@@ -1,0 +1,49 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "lineOuts[0]",
+					"strict" : false
+				},
+				{
+					"name" : "lineOuts[1]",
+					"strict" : false
+				},
+				{
+					"name" : "lineOuts[2]",
+					"strict" : false
+				},
+				{
+					"name" : "lineOuts[3]",
+					"strict" : false
+				},
+				{
+					"name" : "lineOuts[4]",
+					"strict" : false
+				},
+				{
+					"name" : "lineOuts[5]",
+					"strict" : false
+				},
+				{
+					"name" : "lineOuts[6]",
+					"strict" : false
+				},
+				{
+					"name" : "lineIns[2]",
+					"strict" : false
+				},
+				{
+					"name" : "lineIns[0]",
+					"strict" : false
+				},
+				{
+					"name" : "lineIns[1]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

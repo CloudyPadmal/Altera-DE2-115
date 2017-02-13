@@ -1,0 +1,92 @@
+|p2_modules
+X[0] => X[0].IN1
+X[1] => X[1].IN1
+X[2] => X[2].IN1
+X[3] => X[3].IN1
+X[4] => X[4].IN1
+X[5] => X[5].IN1
+X[6] => X[6].IN1
+X[7] => X[7].IN1
+Y[0] => Y[0].IN1
+Y[1] => Y[1].IN1
+Y[2] => Y[2].IN1
+Y[3] => Y[3].IN1
+Y[4] => Y[4].IN1
+Y[5] => Y[5].IN1
+Y[6] => Y[6].IN1
+Y[7] => Y[7].IN1
+LEDs[0] << muxer:mux0.lineout
+LEDs[1] << muxer:mux1.lineout
+LEDs[2] << muxer:mux2.lineout
+LEDs[3] << muxer:mux3.lineout
+LEDs[4] << muxer:mux4.lineout
+LEDs[5] << muxer:mux5.lineout
+LEDs[6] << muxer:mux6.lineout
+LEDs[7] << muxer:mux7.lineout
+selector => selector.IN8
+
+
+|p2_modules|muxer:mux0
+line1 => lineout.IN0
+line2 => lineout.IN0
+selector => lineout.IN1
+selector => lineout.IN1
+lineout <= lineout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|p2_modules|muxer:mux1
+line1 => lineout.IN0
+line2 => lineout.IN0
+selector => lineout.IN1
+selector => lineout.IN1
+lineout <= lineout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|p2_modules|muxer:mux2
+line1 => lineout.IN0
+line2 => lineout.IN0
+selector => lineout.IN1
+selector => lineout.IN1
+lineout <= lineout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|p2_modules|muxer:mux3
+line1 => lineout.IN0
+line2 => lineout.IN0
+selector => lineout.IN1
+selector => lineout.IN1
+lineout <= lineout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|p2_modules|muxer:mux4
+line1 => lineout.IN0
+line2 => lineout.IN0
+selector => lineout.IN1
+selector => lineout.IN1
+lineout <= lineout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|p2_modules|muxer:mux5
+line1 => lineout.IN0
+line2 => lineout.IN0
+selector => lineout.IN1
+selector => lineout.IN1
+lineout <= lineout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|p2_modules|muxer:mux6
+line1 => lineout.IN0
+line2 => lineout.IN0
+selector => lineout.IN1
+selector => lineout.IN1
+lineout <= lineout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|p2_modules|muxer:mux7
+line1 => lineout.IN0
+line2 => lineout.IN0
+selector => lineout.IN1
+selector => lineout.IN1
+lineout <= lineout.DB_MAX_OUTPUT_PORT_TYPE
+
+

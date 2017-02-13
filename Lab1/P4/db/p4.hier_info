@@ -1,0 +1,26 @@
+|p4
+lineIns[0] => lineOuts.IN1
+lineIns[0] => lineOuts.IN1
+lineIns[0] => lineOuts.IN1
+lineIns[0] => lineOuts.IN0
+lineIns[1] => lineOuts.IN0
+lineIns[1] => lineOuts.IN0
+lineIns[2] => lineOuts.IN1
+lineIns[2] => lineOuts.IN1
+lineIns[2] => lineOuts.IN1
+lineIns[2] => lineOuts.IN1
+lineIns[2] => lineOuts.IN1
+lineIns[2] => lineOuts[5].DATAIN
+lineIns[2] => lineOuts.IN1
+lineIns[2] => lineOuts.IN1
+lineIns[2] => lineOuts.IN1
+lineIns[2] => lineOuts[4].DATAIN
+lineOuts[0] <= lineOuts.DB_MAX_OUTPUT_PORT_TYPE
+lineOuts[1] <= lineOuts.DB_MAX_OUTPUT_PORT_TYPE
+lineOuts[2] <= lineOuts.DB_MAX_OUTPUT_PORT_TYPE
+lineOuts[3] <= lineOuts.DB_MAX_OUTPUT_PORT_TYPE
+lineOuts[4] <= lineIns[2].DB_MAX_OUTPUT_PORT_TYPE
+lineOuts[5] <= lineIns[2].DB_MAX_OUTPUT_PORT_TYPE
+lineOuts[6] <= lineOuts.DB_MAX_OUTPUT_PORT_TYPE
+
+
