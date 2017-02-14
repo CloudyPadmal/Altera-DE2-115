@@ -1,0 +1,2 @@
+Info (10281): Verilog HDL Declaration information at p3.v(4): object "A" differs only in case from object "a" in the same scope File: F:/Work/FPGA/Board/Lab2/P3/p3.v Line: 4
+Info (10281): Verilog HDL Declaration information at p3.v(4): object "B" differs only in case from object "b" in the same scope File: F:/Work/FPGA/Board/Lab2/P3/p3.v Line: 4

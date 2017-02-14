@@ -1,0 +1,10 @@
+module bcd(lineIn, lineOut);
+
+	// Define inputs and outputs
+	input [3:0] lineIn;
+	output [6:0] lineOut;
+	
+	// Assign logic
+	lineOut[0] = 
+
+endmodule

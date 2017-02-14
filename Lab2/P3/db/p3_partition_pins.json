@@ -1,0 +1,141 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "Co",
+					"strict" : false
+				},
+				{
+					"name" : "Ds[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Ds[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Ds[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Ds[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Ds[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Ds[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Ds[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Ds[8]",
+					"strict" : false
+				},
+				{
+					"name" : "Ds[9]",
+					"strict" : false
+				},
+				{
+					"name" : "Ai[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Ai[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Ai[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Ai[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Ai[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Ai[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Ai[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Bi[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Bi[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Bi[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Bi[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Bi[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Bi[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Bi[6]",
+					"strict" : false
+				},
+				{
+					"name" : "B[3]",
+					"strict" : false
+				},
+				{
+					"name" : "A[3]",
+					"strict" : false
+				},
+				{
+					"name" : "B[2]",
+					"strict" : false
+				},
+				{
+					"name" : "A[2]",
+					"strict" : false
+				},
+				{
+					"name" : "B[1]",
+					"strict" : false
+				},
+				{
+					"name" : "A[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Ci",
+					"strict" : false
+				},
+				{
+					"name" : "A[0]",
+					"strict" : false
+				},
+				{
+					"name" : "B[0]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
