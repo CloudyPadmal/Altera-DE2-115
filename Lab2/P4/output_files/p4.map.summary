@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Wed Feb 15 05:37:57 2017
+Analysis & Synthesis Status : Successful - Wed Feb 15 08:25:18 2017
 Quartus Prime Version : 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 Revision Name : p4
 Top-level Entity Name : p4
 Family : Cyclone IV E
-Total logic elements : 30
-    Total combinational functions : 30
+Total logic elements : 37
+    Total combinational functions : 37
     Dedicated logic registers : 0
 Total registers : 0
 Total pins : 39

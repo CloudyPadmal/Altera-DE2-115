@@ -1,10 +1,17 @@
 module Comparator(lineIn, result);
 
 	// Define inputs and outputs
-	input [3:0] lineIn;
+	input [4:0] lineIn;
 	output result;
 	
+	// Simplify this to wires
+	wire A = lineIn[4];
+	wire B = lineIn[3];
+	wire C = lineIn[2];
+	wire D = lineIn[1];
+	wire E = lineIn[0];
+	
 	// Assign result
-	assign result = (lineIn[3] & lineIn[2]) + (lineIn[3] & ~lineIn[2] & lineIn[1]);
+	assign result = ~((~A & ~C & ~D) | (~A & ~B & D) | (~A & ~B & C & ~D));
 
 endmodule

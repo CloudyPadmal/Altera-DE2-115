@@ -15,6 +15,11 @@ module p4(A, B, Co, Ci, Ds, Ai, Bi, E);
 	wire [3:0] S;
 	wire a, b, c;
 	wire E1, E2;
+	// Digitizer input
+	wire [4:0] D;
+	
+	assign D[3:0] = S;
+	assign D[4] = Co;
 	
 	// Create 4 FAs and combine
 	FA fa0(
@@ -51,7 +56,7 @@ module p4(A, B, Co, Ci, Ds, Ai, Bi, E);
 	
 	// Create display
 	Digitizer digitizer(
-		.lineIns(S),
+		.lineIns(D),
 		.lineOuts(Ds)
 	);
 	

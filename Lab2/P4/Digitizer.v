@@ -1,7 +1,7 @@
 module Digitizer(lineIns, lineOuts);
 
 	// Define inputs and outputs
-	input [3:0] lineIns;
+	input [4:0] lineIns;
 	output [13:0] lineOuts;
 	
 	wire [3:0] M;

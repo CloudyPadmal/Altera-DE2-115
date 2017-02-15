@@ -1,5 +1,5 @@
 Analysis & Synthesis report for p4
-Wed Feb 15 05:37:57 2017
+Wed Feb 15 08:25:18 2017
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -14,10 +14,13 @@ Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Post-Synthesis Netlist Statistics for Top Partition
- 10. Elapsed Time Per Partition
- 11. Analysis & Synthesis Messages
- 12. Analysis & Synthesis Suppressed Messages
+  9. Port Connectivity Checks: "Comparator:c1"
+ 10. Port Connectivity Checks: "Comparator:c0"
+ 11. Port Connectivity Checks: "Digitizer:digitizer|Converter:converter"
+ 12. Post-Synthesis Netlist Statistics for Top Partition
+ 13. Elapsed Time Per Partition
+ 14. Analysis & Synthesis Messages
+ 15. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -44,13 +47,13 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Feb 15 05:37:57 2017       ;
+; Analysis & Synthesis Status        ; Successful - Wed Feb 15 08:25:18 2017       ;
 ; Quartus Prime Version              ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name                      ; p4                                          ;
 ; Top-level Entity Name              ; p4                                          ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 30                                          ;
-;     Total combinational functions  ; 30                                          ;
+; Total logic elements               ; 37                                          ;
+;     Total combinational functions  ; 37                                          ;
 ;     Dedicated logic registers      ; 0                                           ;
 ; Total registers                    ; 0                                           ;
 ; Total pins                         ; 39                                          ;
@@ -184,16 +187,16 @@ agreement for further details.
 +---------------------------------------------+------------+
 ; Resource                                    ; Usage      ;
 +---------------------------------------------+------------+
-; Estimated Total logic elements              ; 30         ;
+; Estimated Total logic elements              ; 37         ;
 ;                                             ;            ;
-; Total combinational functions               ; 30         ;
+; Total combinational functions               ; 37         ;
 ; Logic element usage by number of LUT inputs ;            ;
-;     -- 4 input functions                    ; 22         ;
-;     -- 3 input functions                    ; 6          ;
-;     -- <=2 input functions                  ; 2          ;
+;     -- 4 input functions                    ; 29         ;
+;     -- 3 input functions                    ; 5          ;
+;     -- <=2 input functions                  ; 3          ;
 ;                                             ;            ;
 ; Logic elements by mode                      ;            ;
-;     -- normal mode                          ; 25         ;
+;     -- normal mode                          ; 32         ;
 ;     -- arithmetic mode                      ; 5          ;
 ;                                             ;            ;
 ; Total registers                             ; 0          ;
@@ -205,9 +208,9 @@ agreement for further details.
 ; Embedded Multiplier 9-bit elements          ; 0          ;
 ;                                             ;            ;
 ; Maximum fan-out node                        ; FA:fa0|s~4 ;
-; Maximum fan-out                             ; 9          ;
-; Total fan-out                               ; 172        ;
-; Average fan-out                             ; 1.59       ;
+; Maximum fan-out                             ; 12         ;
+; Total fan-out                               ; 199        ;
+; Average fan-out                             ; 1.73       ;
 +---------------------------------------------+------------+
 
 
@@ -216,11 +219,11 @@ agreement for further details.
 +-------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------+-------------+--------------+
 ; Compilation Hierarchy Node    ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                           ; Entity Name ; Library Name ;
 +-------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------+-------------+--------------+
-; |p4                           ; 30 (2)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 39   ; 0            ; |p4                                           ; p4          ; work         ;
+; |p4                           ; 37 (2)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 39   ; 0            ; |p4                                           ; p4          ; work         ;
 ;    |BCD:bcd0|                 ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |p4|BCD:bcd0                                  ; BCD         ; work         ;
 ;    |BCD:bcd1|                 ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |p4|BCD:bcd1                                  ; BCD         ; work         ;
-;    |Digitizer:digitizer|      ; 8 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |p4|Digitizer:digitizer                       ; Digitizer   ; work         ;
-;       |BCD:bcd|               ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |p4|Digitizer:digitizer|BCD:bcd               ; BCD         ; work         ;
+;    |Digitizer:digitizer|      ; 15 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |p4|Digitizer:digitizer                       ; Digitizer   ; work         ;
+;       |BCD:bcd|               ; 14 (14)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |p4|Digitizer:digitizer|BCD:bcd               ; BCD         ; work         ;
 ;       |Comparator:comparator| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |p4|Digitizer:digitizer|Comparator:comparator ; Comparator  ; work         ;
 ;    |FA:fa0|                   ; 6 (6)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |p4|FA:fa0                                    ; FA          ; work         ;
 +-------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------+-------------+--------------+
@@ -242,24 +245,52 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Comparator:c1"                                                                                                                                  ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                                                                                                        ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------+
+; lineIn ; Input ; Warning  ; Input port expression (4 bits) is smaller than the input port (5 bits) it drives.  Extra input bit(s) "lineIn[4..4]" will be connected to GND. ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Comparator:c0"                                                                                                                                  ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                                                                                                        ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------+
+; lineIn ; Input ; Warning  ; Input port expression (4 bits) is smaller than the input port (5 bits) it drives.  Extra input bit(s) "lineIn[4..4]" will be connected to GND. ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Digitizer:digitizer|Converter:converter"                                                                                                                                           ;
++---------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                                                                                                          ;
++---------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; lineIns ; Input ; Warning  ; Input port expression (5 bits) is wider than the input port (4 bits) it drives.  The 1 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++---------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 39                          ;
-; cycloneiii_lcell_comb ; 41                          ;
+; cycloneiii_lcell_comb ; 47                          ;
 ;     arith             ; 5                           ;
 ;         2 data inputs ; 1                           ;
 ;         3 data inputs ; 4                           ;
-;     normal            ; 36                          ;
+;     normal            ; 42                          ;
 ;         0 data inputs ; 2                           ;
-;         1 data inputs ; 10                          ;
-;         3 data inputs ; 2                           ;
-;         4 data inputs ; 22                          ;
+;         1 data inputs ; 9                           ;
+;         2 data inputs ; 1                           ;
+;         3 data inputs ; 1                           ;
+;         4 data inputs ; 29                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 3.40                        ;
-; Average LUT depth     ; 2.43                        ;
+; Max LUT depth         ; 4.50                        ;
+; Average LUT depth     ; 3.14                        ;
 +-----------------------+-----------------------------+
 
 
@@ -268,7 +299,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:02     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -278,7 +309,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
-    Info: Processing started: Wed Feb 15 05:37:39 2017
+    Info: Processing started: Wed Feb 15 08:25:06 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off p4 -c p4
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -299,13 +330,15 @@ Info (12021): Found 1 design units, including 1 entities, in source file oner.v
 Info (12021): Found 1 design units, including 1 entities, in source file p4.v
     Info (12023): Found entity 1: p4 File: F:/Work/FPGA/Board/Lab2/P4/p4.v Line: 1
 Info (12127): Elaborating entity "p4" for the top level hierarchy
-Info (12128): Elaborating entity "FA" for hierarchy "FA:fa0" File: F:/Work/FPGA/Board/Lab2/P4/p4.v Line: 26
-Info (12128): Elaborating entity "Digitizer" for hierarchy "Digitizer:digitizer" File: F:/Work/FPGA/Board/Lab2/P4/p4.v Line: 56
+Info (12128): Elaborating entity "FA" for hierarchy "FA:fa0" File: F:/Work/FPGA/Board/Lab2/P4/p4.v Line: 31
+Info (12128): Elaborating entity "Digitizer" for hierarchy "Digitizer:digitizer" File: F:/Work/FPGA/Board/Lab2/P4/p4.v Line: 61
 Info (12128): Elaborating entity "Converter" for hierarchy "Digitizer:digitizer|Converter:converter" File: F:/Work/FPGA/Board/Lab2/P4/Digitizer.v Line: 15
 Info (12128): Elaborating entity "Comparator" for hierarchy "Digitizer:digitizer|Comparator:comparator" File: F:/Work/FPGA/Board/Lab2/P4/Digitizer.v Line: 21
+Warning (10036): Verilog HDL or VHDL warning at Comparator.v(12): object "E" assigned a value but never read File: F:/Work/FPGA/Board/Lab2/P4/Comparator.v Line: 12
 Info (12128): Elaborating entity "Multiplexer" for hierarchy "Digitizer:digitizer|Multiplexer:mux0" File: F:/Work/FPGA/Board/Lab2/P4/Digitizer.v Line: 29
 Info (12128): Elaborating entity "Oner" for hierarchy "Digitizer:digitizer|Oner:oner" File: F:/Work/FPGA/Board/Lab2/P4/Digitizer.v Line: 56
 Info (12128): Elaborating entity "BCD" for hierarchy "Digitizer:digitizer|BCD:bcd" File: F:/Work/FPGA/Board/Lab2/P4/Digitizer.v Line: 62
+Warning (12241): 3 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "Ds[7]" is stuck at VCC File: F:/Work/FPGA/Board/Lab2/P4/p4.v Line: 10
     Warning (13410): Pin "Ds[10]" is stuck at VCC File: F:/Work/FPGA/Board/Lab2/P4/p4.v Line: 10
@@ -316,15 +349,15 @@ Info (286030): Timing-Driven Synthesis is running
 Info (144001): Generated suppressed messages file F:/Work/FPGA/Board/Lab2/P4/output_files/p4.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 69 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 76 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 9 input pins
     Info (21059): Implemented 30 output pins
-    Info (21061): Implemented 30 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 7 warnings
+    Info (21061): Implemented 37 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 9 warnings
     Info: Peak virtual memory: 589 megabytes
-    Info: Processing ended: Wed Feb 15 05:37:57 2017
-    Info: Elapsed time: 00:00:18
-    Info: Total CPU time (on all processors): 00:00:28
+    Info: Processing ended: Wed Feb 15 08:25:18 2017
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:27
 
 
 +------------------------------------------+
