@@ -1,0 +1,391 @@
+|p6
+A[0] => A0[0].IN1
+A[1] => A0[1].IN1
+A[2] => A0[2].IN1
+A[3] => A0[3].IN1
+A[4] => A1[0].IN1
+A[5] => A1[1].IN1
+A[6] => A1[2].IN1
+A[7] => A1[3].IN1
+B[0] => B0[0].IN1
+B[1] => B0[1].IN1
+B[2] => B0[2].IN1
+B[3] => B0[3].IN1
+B[4] => B1[0].IN1
+B[5] => B1[1].IN1
+B[6] => B1[2].IN1
+B[7] => B1[3].IN1
+LEDs[0] <= BCD:bcdS0.lineOut
+LEDs[1] <= BCD:bcdS0.lineOut
+LEDs[2] <= BCD:bcdS0.lineOut
+LEDs[3] <= BCD:bcdS0.lineOut
+LEDs[4] <= BCD:bcdS0.lineOut
+LEDs[5] <= BCD:bcdS0.lineOut
+LEDs[6] <= BCD:bcdS0.lineOut
+LEDs[7] <= BCD:bcdS1.lineOut
+LEDs[8] <= BCD:bcdS1.lineOut
+LEDs[9] <= BCD:bcdS1.lineOut
+LEDs[10] <= BCD:bcdS1.lineOut
+LEDs[11] <= BCD:bcdS1.lineOut
+LEDs[12] <= BCD:bcdS1.lineOut
+LEDs[13] <= BCD:bcdS1.lineOut
+LEDs[14] <= BCD:bcdS2.lineOut
+LEDs[15] <= BCD:bcdS2.lineOut
+LEDs[16] <= BCD:bcdS2.lineOut
+LEDs[17] <= BCD:bcdS2.lineOut
+LEDs[18] <= BCD:bcdS2.lineOut
+LEDs[19] <= BCD:bcdS2.lineOut
+LEDs[20] <= BCD:bcdS2.lineOut
+Ci => ~NO_FANOUT~
+Co <= <GND>
+LEDA[0] <= BCD:bcdA0.lineOut
+LEDA[1] <= BCD:bcdA0.lineOut
+LEDA[2] <= BCD:bcdA0.lineOut
+LEDA[3] <= BCD:bcdA0.lineOut
+LEDA[4] <= BCD:bcdA0.lineOut
+LEDA[5] <= BCD:bcdA0.lineOut
+LEDA[6] <= BCD:bcdA0.lineOut
+LEDA[7] <= BCD:bcdA1.lineOut
+LEDA[8] <= BCD:bcdA1.lineOut
+LEDA[9] <= BCD:bcdA1.lineOut
+LEDA[10] <= BCD:bcdA1.lineOut
+LEDA[11] <= BCD:bcdA1.lineOut
+LEDA[12] <= BCD:bcdA1.lineOut
+LEDA[13] <= BCD:bcdA1.lineOut
+LEDB[0] <= BCD:bcdB0.lineOut
+LEDB[1] <= BCD:bcdB0.lineOut
+LEDB[2] <= BCD:bcdB0.lineOut
+LEDB[3] <= BCD:bcdB0.lineOut
+LEDB[4] <= BCD:bcdB0.lineOut
+LEDB[5] <= BCD:bcdB0.lineOut
+LEDB[6] <= BCD:bcdB0.lineOut
+LEDB[7] <= BCD:bcdB1.lineOut
+LEDB[8] <= BCD:bcdB1.lineOut
+LEDB[9] <= BCD:bcdB1.lineOut
+LEDB[10] <= BCD:bcdB1.lineOut
+LEDB[11] <= BCD:bcdB1.lineOut
+LEDB[12] <= BCD:bcdB1.lineOut
+LEDB[13] <= BCD:bcdB1.lineOut
+
+
+|p6|Comparator:Comp_T0
+lineIn[0] => ~NO_FANOUT~
+lineIn[1] => result.IN1
+lineIn[1] => result.IN1
+lineIn[1] => result.IN1
+lineIn[2] => result.IN1
+lineIn[2] => result.IN0
+lineIn[3] => result.IN0
+lineIn[4] => result.IN1
+lineIn[4] => result.IN1
+result <= result.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|p6|Multiplexer_4_1:mux_z0
+selector => selector.IN2
+lineOuts[0] <= <GND>
+lineOuts[1] <= Multiplexer:mux1.lineout
+lineOuts[2] <= <GND>
+lineOuts[3] <= Multiplexer:mux3.lineout
+
+
+|p6|Multiplexer_4_1:mux_z0|Multiplexer:mux1
+line1 => lineout.IN0
+line2 => lineout.IN0
+lineout <= lineout.DB_MAX_OUTPUT_PORT_TYPE
+selector => lineout.IN1
+selector => lineout.IN1
+
+
+|p6|Multiplexer_4_1:mux_z0|Multiplexer:mux3
+line1 => lineout.IN0
+line2 => lineout.IN0
+lineout <= lineout.DB_MAX_OUTPUT_PORT_TYPE
+selector => lineout.IN1
+selector => lineout.IN1
+
+
+|p6|Multiplexer:mux_c1
+line1 => lineout.IN0
+line2 => lineout.IN0
+lineout <= lineout.DB_MAX_OUTPUT_PORT_TYPE
+selector => lineout.IN1
+selector => lineout.IN1
+
+
+|p6|Comparator:Comp_T1
+lineIn[0] => ~NO_FANOUT~
+lineIn[1] => result.IN1
+lineIn[1] => result.IN1
+lineIn[1] => result.IN1
+lineIn[2] => result.IN1
+lineIn[2] => result.IN0
+lineIn[3] => result.IN0
+lineIn[4] => result.IN1
+lineIn[4] => result.IN1
+result <= result.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|p6|Multiplexer_4_1:mux_z1
+selector => selector.IN2
+lineOuts[0] <= <GND>
+lineOuts[1] <= Multiplexer:mux1.lineout
+lineOuts[2] <= <GND>
+lineOuts[3] <= Multiplexer:mux3.lineout
+
+
+|p6|Multiplexer_4_1:mux_z1|Multiplexer:mux1
+line1 => lineout.IN0
+line2 => lineout.IN0
+lineout <= lineout.DB_MAX_OUTPUT_PORT_TYPE
+selector => lineout.IN1
+selector => lineout.IN1
+
+
+|p6|Multiplexer_4_1:mux_z1|Multiplexer:mux3
+line1 => lineout.IN0
+line2 => lineout.IN0
+lineout <= lineout.DB_MAX_OUTPUT_PORT_TYPE
+selector => lineout.IN1
+selector => lineout.IN1
+
+
+|p6|Multiplexer:mux_c2
+line1 => lineout.IN0
+line2 => lineout.IN0
+lineout <= lineout.DB_MAX_OUTPUT_PORT_TYPE
+selector => lineout.IN1
+selector => lineout.IN1
+
+
+|p6|BCD:bcdA0
+lineIn[0] => lineOut.IN1
+lineIn[0] => lineOut.IN1
+lineIn[0] => lineOut.IN0
+lineIn[0] => lineOut.IN1
+lineIn[0] => lineOut.IN1
+lineIn[0] => lineOut.IN1
+lineIn[0] => lineOut.IN1
+lineIn[0] => lineOut.IN1
+lineIn[0] => lineOut.IN1
+lineIn[1] => lineOut.IN1
+lineIn[1] => lineOut.IN0
+lineIn[1] => lineOut.IN1
+lineIn[1] => lineOut.IN1
+lineIn[1] => lineOut.IN1
+lineIn[1] => lineOut.IN1
+lineIn[2] => lineOut.IN0
+lineIn[2] => lineOut.IN0
+lineIn[2] => lineOut.IN0
+lineIn[3] => lineOut.IN1
+lineIn[3] => lineOut.IN1
+lineIn[3] => lineOut.IN1
+lineIn[3] => lineOut.IN1
+lineIn[3] => lineOut.IN1
+lineOut[0] <= lineOut.DB_MAX_OUTPUT_PORT_TYPE
+lineOut[1] <= lineOut.DB_MAX_OUTPUT_PORT_TYPE
+lineOut[2] <= lineOut.DB_MAX_OUTPUT_PORT_TYPE
+lineOut[3] <= lineOut.DB_MAX_OUTPUT_PORT_TYPE
+lineOut[4] <= lineOut.DB_MAX_OUTPUT_PORT_TYPE
+lineOut[5] <= lineOut.DB_MAX_OUTPUT_PORT_TYPE
+lineOut[6] <= lineOut.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|p6|BCD:bcdA1
+lineIn[0] => lineOut.IN1
+lineIn[0] => lineOut.IN1
+lineIn[0] => lineOut.IN0
+lineIn[0] => lineOut.IN1
+lineIn[0] => lineOut.IN1
+lineIn[0] => lineOut.IN1
+lineIn[0] => lineOut.IN1
+lineIn[0] => lineOut.IN1
+lineIn[0] => lineOut.IN1
+lineIn[1] => lineOut.IN1
+lineIn[1] => lineOut.IN0
+lineIn[1] => lineOut.IN1
+lineIn[1] => lineOut.IN1
+lineIn[1] => lineOut.IN1
+lineIn[1] => lineOut.IN1
+lineIn[2] => lineOut.IN0
+lineIn[2] => lineOut.IN0
+lineIn[2] => lineOut.IN0
+lineIn[3] => lineOut.IN1
+lineIn[3] => lineOut.IN1
+lineIn[3] => lineOut.IN1
+lineIn[3] => lineOut.IN1
+lineIn[3] => lineOut.IN1
+lineOut[0] <= lineOut.DB_MAX_OUTPUT_PORT_TYPE
+lineOut[1] <= lineOut.DB_MAX_OUTPUT_PORT_TYPE
+lineOut[2] <= lineOut.DB_MAX_OUTPUT_PORT_TYPE
+lineOut[3] <= lineOut.DB_MAX_OUTPUT_PORT_TYPE
+lineOut[4] <= lineOut.DB_MAX_OUTPUT_PORT_TYPE
+lineOut[5] <= lineOut.DB_MAX_OUTPUT_PORT_TYPE
+lineOut[6] <= lineOut.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|p6|BCD:bcdB0
+lineIn[0] => lineOut.IN1
+lineIn[0] => lineOut.IN1
+lineIn[0] => lineOut.IN0
+lineIn[0] => lineOut.IN1
+lineIn[0] => lineOut.IN1
+lineIn[0] => lineOut.IN1
+lineIn[0] => lineOut.IN1
+lineIn[0] => lineOut.IN1
+lineIn[0] => lineOut.IN1
+lineIn[1] => lineOut.IN1
+lineIn[1] => lineOut.IN0
+lineIn[1] => lineOut.IN1
+lineIn[1] => lineOut.IN1
+lineIn[1] => lineOut.IN1
+lineIn[1] => lineOut.IN1
+lineIn[2] => lineOut.IN0
+lineIn[2] => lineOut.IN0
+lineIn[2] => lineOut.IN0
+lineIn[3] => lineOut.IN1
+lineIn[3] => lineOut.IN1
+lineIn[3] => lineOut.IN1
+lineIn[3] => lineOut.IN1
+lineIn[3] => lineOut.IN1
+lineOut[0] <= lineOut.DB_MAX_OUTPUT_PORT_TYPE
+lineOut[1] <= lineOut.DB_MAX_OUTPUT_PORT_TYPE
+lineOut[2] <= lineOut.DB_MAX_OUTPUT_PORT_TYPE
+lineOut[3] <= lineOut.DB_MAX_OUTPUT_PORT_TYPE
+lineOut[4] <= lineOut.DB_MAX_OUTPUT_PORT_TYPE
+lineOut[5] <= lineOut.DB_MAX_OUTPUT_PORT_TYPE
+lineOut[6] <= lineOut.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|p6|BCD:bcdB1
+lineIn[0] => lineOut.IN1
+lineIn[0] => lineOut.IN1
+lineIn[0] => lineOut.IN0
+lineIn[0] => lineOut.IN1
+lineIn[0] => lineOut.IN1
+lineIn[0] => lineOut.IN1
+lineIn[0] => lineOut.IN1
+lineIn[0] => lineOut.IN1
+lineIn[0] => lineOut.IN1
+lineIn[1] => lineOut.IN1
+lineIn[1] => lineOut.IN0
+lineIn[1] => lineOut.IN1
+lineIn[1] => lineOut.IN1
+lineIn[1] => lineOut.IN1
+lineIn[1] => lineOut.IN1
+lineIn[2] => lineOut.IN0
+lineIn[2] => lineOut.IN0
+lineIn[2] => lineOut.IN0
+lineIn[3] => lineOut.IN1
+lineIn[3] => lineOut.IN1
+lineIn[3] => lineOut.IN1
+lineIn[3] => lineOut.IN1
+lineIn[3] => lineOut.IN1
+lineOut[0] <= lineOut.DB_MAX_OUTPUT_PORT_TYPE
+lineOut[1] <= lineOut.DB_MAX_OUTPUT_PORT_TYPE
+lineOut[2] <= lineOut.DB_MAX_OUTPUT_PORT_TYPE
+lineOut[3] <= lineOut.DB_MAX_OUTPUT_PORT_TYPE
+lineOut[4] <= lineOut.DB_MAX_OUTPUT_PORT_TYPE
+lineOut[5] <= lineOut.DB_MAX_OUTPUT_PORT_TYPE
+lineOut[6] <= lineOut.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|p6|BCD:bcdS0
+lineIn[0] => lineOut.IN1
+lineIn[0] => lineOut.IN1
+lineIn[0] => lineOut.IN0
+lineIn[0] => lineOut.IN1
+lineIn[0] => lineOut.IN1
+lineIn[0] => lineOut.IN1
+lineIn[0] => lineOut.IN1
+lineIn[0] => lineOut.IN1
+lineIn[0] => lineOut.IN1
+lineIn[1] => lineOut.IN1
+lineIn[1] => lineOut.IN0
+lineIn[1] => lineOut.IN1
+lineIn[1] => lineOut.IN1
+lineIn[1] => lineOut.IN1
+lineIn[1] => lineOut.IN1
+lineIn[2] => lineOut.IN0
+lineIn[2] => lineOut.IN0
+lineIn[2] => lineOut.IN0
+lineIn[3] => lineOut.IN1
+lineIn[3] => lineOut.IN1
+lineIn[3] => lineOut.IN1
+lineIn[3] => lineOut.IN1
+lineIn[3] => lineOut.IN1
+lineOut[0] <= lineOut.DB_MAX_OUTPUT_PORT_TYPE
+lineOut[1] <= lineOut.DB_MAX_OUTPUT_PORT_TYPE
+lineOut[2] <= lineOut.DB_MAX_OUTPUT_PORT_TYPE
+lineOut[3] <= lineOut.DB_MAX_OUTPUT_PORT_TYPE
+lineOut[4] <= lineOut.DB_MAX_OUTPUT_PORT_TYPE
+lineOut[5] <= lineOut.DB_MAX_OUTPUT_PORT_TYPE
+lineOut[6] <= lineOut.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|p6|BCD:bcdS1
+lineIn[0] => lineOut.IN1
+lineIn[0] => lineOut.IN1
+lineIn[0] => lineOut.IN0
+lineIn[0] => lineOut.IN1
+lineIn[0] => lineOut.IN1
+lineIn[0] => lineOut.IN1
+lineIn[0] => lineOut.IN1
+lineIn[0] => lineOut.IN1
+lineIn[0] => lineOut.IN1
+lineIn[1] => lineOut.IN1
+lineIn[1] => lineOut.IN0
+lineIn[1] => lineOut.IN1
+lineIn[1] => lineOut.IN1
+lineIn[1] => lineOut.IN1
+lineIn[1] => lineOut.IN1
+lineIn[2] => lineOut.IN0
+lineIn[2] => lineOut.IN0
+lineIn[2] => lineOut.IN0
+lineIn[3] => lineOut.IN1
+lineIn[3] => lineOut.IN1
+lineIn[3] => lineOut.IN1
+lineIn[3] => lineOut.IN1
+lineIn[3] => lineOut.IN1
+lineOut[0] <= lineOut.DB_MAX_OUTPUT_PORT_TYPE
+lineOut[1] <= lineOut.DB_MAX_OUTPUT_PORT_TYPE
+lineOut[2] <= lineOut.DB_MAX_OUTPUT_PORT_TYPE
+lineOut[3] <= lineOut.DB_MAX_OUTPUT_PORT_TYPE
+lineOut[4] <= lineOut.DB_MAX_OUTPUT_PORT_TYPE
+lineOut[5] <= lineOut.DB_MAX_OUTPUT_PORT_TYPE
+lineOut[6] <= lineOut.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|p6|BCD:bcdS2
+lineIn[0] => lineOut.IN1
+lineIn[0] => lineOut.IN1
+lineIn[0] => lineOut.IN0
+lineIn[0] => lineOut.IN1
+lineIn[0] => lineOut.IN1
+lineIn[0] => lineOut.IN1
+lineIn[0] => lineOut.IN1
+lineIn[0] => lineOut.IN1
+lineIn[0] => lineOut.IN1
+lineIn[1] => lineOut.IN1
+lineIn[1] => lineOut.IN0
+lineIn[1] => lineOut.IN1
+lineIn[1] => lineOut.IN1
+lineIn[1] => lineOut.IN1
+lineIn[1] => lineOut.IN1
+lineIn[2] => lineOut.IN0
+lineIn[2] => lineOut.IN0
+lineIn[2] => lineOut.IN0
+lineIn[3] => lineOut.IN1
+lineIn[3] => lineOut.IN1
+lineIn[3] => lineOut.IN1
+lineIn[3] => lineOut.IN1
+lineIn[3] => lineOut.IN1
+lineOut[0] <= lineOut.DB_MAX_OUTPUT_PORT_TYPE
+lineOut[1] <= lineOut.DB_MAX_OUTPUT_PORT_TYPE
+lineOut[2] <= lineOut.DB_MAX_OUTPUT_PORT_TYPE
+lineOut[3] <= lineOut.DB_MAX_OUTPUT_PORT_TYPE
+lineOut[4] <= lineOut.DB_MAX_OUTPUT_PORT_TYPE
+lineOut[5] <= lineOut.DB_MAX_OUTPUT_PORT_TYPE
+lineOut[6] <= lineOut.DB_MAX_OUTPUT_PORT_TYPE
+
+

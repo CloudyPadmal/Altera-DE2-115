@@ -1,0 +1,193 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dF:/Work/FPGA/Board/Lab2/P5 BCD/simulation/modelsim
+vBCD
+Z1 !s110 1487316320
+!i10b 1
+!s100 3[J8nH>`dN4nfIWWi0e@J2
+Ii68XS>0aFMBXSSQM_h_bY0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1487310654
+8F:/Work/FPGA/Board/Lab2/P5 BCD/BCD.v
+FF:/Work/FPGA/Board/Lab2/P5 BCD/BCD.v
+L0 1
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1487316319.000000
+!s107 F:/Work/FPGA/Board/Lab2/P5 BCD/BCD.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/Work/FPGA/Board/Lab2/P5 BCD|F:/Work/FPGA/Board/Lab2/P5 BCD/BCD.v|
+!i113 1
+Z4 o-vlog01compat -work work
+Z5 !s92 -vlog01compat -work work {+incdir+F:/Work/FPGA/Board/Lab2/P5 BCD}
+Z6 tCvgOpt 0
+n@b@c@d
+vComparator
+R1
+!i10b 1
+!s100 B;V@OV2830Ka]iJ^H1b4Y0
+I7n__RB9l2A2ZBDO1QmzGk2
+R2
+R0
+w1487310671
+8F:/Work/FPGA/Board/Lab2/P5 BCD/Comparator.v
+FF:/Work/FPGA/Board/Lab2/P5 BCD/Comparator.v
+L0 1
+R3
+r1
+!s85 0
+31
+Z7 !s108 1487316320.000000
+!s107 F:/Work/FPGA/Board/Lab2/P5 BCD/Comparator.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/Work/FPGA/Board/Lab2/P5 BCD|F:/Work/FPGA/Board/Lab2/P5 BCD/Comparator.v|
+!i113 1
+R4
+R5
+R6
+n@comparator
+vConverter
+R1
+!i10b 1
+!s100 cX5;I7nQknL^M]gYhhm]_3
+I4@>YWK61OSXD;[IDA3`Do0
+R2
+R0
+w1487310694
+8F:/Work/FPGA/Board/Lab2/P5 BCD/Converter.v
+FF:/Work/FPGA/Board/Lab2/P5 BCD/Converter.v
+L0 1
+R3
+r1
+!s85 0
+31
+R7
+!s107 F:/Work/FPGA/Board/Lab2/P5 BCD/Converter.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/Work/FPGA/Board/Lab2/P5 BCD|F:/Work/FPGA/Board/Lab2/P5 BCD/Converter.v|
+!i113 1
+R4
+R5
+R6
+n@converter
+vDigitizer
+R1
+!i10b 1
+!s100 ^[60Q1_T[R[OH58NTc^e92
+I1JWFHB4[4hBH^lY76anm92
+R2
+R0
+w1487310711
+8F:/Work/FPGA/Board/Lab2/P5 BCD/Digitizer.v
+FF:/Work/FPGA/Board/Lab2/P5 BCD/Digitizer.v
+L0 1
+R3
+r1
+!s85 0
+31
+R7
+!s107 F:/Work/FPGA/Board/Lab2/P5 BCD/Digitizer.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/Work/FPGA/Board/Lab2/P5 BCD|F:/Work/FPGA/Board/Lab2/P5 BCD/Digitizer.v|
+!i113 1
+R4
+R5
+R6
+n@digitizer
+vFA
+R1
+!i10b 1
+!s100 Enc`]P7gUOOhNZ@[@Sn:M3
+IAbY7^[Ae@neS?Ye35OlDE2
+R2
+R0
+w1487310723
+8F:/Work/FPGA/Board/Lab2/P5 BCD/FA.v
+FF:/Work/FPGA/Board/Lab2/P5 BCD/FA.v
+L0 1
+R3
+r1
+!s85 0
+31
+R7
+!s107 F:/Work/FPGA/Board/Lab2/P5 BCD/FA.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/Work/FPGA/Board/Lab2/P5 BCD|F:/Work/FPGA/Board/Lab2/P5 BCD/FA.v|
+!i113 1
+R4
+R5
+R6
+n@f@a
+vMultiplexer
+R1
+!i10b 1
+!s100 L=Ej59NZLZI:BDPBFN;g91
+IDnZ20m:i`Cb93[nkP<8[`3
+R2
+R0
+w1487310741
+8F:/Work/FPGA/Board/Lab2/P5 BCD/Multiplexer.v
+FF:/Work/FPGA/Board/Lab2/P5 BCD/Multiplexer.v
+L0 1
+R3
+r1
+!s85 0
+31
+R7
+!s107 F:/Work/FPGA/Board/Lab2/P5 BCD/Multiplexer.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/Work/FPGA/Board/Lab2/P5 BCD|F:/Work/FPGA/Board/Lab2/P5 BCD/Multiplexer.v|
+!i113 1
+R4
+R5
+R6
+n@multiplexer
+vOner
+R1
+!i10b 1
+!s100 m:m5YXC29SX9>Dh>L3jf?1
+II^bM5oz2U9U;W_QSHPKaG1
+R2
+R0
+w1487310754
+8F:/Work/FPGA/Board/Lab2/P5 BCD/Oner.v
+FF:/Work/FPGA/Board/Lab2/P5 BCD/Oner.v
+L0 1
+R3
+r1
+!s85 0
+31
+R7
+!s107 F:/Work/FPGA/Board/Lab2/P5 BCD/Oner.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/Work/FPGA/Board/Lab2/P5 BCD|F:/Work/FPGA/Board/Lab2/P5 BCD/Oner.v|
+!i113 1
+R4
+R5
+R6
+n@oner
+vp5
+R1
+!i10b 1
+!s100 ?2Jj=Fe:h]nhIneKnYV@J3
+If4E;Jn1dGYOzVW3H5b_:@1
+R2
+R0
+w1487315820
+8F:/Work/FPGA/Board/Lab2/P5 BCD/p5.v
+FF:/Work/FPGA/Board/Lab2/P5 BCD/p5.v
+L0 1
+R3
+r1
+!s85 0
+31
+R7
+!s107 F:/Work/FPGA/Board/Lab2/P5 BCD/p5.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/Work/FPGA/Board/Lab2/P5 BCD|F:/Work/FPGA/Board/Lab2/P5 BCD/p5.v|
+!i113 1
+R4
+R5
+R6
