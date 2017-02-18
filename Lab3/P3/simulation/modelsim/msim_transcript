@@ -1,0 +1,60 @@
+# Reading C:/intelFPGA_lite/16.1/modelsim_ase/tcl/vsim/pref.tcl
+# do p3_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/16.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+F:/Work/FPGA/Board/Lab3/P3 {F:/Work/FPGA/Board/Lab3/P3/p3.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 03:41:55 on Feb 18,2017
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+F:/Work/FPGA/Board/Lab3/P3" F:/Work/FPGA/Board/Lab3/P3/p3.v 
+# -- Compiling module p3
+# 
+# Top level modules:
+# 	p3
+# End time: 03:41:55 on Feb 18,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+F:/Work/FPGA/Board/Lab3/P3 {F:/Work/FPGA/Board/Lab3/P3/D.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 03:41:55 on Feb 18,2017
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+F:/Work/FPGA/Board/Lab3/P3" F:/Work/FPGA/Board/Lab3/P3/D.v 
+# -- Compiling module D
+# 
+# Top level modules:
+# 	D
+# End time: 03:41:56 on Feb 18,2017, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+F:/Work/FPGA/Board/Lab3/P3 {F:/Work/FPGA/Board/Lab3/P3/p3_tb.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 03:41:56 on Feb 18,2017
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+F:/Work/FPGA/Board/Lab3/P3" F:/Work/FPGA/Board/Lab3/P3/p3_tb.v 
+# -- Compiling module p3_tb
+# 
+# Top level modules:
+# 	p3_tb
+# End time: 03:41:56 on Feb 18,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vsim work.p3_tb
+# vsim work.p3_tb 
+# Start time: 03:41:58 on Feb 18,2017
+# Loading work.p3_tb
+# Loading work.p3
+# Loading work.D
+add wave -position end  sim:/p3_tb/Di
+add wave -position end  sim:/p3_tb/Clk
+add wave -position end  sim:/p3_tb/Qa
+add wave -position end  sim:/p3_tb/Qb
+run -all
+# ** Note: $finish    : F:/Work/FPGA/Board/Lab3/P3/p3_tb.v(41)
+#    Time: 18 ps  Iteration: 0  Instance: /p3_tb
+# 1
+# Break in Module p3_tb at F:/Work/FPGA/Board/Lab3/P3/p3_tb.v line 41
+# End time: 03:43:07 on Feb 18,2017, Elapsed time: 0:01:09
+# Errors: 0, Warnings: 0

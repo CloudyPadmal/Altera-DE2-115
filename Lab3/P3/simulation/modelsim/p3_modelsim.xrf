@@ -1,0 +1,17 @@
+vendor_name = ModelSim
+source_file = 1, F:/Work/FPGA/Board/Lab3/P3/p3.v
+source_file = 1, F:/Work/FPGA/Board/Lab3/P3/D.v
+source_file = 1, F:/Work/FPGA/Board/Lab3/P3/p3_tb.v
+source_file = 1, F:/Work/FPGA/Board/Lab3/P3/db/p3.cbx.xml
+design_name = p3
+instance = comp, \Qa~output , Qa~output, p3, 1
+instance = comp, \Qb~output , Qb~output, p3, 1
+instance = comp, \Clk~input , Clk~input, p3, 1
+instance = comp, \Di~input , Di~input, p3, 1
+instance = comp, \d1|comb~0 , d1|comb~0, p3, 1
+instance = comp, \d2|comb~1 , d2|comb~1, p3, 1
+instance = comp, \d2|comb~0 , d2|comb~0, p3, 1
+design_name = hard_block
+instance = comp, \~ALTERA_ASDO_DATA1~~ibuf , ~ALTERA_ASDO_DATA1~~ibuf, hard_block, 1
+instance = comp, \~ALTERA_FLASH_nCE_nCSO~~ibuf , ~ALTERA_FLASH_nCE_nCSO~~ibuf, hard_block, 1
+instance = comp, \~ALTERA_DATA0~~ibuf , ~ALTERA_DATA0~~ibuf, hard_block, 1

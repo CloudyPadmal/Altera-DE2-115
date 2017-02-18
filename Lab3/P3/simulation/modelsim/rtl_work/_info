@@ -1,0 +1,77 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dF:/Work/FPGA/Board/Lab3/P3/simulation/modelsim
+vD
+Z1 !s110 1487369516
+!i10b 1
+!s100 ci@5CJ0HYS=W6=H8YJM8C1
+ISfgHSNB;`0K7hMoc`RD;e2
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1487367167
+8F:/Work/FPGA/Board/Lab3/P3/D.v
+FF:/Work/FPGA/Board/Lab3/P3/D.v
+L0 1
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1487369515.000000
+!s107 F:/Work/FPGA/Board/Lab3/P3/D.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/Work/FPGA/Board/Lab3/P3|F:/Work/FPGA/Board/Lab3/P3/D.v|
+!i113 1
+Z5 o-vlog01compat -work work
+Z6 !s92 -vlog01compat -work work +incdir+F:/Work/FPGA/Board/Lab3/P3
+Z7 tCvgOpt 0
+n@d
+vp3
+!s110 1487369515
+!i10b 1
+!s100 <:_H51NK^E1JYBg5[gE_@0
+Ic0@<X8dJSVEPEG>gG[<LZ0
+R2
+R0
+w1487369230
+8F:/Work/FPGA/Board/Lab3/P3/p3.v
+FF:/Work/FPGA/Board/Lab3/P3/p3.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 F:/Work/FPGA/Board/Lab3/P3/p3.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/Work/FPGA/Board/Lab3/P3|F:/Work/FPGA/Board/Lab3/P3/p3.v|
+!i113 1
+R5
+R6
+R7
+vp3_tb
+R1
+!i10b 1
+!s100 WFbDnl13PGXVm;QER[LL<3
+ISR7PiKj<eB=E?J>zPOXM?0
+R2
+R0
+w1487369350
+8F:/Work/FPGA/Board/Lab3/P3/p3_tb.v
+FF:/Work/FPGA/Board/Lab3/P3/p3_tb.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1487369516.000000
+!s107 F:/Work/FPGA/Board/Lab3/P3/p3_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/Work/FPGA/Board/Lab3/P3|F:/Work/FPGA/Board/Lab3/P3/p3_tb.v|
+!i113 1
+R5
+R6
+R7

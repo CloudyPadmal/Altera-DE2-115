@@ -1,0 +1,6 @@
+module p3_tb();
+
+	reg Di, Clk;
+	wire Qa, Qb;
+
+endmodule

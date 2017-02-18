@@ -1,0 +1,25 @@
+|p3
+Di => Di.IN1
+Clk => Clk.IN1
+Qa << D:d2.Qa
+Qb << D:d2.Qb
+
+
+|p3|D:d1
+Di => S_g.IN0
+Di => R_g.IN0
+Clk => S_g.IN1
+Clk => R_g.IN1
+Qa <= Qa.DB_MAX_OUTPUT_PORT_TYPE
+Qb <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|p3|D:d2
+Di => S_g.IN0
+Di => R_g.IN0
+Clk => S_g.IN1
+Clk => R_g.IN1
+Qa <= Qa.DB_MAX_OUTPUT_PORT_TYPE
+Qb <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
