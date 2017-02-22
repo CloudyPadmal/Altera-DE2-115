@@ -1,0 +1,123 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dF:/Work/FPGA/Board/Lab3/P4/simulation/modelsim
+vD_flop
+Z1 !s110 1487805718
+!i10b 1
+!s100 ChC0kY<l@0hSCe6QX0;c@2
+Ikb_Qjk2?m;nY^Eo9RQV3`2
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1487805692
+8F:/Work/FPGA/Board/Lab3/P4/D_flop.v
+FF:/Work/FPGA/Board/Lab3/P4/D_flop.v
+L0 1
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1487805718.000000
+!s107 F:/Work/FPGA/Board/Lab3/P4/D_flop.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/Work/FPGA/Board/Lab3/P4|F:/Work/FPGA/Board/Lab3/P4/D_flop.v|
+!i113 1
+Z5 o-vlog01compat -work work
+Z6 !s92 -vlog01compat -work work +incdir+F:/Work/FPGA/Board/Lab3/P4
+Z7 tCvgOpt 0
+n@d_flop
+vD_flop_n
+R1
+!i10b 1
+!s100 j73TMXJ[D99i90V4m?oFh0
+I<5Zaz]ZPmP8KPJzKcMKcN0
+R2
+R0
+w1487804990
+8F:/Work/FPGA/Board/Lab3/P4/D_flop_n.v
+FF:/Work/FPGA/Board/Lab3/P4/D_flop_n.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 F:/Work/FPGA/Board/Lab3/P4/D_flop_n.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/Work/FPGA/Board/Lab3/P4|F:/Work/FPGA/Board/Lab3/P4/D_flop_n.v|
+!i113 1
+R5
+R6
+R7
+n@d_flop_n
+vD_flop_p
+R1
+!i10b 1
+!s100 nRZGCIMcT5AMcZXW>[]c@3
+I3UMPHV7cbg:OPEZ=]7zbU0
+R2
+R0
+w1487804986
+8F:/Work/FPGA/Board/Lab3/P4/D_flop_p.v
+FF:/Work/FPGA/Board/Lab3/P4/D_flop_p.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 F:/Work/FPGA/Board/Lab3/P4/D_flop_p.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/Work/FPGA/Board/Lab3/P4|F:/Work/FPGA/Board/Lab3/P4/D_flop_p.v|
+!i113 1
+R5
+R6
+R7
+n@d_flop_p
+vp4
+R1
+!i10b 1
+!s100 OQ8269B^f48PZSHL^m:CE2
+I0B>Y@?mCkIm:?CedMX:;=0
+R2
+R0
+w1487804783
+8F:/Work/FPGA/Board/Lab3/P4/p4.v
+FF:/Work/FPGA/Board/Lab3/P4/p4.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 F:/Work/FPGA/Board/Lab3/P4/p4.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/Work/FPGA/Board/Lab3/P4|F:/Work/FPGA/Board/Lab3/P4/p4.v|
+!i113 1
+R5
+R6
+R7
+vp4_tb
+R1
+!i10b 1
+!s100 gLTO]SU7MV6jeiEXGLWha1
+ILD0Z=jkPfGC?AhDBajT<Z0
+R2
+R0
+w1487805464
+8F:/Work/FPGA/Board/Lab3/P4/p4_tb.v
+FF:/Work/FPGA/Board/Lab3/P4/p4_tb.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 F:/Work/FPGA/Board/Lab3/P4/p4_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/Work/FPGA/Board/Lab3/P4|F:/Work/FPGA/Board/Lab3/P4/p4_tb.v|
+!i113 1
+R5
+R6
+R7

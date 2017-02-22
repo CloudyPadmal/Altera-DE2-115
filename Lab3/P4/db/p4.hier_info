@@ -1,0 +1,29 @@
+|p4_tb
+
+
+|p4_tb|p4:uut
+D => D.IN3
+Clk => Clk.IN3
+Qa <= D_flop:D1.Qa
+Qb <= D_flop_p:D2.Qa
+Qc <= D_flop_n:D3.Qa
+
+
+|p4_tb|p4:uut|D_flop:D1
+Di => Qa$latch.DATAIN
+Clk => Qa$latch.LATCH_ENABLE
+Qa <= Qa$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|p4_tb|p4:uut|D_flop_p:D2
+Di => Qa~reg0.DATAIN
+Clk => Qa~reg0.CLK
+Qa <= Qa~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|p4_tb|p4:uut|D_flop_n:D3
+Di => Qa~reg0.DATAIN
+Clk => Qa~reg0.CLK
+Qa <= Qa~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

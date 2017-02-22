@@ -1,0 +1,9 @@
+module D_flop_n (Di, Clk, Qa);
+
+	input Di, Clk;
+	output Qa;
+	
+	always @ (negedge Clk)
+		Qa = Di;
+	
+endmodule

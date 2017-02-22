@@ -1,0 +1,14 @@
+module D_flop_p (Di, Clk, Qa);
+
+	input Di, Clk;
+	output Qa;
+	
+	wire R, S_g, R_g, Qb;
+	
+	nand(S_g, Di, Clk);
+	not(R, Di);
+	nand(R_g, R, Clk);
+	nand(Qa, Qb, S_g);
+	nand(Qb, Qa, R_g);
+	
+endmodule
