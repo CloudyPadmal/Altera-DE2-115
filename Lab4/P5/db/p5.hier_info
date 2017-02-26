@@ -1,0 +1,993 @@
+|p5
+CLK => CLK.IN1
+LEDs[0] <= bcdDecoder:bcd0.lineOuts
+LEDs[1] <= bcdDecoder:bcd0.lineOuts
+LEDs[2] <= bcdDecoder:bcd0.lineOuts
+LEDs[3] <= bcdDecoder:bcd0.lineOuts
+LEDs[4] <= bcdDecoder:bcd0.lineOuts
+LEDs[5] <= bcdDecoder:bcd0.lineOuts
+LEDs[6] <= bcdDecoder:bcd0.lineOuts
+LEDs[7] <= bcdDecoder:bcd1.lineOuts
+LEDs[8] <= bcdDecoder:bcd1.lineOuts
+LEDs[9] <= bcdDecoder:bcd1.lineOuts
+LEDs[10] <= bcdDecoder:bcd1.lineOuts
+LEDs[11] <= bcdDecoder:bcd1.lineOuts
+LEDs[12] <= bcdDecoder:bcd1.lineOuts
+LEDs[13] <= bcdDecoder:bcd1.lineOuts
+LEDs[14] <= bcdDecoder:bcd2.lineOuts
+LEDs[15] <= bcdDecoder:bcd2.lineOuts
+LEDs[16] <= bcdDecoder:bcd2.lineOuts
+LEDs[17] <= bcdDecoder:bcd2.lineOuts
+LEDs[18] <= bcdDecoder:bcd2.lineOuts
+LEDs[19] <= bcdDecoder:bcd2.lineOuts
+LEDs[20] <= bcdDecoder:bcd2.lineOuts
+LEDs[21] <= bcdDecoder:bcd3.lineOuts
+LEDs[22] <= bcdDecoder:bcd3.lineOuts
+LEDs[23] <= bcdDecoder:bcd3.lineOuts
+LEDs[24] <= bcdDecoder:bcd3.lineOuts
+LEDs[25] <= bcdDecoder:bcd3.lineOuts
+LEDs[26] <= bcdDecoder:bcd3.lineOuts
+LEDs[27] <= bcdDecoder:bcd3.lineOuts
+LEDs[28] <= bcdDecoder:bcd4.lineOuts
+LEDs[29] <= bcdDecoder:bcd4.lineOuts
+LEDs[30] <= bcdDecoder:bcd4.lineOuts
+LEDs[31] <= bcdDecoder:bcd4.lineOuts
+LEDs[32] <= bcdDecoder:bcd4.lineOuts
+LEDs[33] <= bcdDecoder:bcd4.lineOuts
+LEDs[34] <= bcdDecoder:bcd4.lineOuts
+
+
+|p5|bcdDecoder:bcd0
+lineIns[0] => lineOuts.IN1
+lineIns[0] => lineOuts.IN1
+lineIns[0] => lineOuts.IN1
+lineIns[0] => lineOuts.IN0
+lineIns[1] => lineOuts.IN0
+lineIns[1] => lineOuts.IN0
+lineIns[2] => lineOuts.IN1
+lineIns[2] => lineOuts.IN1
+lineIns[2] => lineOuts.IN1
+lineIns[2] => lineOuts.IN1
+lineIns[2] => lineOuts.IN1
+lineIns[2] => lineOuts[5].DATAIN
+lineIns[2] => lineOuts.IN1
+lineIns[2] => lineOuts.IN1
+lineIns[2] => lineOuts.IN1
+lineIns[2] => lineOuts[4].DATAIN
+lineOuts[0] <= lineOuts.DB_MAX_OUTPUT_PORT_TYPE
+lineOuts[1] <= lineOuts.DB_MAX_OUTPUT_PORT_TYPE
+lineOuts[2] <= lineOuts.DB_MAX_OUTPUT_PORT_TYPE
+lineOuts[3] <= lineOuts.DB_MAX_OUTPUT_PORT_TYPE
+lineOuts[4] <= lineIns[2].DB_MAX_OUTPUT_PORT_TYPE
+lineOuts[5] <= lineIns[2].DB_MAX_OUTPUT_PORT_TYPE
+lineOuts[6] <= lineOuts.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|p5|bcdDecoder:bcd1
+lineIns[0] => lineOuts.IN1
+lineIns[0] => lineOuts.IN1
+lineIns[0] => lineOuts.IN1
+lineIns[0] => lineOuts.IN0
+lineIns[1] => lineOuts.IN0
+lineIns[1] => lineOuts.IN0
+lineIns[2] => lineOuts.IN1
+lineIns[2] => lineOuts.IN1
+lineIns[2] => lineOuts.IN1
+lineIns[2] => lineOuts.IN1
+lineIns[2] => lineOuts.IN1
+lineIns[2] => lineOuts[5].DATAIN
+lineIns[2] => lineOuts.IN1
+lineIns[2] => lineOuts.IN1
+lineIns[2] => lineOuts.IN1
+lineIns[2] => lineOuts[4].DATAIN
+lineOuts[0] <= lineOuts.DB_MAX_OUTPUT_PORT_TYPE
+lineOuts[1] <= lineOuts.DB_MAX_OUTPUT_PORT_TYPE
+lineOuts[2] <= lineOuts.DB_MAX_OUTPUT_PORT_TYPE
+lineOuts[3] <= lineOuts.DB_MAX_OUTPUT_PORT_TYPE
+lineOuts[4] <= lineIns[2].DB_MAX_OUTPUT_PORT_TYPE
+lineOuts[5] <= lineIns[2].DB_MAX_OUTPUT_PORT_TYPE
+lineOuts[6] <= lineOuts.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|p5|bcdDecoder:bcd2
+lineIns[0] => lineOuts.IN1
+lineIns[0] => lineOuts.IN1
+lineIns[0] => lineOuts.IN1
+lineIns[0] => lineOuts.IN0
+lineIns[1] => lineOuts.IN0
+lineIns[1] => lineOuts.IN0
+lineIns[2] => lineOuts.IN1
+lineIns[2] => lineOuts.IN1
+lineIns[2] => lineOuts.IN1
+lineIns[2] => lineOuts.IN1
+lineIns[2] => lineOuts.IN1
+lineIns[2] => lineOuts[5].DATAIN
+lineIns[2] => lineOuts.IN1
+lineIns[2] => lineOuts.IN1
+lineIns[2] => lineOuts.IN1
+lineIns[2] => lineOuts[4].DATAIN
+lineOuts[0] <= lineOuts.DB_MAX_OUTPUT_PORT_TYPE
+lineOuts[1] <= lineOuts.DB_MAX_OUTPUT_PORT_TYPE
+lineOuts[2] <= lineOuts.DB_MAX_OUTPUT_PORT_TYPE
+lineOuts[3] <= lineOuts.DB_MAX_OUTPUT_PORT_TYPE
+lineOuts[4] <= lineIns[2].DB_MAX_OUTPUT_PORT_TYPE
+lineOuts[5] <= lineIns[2].DB_MAX_OUTPUT_PORT_TYPE
+lineOuts[6] <= lineOuts.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|p5|bcdDecoder:bcd3
+lineIns[0] => lineOuts.IN1
+lineIns[0] => lineOuts.IN1
+lineIns[0] => lineOuts.IN1
+lineIns[0] => lineOuts.IN0
+lineIns[1] => lineOuts.IN0
+lineIns[1] => lineOuts.IN0
+lineIns[2] => lineOuts.IN1
+lineIns[2] => lineOuts.IN1
+lineIns[2] => lineOuts.IN1
+lineIns[2] => lineOuts.IN1
+lineIns[2] => lineOuts.IN1
+lineIns[2] => lineOuts[5].DATAIN
+lineIns[2] => lineOuts.IN1
+lineIns[2] => lineOuts.IN1
+lineIns[2] => lineOuts.IN1
+lineIns[2] => lineOuts[4].DATAIN
+lineOuts[0] <= lineOuts.DB_MAX_OUTPUT_PORT_TYPE
+lineOuts[1] <= lineOuts.DB_MAX_OUTPUT_PORT_TYPE
+lineOuts[2] <= lineOuts.DB_MAX_OUTPUT_PORT_TYPE
+lineOuts[3] <= lineOuts.DB_MAX_OUTPUT_PORT_TYPE
+lineOuts[4] <= lineIns[2].DB_MAX_OUTPUT_PORT_TYPE
+lineOuts[5] <= lineIns[2].DB_MAX_OUTPUT_PORT_TYPE
+lineOuts[6] <= lineOuts.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|p5|bcdDecoder:bcd4
+lineIns[0] => lineOuts.IN1
+lineIns[0] => lineOuts.IN1
+lineIns[0] => lineOuts.IN1
+lineIns[0] => lineOuts.IN0
+lineIns[1] => lineOuts.IN0
+lineIns[1] => lineOuts.IN0
+lineIns[2] => lineOuts.IN1
+lineIns[2] => lineOuts.IN1
+lineIns[2] => lineOuts.IN1
+lineIns[2] => lineOuts.IN1
+lineIns[2] => lineOuts.IN1
+lineIns[2] => lineOuts[5].DATAIN
+lineIns[2] => lineOuts.IN1
+lineIns[2] => lineOuts.IN1
+lineIns[2] => lineOuts.IN1
+lineIns[2] => lineOuts[4].DATAIN
+lineOuts[0] <= lineOuts.DB_MAX_OUTPUT_PORT_TYPE
+lineOuts[1] <= lineOuts.DB_MAX_OUTPUT_PORT_TYPE
+lineOuts[2] <= lineOuts.DB_MAX_OUTPUT_PORT_TYPE
+lineOuts[3] <= lineOuts.DB_MAX_OUTPUT_PORT_TYPE
+lineOuts[4] <= lineIns[2].DB_MAX_OUTPUT_PORT_TYPE
+lineOuts[5] <= lineIns[2].DB_MAX_OUTPUT_PORT_TYPE
+lineOuts[6] <= lineOuts.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|p5|muxer_3_5_1:mux0
+A[0] => A[0].IN1
+A[1] => A[1].IN1
+A[2] => A[2].IN1
+B[0] => B[0].IN1
+B[1] => B[1].IN1
+B[2] => B[2].IN1
+C[0] => C[0].IN1
+C[1] => C[1].IN1
+C[2] => C[2].IN1
+D[0] => D[0].IN1
+D[1] => D[1].IN1
+D[2] => D[2].IN1
+E[0] => E[0].IN1
+E[1] => E[1].IN1
+E[2] => E[2].IN1
+Selectors[0] => Selectors[0].IN3
+Selectors[1] => Selectors[1].IN3
+Selectors[2] => Selectors[2].IN3
+LEDs[0] <= muxer_5_1:muxA.lineout
+LEDs[1] <= muxer_5_1:muxB.lineout
+LEDs[2] <= muxer_5_1:muxC.lineout
+
+
+|p5|muxer_3_5_1:mux0|muxer_5_1:muxA
+lineA => lineA.IN1
+lineB => lineB.IN1
+lineC => lineC.IN1
+lineD => lineD.IN1
+lineE => lineE.IN1
+Selectors[0] => Selectors[0].IN2
+Selectors[1] => Selectors[1].IN1
+Selectors[2] => Selectors[2].IN1
+lineout <= muxer:muxD.lineout
+
+
+|p5|muxer_3_5_1:mux0|muxer_5_1:muxA|muxer:muxA
+line1 => lineout.IN0
+line2 => lineout.IN0
+lineout <= lineout.DB_MAX_OUTPUT_PORT_TYPE
+selector => lineout.IN1
+selector => lineout.IN1
+
+
+|p5|muxer_3_5_1:mux0|muxer_5_1:muxA|muxer:muxB
+line1 => lineout.IN0
+line2 => lineout.IN0
+lineout <= lineout.DB_MAX_OUTPUT_PORT_TYPE
+selector => lineout.IN1
+selector => lineout.IN1
+
+
+|p5|muxer_3_5_1:mux0|muxer_5_1:muxA|muxer:muxC
+line1 => lineout.IN0
+line2 => lineout.IN0
+lineout <= lineout.DB_MAX_OUTPUT_PORT_TYPE
+selector => lineout.IN1
+selector => lineout.IN1
+
+
+|p5|muxer_3_5_1:mux0|muxer_5_1:muxA|muxer:muxD
+line1 => lineout.IN0
+line2 => lineout.IN0
+lineout <= lineout.DB_MAX_OUTPUT_PORT_TYPE
+selector => lineout.IN1
+selector => lineout.IN1
+
+
+|p5|muxer_3_5_1:mux0|muxer_5_1:muxB
+lineA => lineA.IN1
+lineB => lineB.IN1
+lineC => lineC.IN1
+lineD => lineD.IN1
+lineE => lineE.IN1
+Selectors[0] => Selectors[0].IN2
+Selectors[1] => Selectors[1].IN1
+Selectors[2] => Selectors[2].IN1
+lineout <= muxer:muxD.lineout
+
+
+|p5|muxer_3_5_1:mux0|muxer_5_1:muxB|muxer:muxA
+line1 => lineout.IN0
+line2 => lineout.IN0
+lineout <= lineout.DB_MAX_OUTPUT_PORT_TYPE
+selector => lineout.IN1
+selector => lineout.IN1
+
+
+|p5|muxer_3_5_1:mux0|muxer_5_1:muxB|muxer:muxB
+line1 => lineout.IN0
+line2 => lineout.IN0
+lineout <= lineout.DB_MAX_OUTPUT_PORT_TYPE
+selector => lineout.IN1
+selector => lineout.IN1
+
+
+|p5|muxer_3_5_1:mux0|muxer_5_1:muxB|muxer:muxC
+line1 => lineout.IN0
+line2 => lineout.IN0
+lineout <= lineout.DB_MAX_OUTPUT_PORT_TYPE
+selector => lineout.IN1
+selector => lineout.IN1
+
+
+|p5|muxer_3_5_1:mux0|muxer_5_1:muxB|muxer:muxD
+line1 => lineout.IN0
+line2 => lineout.IN0
+lineout <= lineout.DB_MAX_OUTPUT_PORT_TYPE
+selector => lineout.IN1
+selector => lineout.IN1
+
+
+|p5|muxer_3_5_1:mux0|muxer_5_1:muxC
+lineA => lineA.IN1
+lineB => lineB.IN1
+lineC => lineC.IN1
+lineD => lineD.IN1
+lineE => lineE.IN1
+Selectors[0] => Selectors[0].IN2
+Selectors[1] => Selectors[1].IN1
+Selectors[2] => Selectors[2].IN1
+lineout <= muxer:muxD.lineout
+
+
+|p5|muxer_3_5_1:mux0|muxer_5_1:muxC|muxer:muxA
+line1 => lineout.IN0
+line2 => lineout.IN0
+lineout <= lineout.DB_MAX_OUTPUT_PORT_TYPE
+selector => lineout.IN1
+selector => lineout.IN1
+
+
+|p5|muxer_3_5_1:mux0|muxer_5_1:muxC|muxer:muxB
+line1 => lineout.IN0
+line2 => lineout.IN0
+lineout <= lineout.DB_MAX_OUTPUT_PORT_TYPE
+selector => lineout.IN1
+selector => lineout.IN1
+
+
+|p5|muxer_3_5_1:mux0|muxer_5_1:muxC|muxer:muxC
+line1 => lineout.IN0
+line2 => lineout.IN0
+lineout <= lineout.DB_MAX_OUTPUT_PORT_TYPE
+selector => lineout.IN1
+selector => lineout.IN1
+
+
+|p5|muxer_3_5_1:mux0|muxer_5_1:muxC|muxer:muxD
+line1 => lineout.IN0
+line2 => lineout.IN0
+lineout <= lineout.DB_MAX_OUTPUT_PORT_TYPE
+selector => lineout.IN1
+selector => lineout.IN1
+
+
+|p5|muxer_3_5_1:mux1
+A[0] => A[0].IN1
+A[1] => A[1].IN1
+A[2] => A[2].IN1
+B[0] => B[0].IN1
+B[1] => B[1].IN1
+B[2] => B[2].IN1
+C[0] => C[0].IN1
+C[1] => C[1].IN1
+C[2] => C[2].IN1
+D[0] => D[0].IN1
+D[1] => D[1].IN1
+D[2] => D[2].IN1
+E[0] => E[0].IN1
+E[1] => E[1].IN1
+E[2] => E[2].IN1
+Selectors[0] => Selectors[0].IN3
+Selectors[1] => Selectors[1].IN3
+Selectors[2] => Selectors[2].IN3
+LEDs[0] <= muxer_5_1:muxA.lineout
+LEDs[1] <= muxer_5_1:muxB.lineout
+LEDs[2] <= muxer_5_1:muxC.lineout
+
+
+|p5|muxer_3_5_1:mux1|muxer_5_1:muxA
+lineA => lineA.IN1
+lineB => lineB.IN1
+lineC => lineC.IN1
+lineD => lineD.IN1
+lineE => lineE.IN1
+Selectors[0] => Selectors[0].IN2
+Selectors[1] => Selectors[1].IN1
+Selectors[2] => Selectors[2].IN1
+lineout <= muxer:muxD.lineout
+
+
+|p5|muxer_3_5_1:mux1|muxer_5_1:muxA|muxer:muxA
+line1 => lineout.IN0
+line2 => lineout.IN0
+lineout <= lineout.DB_MAX_OUTPUT_PORT_TYPE
+selector => lineout.IN1
+selector => lineout.IN1
+
+
+|p5|muxer_3_5_1:mux1|muxer_5_1:muxA|muxer:muxB
+line1 => lineout.IN0
+line2 => lineout.IN0
+lineout <= lineout.DB_MAX_OUTPUT_PORT_TYPE
+selector => lineout.IN1
+selector => lineout.IN1
+
+
+|p5|muxer_3_5_1:mux1|muxer_5_1:muxA|muxer:muxC
+line1 => lineout.IN0
+line2 => lineout.IN0
+lineout <= lineout.DB_MAX_OUTPUT_PORT_TYPE
+selector => lineout.IN1
+selector => lineout.IN1
+
+
+|p5|muxer_3_5_1:mux1|muxer_5_1:muxA|muxer:muxD
+line1 => lineout.IN0
+line2 => lineout.IN0
+lineout <= lineout.DB_MAX_OUTPUT_PORT_TYPE
+selector => lineout.IN1
+selector => lineout.IN1
+
+
+|p5|muxer_3_5_1:mux1|muxer_5_1:muxB
+lineA => lineA.IN1
+lineB => lineB.IN1
+lineC => lineC.IN1
+lineD => lineD.IN1
+lineE => lineE.IN1
+Selectors[0] => Selectors[0].IN2
+Selectors[1] => Selectors[1].IN1
+Selectors[2] => Selectors[2].IN1
+lineout <= muxer:muxD.lineout
+
+
+|p5|muxer_3_5_1:mux1|muxer_5_1:muxB|muxer:muxA
+line1 => lineout.IN0
+line2 => lineout.IN0
+lineout <= lineout.DB_MAX_OUTPUT_PORT_TYPE
+selector => lineout.IN1
+selector => lineout.IN1
+
+
+|p5|muxer_3_5_1:mux1|muxer_5_1:muxB|muxer:muxB
+line1 => lineout.IN0
+line2 => lineout.IN0
+lineout <= lineout.DB_MAX_OUTPUT_PORT_TYPE
+selector => lineout.IN1
+selector => lineout.IN1
+
+
+|p5|muxer_3_5_1:mux1|muxer_5_1:muxB|muxer:muxC
+line1 => lineout.IN0
+line2 => lineout.IN0
+lineout <= lineout.DB_MAX_OUTPUT_PORT_TYPE
+selector => lineout.IN1
+selector => lineout.IN1
+
+
+|p5|muxer_3_5_1:mux1|muxer_5_1:muxB|muxer:muxD
+line1 => lineout.IN0
+line2 => lineout.IN0
+lineout <= lineout.DB_MAX_OUTPUT_PORT_TYPE
+selector => lineout.IN1
+selector => lineout.IN1
+
+
+|p5|muxer_3_5_1:mux1|muxer_5_1:muxC
+lineA => lineA.IN1
+lineB => lineB.IN1
+lineC => lineC.IN1
+lineD => lineD.IN1
+lineE => lineE.IN1
+Selectors[0] => Selectors[0].IN2
+Selectors[1] => Selectors[1].IN1
+Selectors[2] => Selectors[2].IN1
+lineout <= muxer:muxD.lineout
+
+
+|p5|muxer_3_5_1:mux1|muxer_5_1:muxC|muxer:muxA
+line1 => lineout.IN0
+line2 => lineout.IN0
+lineout <= lineout.DB_MAX_OUTPUT_PORT_TYPE
+selector => lineout.IN1
+selector => lineout.IN1
+
+
+|p5|muxer_3_5_1:mux1|muxer_5_1:muxC|muxer:muxB
+line1 => lineout.IN0
+line2 => lineout.IN0
+lineout <= lineout.DB_MAX_OUTPUT_PORT_TYPE
+selector => lineout.IN1
+selector => lineout.IN1
+
+
+|p5|muxer_3_5_1:mux1|muxer_5_1:muxC|muxer:muxC
+line1 => lineout.IN0
+line2 => lineout.IN0
+lineout <= lineout.DB_MAX_OUTPUT_PORT_TYPE
+selector => lineout.IN1
+selector => lineout.IN1
+
+
+|p5|muxer_3_5_1:mux1|muxer_5_1:muxC|muxer:muxD
+line1 => lineout.IN0
+line2 => lineout.IN0
+lineout <= lineout.DB_MAX_OUTPUT_PORT_TYPE
+selector => lineout.IN1
+selector => lineout.IN1
+
+
+|p5|muxer_3_5_1:mux2
+A[0] => A[0].IN1
+A[1] => A[1].IN1
+A[2] => A[2].IN1
+B[0] => B[0].IN1
+B[1] => B[1].IN1
+B[2] => B[2].IN1
+C[0] => C[0].IN1
+C[1] => C[1].IN1
+C[2] => C[2].IN1
+D[0] => D[0].IN1
+D[1] => D[1].IN1
+D[2] => D[2].IN1
+E[0] => E[0].IN1
+E[1] => E[1].IN1
+E[2] => E[2].IN1
+Selectors[0] => Selectors[0].IN3
+Selectors[1] => Selectors[1].IN3
+Selectors[2] => Selectors[2].IN3
+LEDs[0] <= muxer_5_1:muxA.lineout
+LEDs[1] <= muxer_5_1:muxB.lineout
+LEDs[2] <= muxer_5_1:muxC.lineout
+
+
+|p5|muxer_3_5_1:mux2|muxer_5_1:muxA
+lineA => lineA.IN1
+lineB => lineB.IN1
+lineC => lineC.IN1
+lineD => lineD.IN1
+lineE => lineE.IN1
+Selectors[0] => Selectors[0].IN2
+Selectors[1] => Selectors[1].IN1
+Selectors[2] => Selectors[2].IN1
+lineout <= muxer:muxD.lineout
+
+
+|p5|muxer_3_5_1:mux2|muxer_5_1:muxA|muxer:muxA
+line1 => lineout.IN0
+line2 => lineout.IN0
+lineout <= lineout.DB_MAX_OUTPUT_PORT_TYPE
+selector => lineout.IN1
+selector => lineout.IN1
+
+
+|p5|muxer_3_5_1:mux2|muxer_5_1:muxA|muxer:muxB
+line1 => lineout.IN0
+line2 => lineout.IN0
+lineout <= lineout.DB_MAX_OUTPUT_PORT_TYPE
+selector => lineout.IN1
+selector => lineout.IN1
+
+
+|p5|muxer_3_5_1:mux2|muxer_5_1:muxA|muxer:muxC
+line1 => lineout.IN0
+line2 => lineout.IN0
+lineout <= lineout.DB_MAX_OUTPUT_PORT_TYPE
+selector => lineout.IN1
+selector => lineout.IN1
+
+
+|p5|muxer_3_5_1:mux2|muxer_5_1:muxA|muxer:muxD
+line1 => lineout.IN0
+line2 => lineout.IN0
+lineout <= lineout.DB_MAX_OUTPUT_PORT_TYPE
+selector => lineout.IN1
+selector => lineout.IN1
+
+
+|p5|muxer_3_5_1:mux2|muxer_5_1:muxB
+lineA => lineA.IN1
+lineB => lineB.IN1
+lineC => lineC.IN1
+lineD => lineD.IN1
+lineE => lineE.IN1
+Selectors[0] => Selectors[0].IN2
+Selectors[1] => Selectors[1].IN1
+Selectors[2] => Selectors[2].IN1
+lineout <= muxer:muxD.lineout
+
+
+|p5|muxer_3_5_1:mux2|muxer_5_1:muxB|muxer:muxA
+line1 => lineout.IN0
+line2 => lineout.IN0
+lineout <= lineout.DB_MAX_OUTPUT_PORT_TYPE
+selector => lineout.IN1
+selector => lineout.IN1
+
+
+|p5|muxer_3_5_1:mux2|muxer_5_1:muxB|muxer:muxB
+line1 => lineout.IN0
+line2 => lineout.IN0
+lineout <= lineout.DB_MAX_OUTPUT_PORT_TYPE
+selector => lineout.IN1
+selector => lineout.IN1
+
+
+|p5|muxer_3_5_1:mux2|muxer_5_1:muxB|muxer:muxC
+line1 => lineout.IN0
+line2 => lineout.IN0
+lineout <= lineout.DB_MAX_OUTPUT_PORT_TYPE
+selector => lineout.IN1
+selector => lineout.IN1
+
+
+|p5|muxer_3_5_1:mux2|muxer_5_1:muxB|muxer:muxD
+line1 => lineout.IN0
+line2 => lineout.IN0
+lineout <= lineout.DB_MAX_OUTPUT_PORT_TYPE
+selector => lineout.IN1
+selector => lineout.IN1
+
+
+|p5|muxer_3_5_1:mux2|muxer_5_1:muxC
+lineA => lineA.IN1
+lineB => lineB.IN1
+lineC => lineC.IN1
+lineD => lineD.IN1
+lineE => lineE.IN1
+Selectors[0] => Selectors[0].IN2
+Selectors[1] => Selectors[1].IN1
+Selectors[2] => Selectors[2].IN1
+lineout <= muxer:muxD.lineout
+
+
+|p5|muxer_3_5_1:mux2|muxer_5_1:muxC|muxer:muxA
+line1 => lineout.IN0
+line2 => lineout.IN0
+lineout <= lineout.DB_MAX_OUTPUT_PORT_TYPE
+selector => lineout.IN1
+selector => lineout.IN1
+
+
+|p5|muxer_3_5_1:mux2|muxer_5_1:muxC|muxer:muxB
+line1 => lineout.IN0
+line2 => lineout.IN0
+lineout <= lineout.DB_MAX_OUTPUT_PORT_TYPE
+selector => lineout.IN1
+selector => lineout.IN1
+
+
+|p5|muxer_3_5_1:mux2|muxer_5_1:muxC|muxer:muxC
+line1 => lineout.IN0
+line2 => lineout.IN0
+lineout <= lineout.DB_MAX_OUTPUT_PORT_TYPE
+selector => lineout.IN1
+selector => lineout.IN1
+
+
+|p5|muxer_3_5_1:mux2|muxer_5_1:muxC|muxer:muxD
+line1 => lineout.IN0
+line2 => lineout.IN0
+lineout <= lineout.DB_MAX_OUTPUT_PORT_TYPE
+selector => lineout.IN1
+selector => lineout.IN1
+
+
+|p5|muxer_3_5_1:mux3
+A[0] => A[0].IN1
+A[1] => A[1].IN1
+A[2] => A[2].IN1
+B[0] => B[0].IN1
+B[1] => B[1].IN1
+B[2] => B[2].IN1
+C[0] => C[0].IN1
+C[1] => C[1].IN1
+C[2] => C[2].IN1
+D[0] => D[0].IN1
+D[1] => D[1].IN1
+D[2] => D[2].IN1
+E[0] => E[0].IN1
+E[1] => E[1].IN1
+E[2] => E[2].IN1
+Selectors[0] => Selectors[0].IN3
+Selectors[1] => Selectors[1].IN3
+Selectors[2] => Selectors[2].IN3
+LEDs[0] <= muxer_5_1:muxA.lineout
+LEDs[1] <= muxer_5_1:muxB.lineout
+LEDs[2] <= muxer_5_1:muxC.lineout
+
+
+|p5|muxer_3_5_1:mux3|muxer_5_1:muxA
+lineA => lineA.IN1
+lineB => lineB.IN1
+lineC => lineC.IN1
+lineD => lineD.IN1
+lineE => lineE.IN1
+Selectors[0] => Selectors[0].IN2
+Selectors[1] => Selectors[1].IN1
+Selectors[2] => Selectors[2].IN1
+lineout <= muxer:muxD.lineout
+
+
+|p5|muxer_3_5_1:mux3|muxer_5_1:muxA|muxer:muxA
+line1 => lineout.IN0
+line2 => lineout.IN0
+lineout <= lineout.DB_MAX_OUTPUT_PORT_TYPE
+selector => lineout.IN1
+selector => lineout.IN1
+
+
+|p5|muxer_3_5_1:mux3|muxer_5_1:muxA|muxer:muxB
+line1 => lineout.IN0
+line2 => lineout.IN0
+lineout <= lineout.DB_MAX_OUTPUT_PORT_TYPE
+selector => lineout.IN1
+selector => lineout.IN1
+
+
+|p5|muxer_3_5_1:mux3|muxer_5_1:muxA|muxer:muxC
+line1 => lineout.IN0
+line2 => lineout.IN0
+lineout <= lineout.DB_MAX_OUTPUT_PORT_TYPE
+selector => lineout.IN1
+selector => lineout.IN1
+
+
+|p5|muxer_3_5_1:mux3|muxer_5_1:muxA|muxer:muxD
+line1 => lineout.IN0
+line2 => lineout.IN0
+lineout <= lineout.DB_MAX_OUTPUT_PORT_TYPE
+selector => lineout.IN1
+selector => lineout.IN1
+
+
+|p5|muxer_3_5_1:mux3|muxer_5_1:muxB
+lineA => lineA.IN1
+lineB => lineB.IN1
+lineC => lineC.IN1
+lineD => lineD.IN1
+lineE => lineE.IN1
+Selectors[0] => Selectors[0].IN2
+Selectors[1] => Selectors[1].IN1
+Selectors[2] => Selectors[2].IN1
+lineout <= muxer:muxD.lineout
+
+
+|p5|muxer_3_5_1:mux3|muxer_5_1:muxB|muxer:muxA
+line1 => lineout.IN0
+line2 => lineout.IN0
+lineout <= lineout.DB_MAX_OUTPUT_PORT_TYPE
+selector => lineout.IN1
+selector => lineout.IN1
+
+
+|p5|muxer_3_5_1:mux3|muxer_5_1:muxB|muxer:muxB
+line1 => lineout.IN0
+line2 => lineout.IN0
+lineout <= lineout.DB_MAX_OUTPUT_PORT_TYPE
+selector => lineout.IN1
+selector => lineout.IN1
+
+
+|p5|muxer_3_5_1:mux3|muxer_5_1:muxB|muxer:muxC
+line1 => lineout.IN0
+line2 => lineout.IN0
+lineout <= lineout.DB_MAX_OUTPUT_PORT_TYPE
+selector => lineout.IN1
+selector => lineout.IN1
+
+
+|p5|muxer_3_5_1:mux3|muxer_5_1:muxB|muxer:muxD
+line1 => lineout.IN0
+line2 => lineout.IN0
+lineout <= lineout.DB_MAX_OUTPUT_PORT_TYPE
+selector => lineout.IN1
+selector => lineout.IN1
+
+
+|p5|muxer_3_5_1:mux3|muxer_5_1:muxC
+lineA => lineA.IN1
+lineB => lineB.IN1
+lineC => lineC.IN1
+lineD => lineD.IN1
+lineE => lineE.IN1
+Selectors[0] => Selectors[0].IN2
+Selectors[1] => Selectors[1].IN1
+Selectors[2] => Selectors[2].IN1
+lineout <= muxer:muxD.lineout
+
+
+|p5|muxer_3_5_1:mux3|muxer_5_1:muxC|muxer:muxA
+line1 => lineout.IN0
+line2 => lineout.IN0
+lineout <= lineout.DB_MAX_OUTPUT_PORT_TYPE
+selector => lineout.IN1
+selector => lineout.IN1
+
+
+|p5|muxer_3_5_1:mux3|muxer_5_1:muxC|muxer:muxB
+line1 => lineout.IN0
+line2 => lineout.IN0
+lineout <= lineout.DB_MAX_OUTPUT_PORT_TYPE
+selector => lineout.IN1
+selector => lineout.IN1
+
+
+|p5|muxer_3_5_1:mux3|muxer_5_1:muxC|muxer:muxC
+line1 => lineout.IN0
+line2 => lineout.IN0
+lineout <= lineout.DB_MAX_OUTPUT_PORT_TYPE
+selector => lineout.IN1
+selector => lineout.IN1
+
+
+|p5|muxer_3_5_1:mux3|muxer_5_1:muxC|muxer:muxD
+line1 => lineout.IN0
+line2 => lineout.IN0
+lineout <= lineout.DB_MAX_OUTPUT_PORT_TYPE
+selector => lineout.IN1
+selector => lineout.IN1
+
+
+|p5|muxer_3_5_1:mux4
+A[0] => A[0].IN1
+A[1] => A[1].IN1
+A[2] => A[2].IN1
+B[0] => B[0].IN1
+B[1] => B[1].IN1
+B[2] => B[2].IN1
+C[0] => C[0].IN1
+C[1] => C[1].IN1
+C[2] => C[2].IN1
+D[0] => D[0].IN1
+D[1] => D[1].IN1
+D[2] => D[2].IN1
+E[0] => E[0].IN1
+E[1] => E[1].IN1
+E[2] => E[2].IN1
+Selectors[0] => Selectors[0].IN3
+Selectors[1] => Selectors[1].IN3
+Selectors[2] => Selectors[2].IN3
+LEDs[0] <= muxer_5_1:muxA.lineout
+LEDs[1] <= muxer_5_1:muxB.lineout
+LEDs[2] <= muxer_5_1:muxC.lineout
+
+
+|p5|muxer_3_5_1:mux4|muxer_5_1:muxA
+lineA => lineA.IN1
+lineB => lineB.IN1
+lineC => lineC.IN1
+lineD => lineD.IN1
+lineE => lineE.IN1
+Selectors[0] => Selectors[0].IN2
+Selectors[1] => Selectors[1].IN1
+Selectors[2] => Selectors[2].IN1
+lineout <= muxer:muxD.lineout
+
+
+|p5|muxer_3_5_1:mux4|muxer_5_1:muxA|muxer:muxA
+line1 => lineout.IN0
+line2 => lineout.IN0
+lineout <= lineout.DB_MAX_OUTPUT_PORT_TYPE
+selector => lineout.IN1
+selector => lineout.IN1
+
+
+|p5|muxer_3_5_1:mux4|muxer_5_1:muxA|muxer:muxB
+line1 => lineout.IN0
+line2 => lineout.IN0
+lineout <= lineout.DB_MAX_OUTPUT_PORT_TYPE
+selector => lineout.IN1
+selector => lineout.IN1
+
+
+|p5|muxer_3_5_1:mux4|muxer_5_1:muxA|muxer:muxC
+line1 => lineout.IN0
+line2 => lineout.IN0
+lineout <= lineout.DB_MAX_OUTPUT_PORT_TYPE
+selector => lineout.IN1
+selector => lineout.IN1
+
+
+|p5|muxer_3_5_1:mux4|muxer_5_1:muxA|muxer:muxD
+line1 => lineout.IN0
+line2 => lineout.IN0
+lineout <= lineout.DB_MAX_OUTPUT_PORT_TYPE
+selector => lineout.IN1
+selector => lineout.IN1
+
+
+|p5|muxer_3_5_1:mux4|muxer_5_1:muxB
+lineA => lineA.IN1
+lineB => lineB.IN1
+lineC => lineC.IN1
+lineD => lineD.IN1
+lineE => lineE.IN1
+Selectors[0] => Selectors[0].IN2
+Selectors[1] => Selectors[1].IN1
+Selectors[2] => Selectors[2].IN1
+lineout <= muxer:muxD.lineout
+
+
+|p5|muxer_3_5_1:mux4|muxer_5_1:muxB|muxer:muxA
+line1 => lineout.IN0
+line2 => lineout.IN0
+lineout <= lineout.DB_MAX_OUTPUT_PORT_TYPE
+selector => lineout.IN1
+selector => lineout.IN1
+
+
+|p5|muxer_3_5_1:mux4|muxer_5_1:muxB|muxer:muxB
+line1 => lineout.IN0
+line2 => lineout.IN0
+lineout <= lineout.DB_MAX_OUTPUT_PORT_TYPE
+selector => lineout.IN1
+selector => lineout.IN1
+
+
+|p5|muxer_3_5_1:mux4|muxer_5_1:muxB|muxer:muxC
+line1 => lineout.IN0
+line2 => lineout.IN0
+lineout <= lineout.DB_MAX_OUTPUT_PORT_TYPE
+selector => lineout.IN1
+selector => lineout.IN1
+
+
+|p5|muxer_3_5_1:mux4|muxer_5_1:muxB|muxer:muxD
+line1 => lineout.IN0
+line2 => lineout.IN0
+lineout <= lineout.DB_MAX_OUTPUT_PORT_TYPE
+selector => lineout.IN1
+selector => lineout.IN1
+
+
+|p5|muxer_3_5_1:mux4|muxer_5_1:muxC
+lineA => lineA.IN1
+lineB => lineB.IN1
+lineC => lineC.IN1
+lineD => lineD.IN1
+lineE => lineE.IN1
+Selectors[0] => Selectors[0].IN2
+Selectors[1] => Selectors[1].IN1
+Selectors[2] => Selectors[2].IN1
+lineout <= muxer:muxD.lineout
+
+
+|p5|muxer_3_5_1:mux4|muxer_5_1:muxC|muxer:muxA
+line1 => lineout.IN0
+line2 => lineout.IN0
+lineout <= lineout.DB_MAX_OUTPUT_PORT_TYPE
+selector => lineout.IN1
+selector => lineout.IN1
+
+
+|p5|muxer_3_5_1:mux4|muxer_5_1:muxC|muxer:muxB
+line1 => lineout.IN0
+line2 => lineout.IN0
+lineout <= lineout.DB_MAX_OUTPUT_PORT_TYPE
+selector => lineout.IN1
+selector => lineout.IN1
+
+
+|p5|muxer_3_5_1:mux4|muxer_5_1:muxC|muxer:muxC
+line1 => lineout.IN0
+line2 => lineout.IN0
+lineout <= lineout.DB_MAX_OUTPUT_PORT_TYPE
+selector => lineout.IN1
+selector => lineout.IN1
+
+
+|p5|muxer_3_5_1:mux4|muxer_5_1:muxC|muxer:muxD
+line1 => lineout.IN0
+line2 => lineout.IN0
+lineout <= lineout.DB_MAX_OUTPUT_PORT_TYPE
+selector => lineout.IN1
+selector => lineout.IN1
+
+
+|p5|secondsCounter:comb_3
+clkIn => clkOut~reg0.CLK
+clkIn => seconds[0].CLK
+clkIn => seconds[1].CLK
+clkIn => seconds[2].CLK
+clkIn => seconds[3].CLK
+clkIn => seconds[4].CLK
+clkIn => seconds[5].CLK
+clkIn => seconds[6].CLK
+clkIn => seconds[7].CLK
+clkIn => seconds[8].CLK
+clkIn => seconds[9].CLK
+clkIn => seconds[10].CLK
+clkIn => seconds[11].CLK
+clkIn => seconds[12].CLK
+clkIn => seconds[13].CLK
+clkIn => seconds[14].CLK
+clkIn => seconds[15].CLK
+clkIn => seconds[16].CLK
+clkIn => seconds[17].CLK
+clkIn => seconds[18].CLK
+clkIn => seconds[19].CLK
+clkIn => seconds[20].CLK
+clkIn => seconds[21].CLK
+clkIn => seconds[22].CLK
+clkIn => seconds[23].CLK
+clkIn => seconds[24].CLK
+clkIn => seconds[25].CLK
+clkIn => seconds[26].CLK
+clkOut <= clkOut~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|p5|bcdCounter:counter
+clkIn => count[0].CLK
+clkIn => count[1].CLK
+clkIn => count[2].CLK
+clkIn => BCD[0]~reg0.CLK
+clkIn => BCD[1]~reg0.CLK
+clkIn => BCD[2]~reg0.CLK
+BCD[0] <= BCD[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+BCD[1] <= BCD[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+BCD[2] <= BCD[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
