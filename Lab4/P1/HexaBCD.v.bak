@@ -1,0 +1,5 @@
+module HexaBCD(lineIns, lineOuts);
+
+	// Define inputs and outputs
+	input [3:0] lineIns;
+	output [6:0] lineOuts;

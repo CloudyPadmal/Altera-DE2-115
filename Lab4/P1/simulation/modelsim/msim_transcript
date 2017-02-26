@@ -1,0 +1,60 @@
+# Reading C:/intelFPGA_lite/16.1/modelsim_ase/tcl/vsim/pref.tcl
+# do p1_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/16.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+F:/Work/FPGA/Board/Lab4/P1 {F:/Work/FPGA/Board/Lab4/P1/T_Flop.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 05:41:37 on Feb 26,2017
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+F:/Work/FPGA/Board/Lab4/P1" F:/Work/FPGA/Board/Lab4/P1/T_Flop.v 
+# -- Compiling module T_Flop
+# 
+# Top level modules:
+# 	T_Flop
+# End time: 05:41:37 on Feb 26,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+F:/Work/FPGA/Board/Lab4/P1 {F:/Work/FPGA/Board/Lab4/P1/testT.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 05:41:37 on Feb 26,2017
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+F:/Work/FPGA/Board/Lab4/P1" F:/Work/FPGA/Board/Lab4/P1/testT.v 
+# -- Compiling module testT
+# 
+# Top level modules:
+# 	testT
+# End time: 05:41:37 on Feb 26,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+F:/Work/FPGA/Board/Lab4/P1 {F:/Work/FPGA/Board/Lab4/P1/counter_16.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 05:41:37 on Feb 26,2017
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+F:/Work/FPGA/Board/Lab4/P1" F:/Work/FPGA/Board/Lab4/P1/counter_16.v 
+# -- Compiling module counter_16
+# 
+# Top level modules:
+# 	counter_16
+# End time: 05:41:37 on Feb 26,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vsim work.testT
+# vsim work.testT 
+# Start time: 05:41:43 on Feb 26,2017
+# Loading work.testT
+# Loading work.counter_16
+# Loading work.T_Flop
+add wave -position end  sim:/testT/EN
+add wave -position end  sim:/testT/CLK
+add wave -position end  sim:/testT/RST
+add wave -position end  sim:/testT/bits
+run -all
+# ** Note: $finish    : F:/Work/FPGA/Board/Lab4/P1/testT.v(21)
+#    Time: 500 ps  Iteration: 0  Instance: /testT
+# 1
+# Break in Module testT at F:/Work/FPGA/Board/Lab4/P1/testT.v line 21
+# End time: 05:42:52 on Feb 26,2017, Elapsed time: 0:01:09
+# Errors: 0, Warnings: 0

@@ -1,0 +1,78 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dF:/Work/FPGA/Board/Lab4/P1/simulation/modelsim
+vcounter_16
+Z1 !s110 1488067897
+!i10b 1
+!s100 eMNS8GJg_[G_NR7QUmj9H3
+IfWcGcRfOjFn[^fe_hhIJK0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1488067822
+8F:/Work/FPGA/Board/Lab4/P1/counter_16.v
+FF:/Work/FPGA/Board/Lab4/P1/counter_16.v
+L0 1
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1488067897.000000
+!s107 F:/Work/FPGA/Board/Lab4/P1/counter_16.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/Work/FPGA/Board/Lab4/P1|F:/Work/FPGA/Board/Lab4/P1/counter_16.v|
+!i113 1
+Z5 o-vlog01compat -work work
+Z6 !s92 -vlog01compat -work work +incdir+F:/Work/FPGA/Board/Lab4/P1
+Z7 tCvgOpt 0
+vT_Flop
+R1
+!i10b 1
+!s100 TaJ_ak_N4zb=NG;^Wg13<2
+IC[^:@OzOL0Lc8<>5=38T23
+R2
+R0
+w1488044840
+8F:/Work/FPGA/Board/Lab4/P1/T_Flop.v
+FF:/Work/FPGA/Board/Lab4/P1/T_Flop.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 F:/Work/FPGA/Board/Lab4/P1/T_Flop.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/Work/FPGA/Board/Lab4/P1|F:/Work/FPGA/Board/Lab4/P1/T_Flop.v|
+!i113 1
+R5
+R6
+R7
+n@t_@flop
+vtestT
+R1
+!i10b 1
+!s100 z7ghE8o59R83z@1:QndN;1
+Ia`AZKi[M45=XO[>Bi5YW@0
+R2
+R0
+w1488067838
+8F:/Work/FPGA/Board/Lab4/P1/testT.v
+FF:/Work/FPGA/Board/Lab4/P1/testT.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 F:/Work/FPGA/Board/Lab4/P1/testT.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/Work/FPGA/Board/Lab4/P1|F:/Work/FPGA/Board/Lab4/P1/testT.v|
+!i113 1
+R5
+R6
+R7
+ntest@t
