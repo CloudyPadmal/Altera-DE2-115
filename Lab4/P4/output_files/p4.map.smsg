@@ -1,0 +1,2 @@
+Warning (10268): Verilog HDL information at secondsCounter.v(9): always construct contains both blocking and non-blocking assignments File: F:/Work/FPGA/Board/Lab4/P4/secondsCounter.v Line: 9
+Warning (10268): Verilog HDL information at bcdCounter.v(14): always construct contains both blocking and non-blocking assignments File: F:/Work/FPGA/Board/Lab4/P4/bcdCounter.v Line: 14

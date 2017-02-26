@@ -1,0 +1,92 @@
+|p4
+CLK => CLK.IN1
+EN => ~NO_FANOUT~
+LEDs[0] << BCD:bcd.lineOut
+LEDs[1] << BCD:bcd.lineOut
+LEDs[2] << BCD:bcd.lineOut
+LEDs[3] << BCD:bcd.lineOut
+LEDs[4] << BCD:bcd.lineOut
+LEDs[5] << BCD:bcd.lineOut
+LEDs[6] << BCD:bcd.lineOut
+
+
+|p4|BCD:bcd
+lineIn[0] => lineOut.IN1
+lineIn[0] => lineOut.IN1
+lineIn[0] => lineOut.IN0
+lineIn[0] => lineOut.IN1
+lineIn[0] => lineOut.IN1
+lineIn[0] => lineOut.IN1
+lineIn[0] => lineOut.IN1
+lineIn[0] => lineOut.IN1
+lineIn[0] => lineOut.IN1
+lineIn[1] => lineOut.IN1
+lineIn[1] => lineOut.IN0
+lineIn[1] => lineOut.IN1
+lineIn[1] => lineOut.IN1
+lineIn[1] => lineOut.IN1
+lineIn[1] => lineOut.IN1
+lineIn[2] => lineOut.IN0
+lineIn[2] => lineOut.IN0
+lineIn[2] => lineOut.IN0
+lineIn[3] => lineOut.IN1
+lineIn[3] => lineOut.IN1
+lineIn[3] => lineOut.IN1
+lineIn[3] => lineOut.IN1
+lineIn[3] => lineOut.IN1
+lineOut[0] <= lineOut.DB_MAX_OUTPUT_PORT_TYPE
+lineOut[1] <= lineOut.DB_MAX_OUTPUT_PORT_TYPE
+lineOut[2] <= lineOut.DB_MAX_OUTPUT_PORT_TYPE
+lineOut[3] <= lineOut.DB_MAX_OUTPUT_PORT_TYPE
+lineOut[4] <= lineOut.DB_MAX_OUTPUT_PORT_TYPE
+lineOut[5] <= lineOut.DB_MAX_OUTPUT_PORT_TYPE
+lineOut[6] <= lineOut.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|p4|secondsCounter:comb_3
+clkIn => clkOut~reg0.CLK
+clkIn => seconds[0].CLK
+clkIn => seconds[1].CLK
+clkIn => seconds[2].CLK
+clkIn => seconds[3].CLK
+clkIn => seconds[4].CLK
+clkIn => seconds[5].CLK
+clkIn => seconds[6].CLK
+clkIn => seconds[7].CLK
+clkIn => seconds[8].CLK
+clkIn => seconds[9].CLK
+clkIn => seconds[10].CLK
+clkIn => seconds[11].CLK
+clkIn => seconds[12].CLK
+clkIn => seconds[13].CLK
+clkIn => seconds[14].CLK
+clkIn => seconds[15].CLK
+clkIn => seconds[16].CLK
+clkIn => seconds[17].CLK
+clkIn => seconds[18].CLK
+clkIn => seconds[19].CLK
+clkIn => seconds[20].CLK
+clkIn => seconds[21].CLK
+clkIn => seconds[22].CLK
+clkIn => seconds[23].CLK
+clkIn => seconds[24].CLK
+clkIn => seconds[25].CLK
+clkIn => seconds[26].CLK
+clkOut <= clkOut~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|p4|bcdCounter:counter
+clkIn => count[0].CLK
+clkIn => count[1].CLK
+clkIn => count[2].CLK
+clkIn => count[3].CLK
+clkIn => BCD[0]~reg0.CLK
+clkIn => BCD[1]~reg0.CLK
+clkIn => BCD[2]~reg0.CLK
+clkIn => BCD[3]~reg0.CLK
+BCD[0] <= BCD[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+BCD[1] <= BCD[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+BCD[2] <= BCD[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+BCD[3] <= BCD[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
