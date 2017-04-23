@@ -1,0 +1,117 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 2016  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel MegaCore Function License Agreement, or other 
+# applicable license agreement, including, without limitation, 
+# that your use is for the sole purpose of programming logic 
+# devices manufactured by Intel and sold by Intel or its 
+# authorized distributors.  Please refer to the applicable 
+# agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus Prime
+# Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
+# Date created = 04:55:42  April 23, 2017
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		p2_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus Prime software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone IV E"
+set_global_assignment -name DEVICE EP4CE115F29C7
+set_global_assignment -name TOP_LEVEL_ENTITY p2
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 16.1.0
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "04:55:42  APRIL 23, 2017"
+set_global_assignment -name LAST_QUARTUS_VERSION "16.1.0 Lite Edition"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
+set_global_assignment -name VERILOG_FILE p2.v
+set_global_assignment -name VERILOG_FILE BCD.v
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name QIP_FILE rammo.qip
+set_location_assignment PIN_M23 -to clock
+set_location_assignment PIN_G18 -to LEDs[0]
+set_location_assignment PIN_F22 -to LEDs[1]
+set_location_assignment PIN_E17 -to LEDs[2]
+set_location_assignment PIN_L26 -to LEDs[3]
+set_location_assignment PIN_L25 -to LEDs[4]
+set_location_assignment PIN_J22 -to LEDs[5]
+set_location_assignment PIN_H22 -to LEDs[6]
+set_location_assignment PIN_M24 -to LEDs[7]
+set_location_assignment PIN_Y22 -to LEDs[8]
+set_location_assignment PIN_W21 -to LEDs[9]
+set_location_assignment PIN_W22 -to LEDs[10]
+set_location_assignment PIN_W25 -to LEDs[11]
+set_location_assignment PIN_U23 -to LEDs[12]
+set_location_assignment PIN_U24 -to LEDs[13]
+set_location_assignment PIN_Y23 -to wren
+set_location_assignment PIN_AC28 -to address[1]
+set_location_assignment PIN_AC27 -to address[2]
+set_location_assignment PIN_AD27 -to address[3]
+set_location_assignment PIN_AB27 -to address[4]
+set_location_assignment PIN_AD26 -to data[0]
+set_location_assignment PIN_AB26 -to data[1]
+set_location_assignment PIN_AC25 -to data[2]
+set_location_assignment PIN_AB25 -to data[3]
+set_location_assignment PIN_AC24 -to data[4]
+set_location_assignment PIN_AB24 -to data[5]
+set_location_assignment PIN_AB23 -to data[6]
+set_location_assignment PIN_AA24 -to data[7]
+set_location_assignment PIN_G19 -to outs[0]
+set_location_assignment PIN_F19 -to outs[1]
+set_location_assignment PIN_E19 -to outs[2]
+set_location_assignment PIN_F21 -to outs[3]
+set_location_assignment PIN_F18 -to outs[4]
+set_location_assignment PIN_E18 -to outs[5]
+set_location_assignment PIN_J19 -to outs[6]
+set_location_assignment PIN_H19 -to outs[7]
+set_location_assignment PIN_J15 -to q[0]
+set_location_assignment PIN_H16 -to q[1]
+set_location_assignment PIN_J16 -to q[2]
+set_location_assignment PIN_H17 -to q[3]
+set_location_assignment PIN_F15 -to q[4]
+set_location_assignment PIN_G15 -to q[5]
+set_location_assignment PIN_G16 -to q[6]
+set_location_assignment PIN_H15 -to q[7]
+set_location_assignment PIN_AB28 -to address[0]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to outs[1]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to outs[2]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to outs[3]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to outs[4]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to outs[5]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to outs[6]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to outs[7]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to q[0]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to q[1]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to q[2]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to q[3]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to q[4]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to q[5]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to q[6]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to q[7]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to outs[0]
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
