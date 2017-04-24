@@ -1,0 +1,177 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "Q[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Q[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Q[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Q[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Q[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Q[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Q[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Q[7]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAMWE",
+					"strict" : false
+				},
+				{
+					"name" : "OE",
+					"strict" : false
+				},
+				{
+					"name" : "SRAMADDRESS[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAMADDRESS[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAMADDRESS[2]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAMADDRESS[3]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAMADDRESS[4]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDs[1]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDs[2]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDs[4]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDs[5]",
+					"strict" : false
+				},
+				{
+					"name" : "LEDs[8]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAMDATA[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAMDATA[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAMDATA[2]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAMDATA[3]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAMDATA[4]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAMDATA[5]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAMDATA[6]",
+					"strict" : false
+				},
+				{
+					"name" : "SRAMDATA[7]",
+					"strict" : false
+				},
+				{
+					"name" : "WE",
+					"strict" : false
+				},
+				{
+					"name" : "ADDRESS[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ADDRESS[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ADDRESS[2]",
+					"strict" : false
+				},
+				{
+					"name" : "ADDRESS[3]",
+					"strict" : false
+				},
+				{
+					"name" : "ADDRESS[4]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA[0]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA[1]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA[2]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA[3]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA[4]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA[5]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA[6]",
+					"strict" : false
+				},
+				{
+					"name" : "DATA[7]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
