@@ -1,0 +1,2 @@
+Warning (10268): Verilog HDL information at p5.v(54): always construct contains both blocking and non-blocking assignments File: F:/Work/FPGA/Board/Lab8/P5/p5.v Line: 54
+Info (10281): Verilog HDL Declaration information at secondsCounter.v(3): object "SECONDS" differs only in case from object "seconds" in the same scope File: F:/Work/FPGA/Board/Lab8/P5/secondsCounter.v Line: 3
