@@ -1,0 +1,56 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dF:/Work/FPGA/Board/Lab9/P1/simulation/modelsim
+vIREGISTER
+Z1 !s110 1493114822
+!i10b 1
+!s100 oHR`D7Q;cN1]0Rk39`:^h2
+ICTH]BhLKGU`RbL_HBKdoR3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1493114627
+Z4 8F:/Work/FPGA/Board/Lab9/P1/IREGISTER.v
+Z5 FF:/Work/FPGA/Board/Lab9/P1/IREGISTER.v
+L0 1
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1493114822.000000
+Z8 !s107 F:/Work/FPGA/Board/Lab9/P1/IREGISTER.v|
+Z9 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/Work/FPGA/Board/Lab9/P1|F:/Work/FPGA/Board/Lab9/P1/IREGISTER.v|
+!i113 1
+Z10 o-vlog01compat -work work
+Z11 !s92 -vlog01compat -work work +incdir+F:/Work/FPGA/Board/Lab9/P1
+Z12 tCvgOpt 0
+n@i@r@e@g@i@s@t@e@r
+vtestIREGISTER
+R1
+!i10b 1
+!s100 2W:2mcjT5iRQ?_ehS<G0X0
+IhW@_`VA<[K@EE9hDBRlFQ0
+R2
+R0
+R3
+R4
+R5
+L0 29
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+R12
+ntest@i@r@e@g@i@s@t@e@r
