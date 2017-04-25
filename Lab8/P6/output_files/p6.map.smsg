@@ -1,0 +1,1 @@
+Info (10281): Verilog HDL Declaration information at secondsCounter.v(3): object "SECONDS" differs only in case from object "seconds" in the same scope File: F:/Work/FPGA/Board/Lab8/P6/secondsCounter.v Line: 3

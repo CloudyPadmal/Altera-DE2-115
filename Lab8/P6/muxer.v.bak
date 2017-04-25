@@ -1,0 +1,4 @@
+module muxer(lineInA, lineInB, lineOut);
+
+
+endmodule

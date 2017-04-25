@@ -1,0 +1,145 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dF:/Work/FPGA/Board/Lab8/P6/simulation/modelsim
+vHexaBCD
+Z1 !s110 1493079408
+!i10b 1
+!s100 _Hf[7g20Z5SG3zE@eNC]Q0
+IiC6kh^C=11B6aG?ZKWjz>0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1493076898
+8F:/Work/FPGA/Board/Lab8/P6/HexaBCD.v
+FF:/Work/FPGA/Board/Lab8/P6/HexaBCD.v
+L0 1
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1493079408.000000
+!s107 F:/Work/FPGA/Board/Lab8/P6/HexaBCD.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/Work/FPGA/Board/Lab8/P6|F:/Work/FPGA/Board/Lab8/P6/HexaBCD.v|
+!i113 1
+Z5 o-vlog01compat -work work
+Z6 !s92 -vlog01compat -work work +incdir+F:/Work/FPGA/Board/Lab8/P6
+Z7 tCvgOpt 0
+n@hexa@b@c@d
+vmuxer
+R1
+!i10b 1
+!s100 e?CY8Pzci3TT<;[0UiQdU0
+I?P]fUSbjXmHiofnHh9NRz1
+R2
+R0
+w1493078820
+8F:/Work/FPGA/Board/Lab8/P6/muxer.v
+FF:/Work/FPGA/Board/Lab8/P6/muxer.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 F:/Work/FPGA/Board/Lab8/P6/muxer.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/Work/FPGA/Board/Lab8/P6|F:/Work/FPGA/Board/Lab8/P6/muxer.v|
+!i113 1
+R5
+R6
+R7
+vp6
+R1
+!i10b 1
+!s100 Y5izNgiTzJJR^1Fn^981A3
+Ikj2knbLZ3;c[@MfCIUUDm1
+R2
+R0
+Z8 w1493079368
+Z9 8F:/Work/FPGA/Board/Lab8/P6/p6.v
+Z10 FF:/Work/FPGA/Board/Lab8/P6/p6.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+Z11 !s107 F:/Work/FPGA/Board/Lab8/P6/p6.v|
+Z12 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/Work/FPGA/Board/Lab8/P6|F:/Work/FPGA/Board/Lab8/P6/p6.v|
+!i113 1
+R5
+R6
+R7
+vramlpm
+R1
+!i10b 1
+!s100 Q0Gh@iJgnc^Kb;@=YlKiD1
+IEhYFCQ:7Jz^e0E[3>h1n23
+R2
+R0
+w1493076802
+8F:/Work/FPGA/Board/Lab8/P6/ramlpm.v
+FF:/Work/FPGA/Board/Lab8/P6/ramlpm.v
+L0 40
+R3
+r1
+!s85 0
+31
+R4
+!s107 F:/Work/FPGA/Board/Lab8/P6/ramlpm.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/Work/FPGA/Board/Lab8/P6|F:/Work/FPGA/Board/Lab8/P6/ramlpm.v|
+!i113 1
+R5
+R6
+R7
+vsecondsCounter
+R1
+!i10b 1
+!s100 fF[_;WKnaI79W5gVHVBH60
+IoL7`nEjng<<`bomz=3@mz0
+R2
+R0
+w1493077005
+8F:/Work/FPGA/Board/Lab8/P6/secondsCounter.v
+FF:/Work/FPGA/Board/Lab8/P6/secondsCounter.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 F:/Work/FPGA/Board/Lab8/P6/secondsCounter.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/Work/FPGA/Board/Lab8/P6|F:/Work/FPGA/Board/Lab8/P6/secondsCounter.v|
+!i113 1
+R5
+R6
+R7
+nseconds@counter
+vtestRam
+R1
+!i10b 1
+!s100 CFHShQV>gbG49Mf[dj5Co2
+Ifc>Z1JnKooZHlBlzVKI8a2
+R2
+R0
+R8
+R9
+R10
+L0 69
+R3
+r1
+!s85 0
+31
+R4
+R11
+R12
+!i113 1
+R5
+R6
+R7
+ntest@ram
