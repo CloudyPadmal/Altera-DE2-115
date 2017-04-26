@@ -1,0 +1,11 @@
+module CONTROLUNIT
+(
+
+);
+
+
+endmodule
+
+module testCONTROLUNIT;
+
+endmodule

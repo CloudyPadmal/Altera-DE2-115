@@ -1,0 +1,12 @@
+module DECODER
+(
+
+);
+
+
+endmodule
+
+module testDECODER;
+
+
+endmodule

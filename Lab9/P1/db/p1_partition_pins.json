@@ -4,91 +4,51 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "OUT[0]",
+					"name" : "LINEOUT[0]",
 					"strict" : false
 				},
 				{
-					"name" : "OUT[1]",
+					"name" : "LINEOUT[1]",
 					"strict" : false
 				},
 				{
-					"name" : "OUT[2]",
+					"name" : "LINEOUT[2]",
 					"strict" : false
 				},
 				{
-					"name" : "OUT[3]",
+					"name" : "LINEOUT[3]",
 					"strict" : false
 				},
 				{
-					"name" : "OUT[4]",
+					"name" : "LINEOUT[4]",
 					"strict" : false
 				},
 				{
-					"name" : "OUT[5]",
+					"name" : "LINEOUT[5]",
 					"strict" : false
 				},
 				{
-					"name" : "OUT[6]",
+					"name" : "LINEOUT[6]",
 					"strict" : false
 				},
 				{
-					"name" : "OUT[7]",
+					"name" : "LINEOUT[7]",
 					"strict" : false
 				},
 				{
-					"name" : "OUT[8]",
+					"name" : "EN",
 					"strict" : false
 				},
 				{
-					"name" : "OUT[9]",
+					"name" : "LINEIN[0]",
 					"strict" : false
 				},
 				{
-					"name" : "IN[0]",
+					"name" : "LINEIN[1]",
 					"strict" : false
 				},
 				{
-					"name" : "WE",
-					"strict" : false
-				},
-				{
-					"name" : "CLK",
-					"strict" : false
-				},
-				{
-					"name" : "IN[1]",
-					"strict" : false
-				},
-				{
-					"name" : "IN[2]",
-					"strict" : false
-				},
-				{
-					"name" : "IN[3]",
-					"strict" : false
-				},
-				{
-					"name" : "IN[4]",
-					"strict" : false
-				},
-				{
-					"name" : "IN[5]",
-					"strict" : false
-				},
-				{
-					"name" : "IN[6]",
-					"strict" : false
-				},
-				{
-					"name" : "IN[7]",
-					"strict" : false
-				},
-				{
-					"name" : "IN[8]",
-					"strict" : false
-				},
-				{
-					"name" : "IN[9]",
+					"name" : "LINEIN[2]",
 					"strict" : false
 				}
 			]

@@ -1,0 +1,11 @@
+module MULTIPLEXER
+(
+
+);
+
+
+endmodule
+
+module testMULTIPLEXER;
+
+endmodule

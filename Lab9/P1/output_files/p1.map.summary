@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Tue Apr 25 15:34:00 2017
+Analysis & Synthesis Status : Successful - Wed Apr 26 18:22:32 2017
 Quartus Prime Version : 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 Revision Name : p1
-Top-level Entity Name : IREGISTER
+Top-level Entity Name : DECODER
 Family : Cyclone IV E
-Total logic elements : 20
-    Total combinational functions : 10
-    Dedicated logic registers : 20
-Total registers : 20
-Total pins : 22
+Total logic elements : 8
+    Total combinational functions : 8
+    Dedicated logic registers : 0
+Total registers : 0
+Total pins : 12
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0
