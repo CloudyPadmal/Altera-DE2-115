@@ -1,12 +1,12 @@
 module IREGISTER
 (
-    input [9:0] IN,
+    input [8:0] IN,
     input CLK, WE,
-    output reg [9:0] OUT
+    output reg [8:0] OUT
 );
 
     // Temp Holder
-    reg [9:0] CURRENT = 10'b0_0000_0000;
+    reg [8:0] CURRENT = 10'b0_0000_0000;
 
     always @ (posedge CLK)
         begin
@@ -28,13 +28,13 @@ endmodule
 /*****************************************************************************/
 module testIREGISTER;
 
-    reg [9:0] IN;
+    reg [8:0] IN;
     reg CLK, WE;
-    wire [9:0] OUT;
+    wire [8:0] OUT;
     
     // Initiate registers
     initial begin
-        IN = 10'b0_0000_0000;
+        IN = 9'b0_0000_0000;
         CLK = 1'b0;
         WE = 1'b0;
     end
@@ -50,34 +50,33 @@ module testIREGISTER;
     // Test
     initial begin
         #10 // Set a value for REG
-        IN = 10'b1_0000_1110;
+        IN = 9'b1_0000_1110;
         CLK = 1'b1;
         WE = 1'b1;
         #10
         CLK = 1'b0;
         #10 // Keep a value on DATA with WE - 0
-        IN = 10'b0_1110_0001;
+        IN = 9'b0_1110_0001;
         CLK = 1'b1;
         WE = 1'b0;
         #10
         CLK = 1'b0;
         #10 // Set a new value for REG
-        IN = 10'b0_1110_1101;
+        IN = 9'b0_1110_1101;
         CLK = 1'b1;
         WE = 1'b1;
         #10
         CLK = 1'b0;
         #10 // Try Read value
-        IN = 10'b0_1110_0001;
+        IN = 9'b0_1110_0001;
         CLK = 1'b1;
         WE = 1'b0;
         #10
         CLK = 1'b0;
         #10 // Set a new value
-        IN = 10'b0_1110_0001;
+        IN = 9'b0_1110_0001;
         CLK = 1'b1;
-        WE = 1'b1;
-        
+        WE = 1'b1;        
     end
 
 endmodule

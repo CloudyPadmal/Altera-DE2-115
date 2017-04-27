@@ -1,5 +1,5 @@
 Analysis & Synthesis report for p1
-Wed Apr 26 18:22:32 2017
+Thu Apr 27 09:12:51 2017
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -13,10 +13,25 @@ Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Post-Synthesis Netlist Statistics for Top Partition
- 10. Elapsed Time Per Partition
- 11. Analysis & Synthesis Messages
+  8. Registers Removed During Synthesis
+  9. Removed Registers Triggering Further Register Optimizations
+ 10. General Register Statistics
+ 11. Parameter Settings for User Entity Instance: REGISTER:REG_0
+ 12. Parameter Settings for User Entity Instance: REGISTER:REG_1
+ 13. Parameter Settings for User Entity Instance: REGISTER:REG_2
+ 14. Parameter Settings for User Entity Instance: REGISTER:REG_3
+ 15. Parameter Settings for User Entity Instance: REGISTER:REG_4
+ 16. Parameter Settings for User Entity Instance: REGISTER:REG_5
+ 17. Parameter Settings for User Entity Instance: REGISTER:REG_6
+ 18. Parameter Settings for User Entity Instance: REGISTER:REG_7
+ 19. Parameter Settings for User Entity Instance: REGISTER:REG_A
+ 20. Parameter Settings for User Entity Instance: REGISTER:REG_G
+ 21. Port Connectivity Checks: "CONTROLUNIT:CU|DECODER:DEC2"
+ 22. Port Connectivity Checks: "CONTROLUNIT:CU|DECODER:DEC1"
+ 23. Post-Synthesis Netlist Statistics for Top Partition
+ 24. Elapsed Time Per Partition
+ 25. Analysis & Synthesis Messages
+ 26. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -43,16 +58,16 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Apr 26 18:22:32 2017       ;
+; Analysis & Synthesis Status        ; Successful - Thu Apr 27 09:12:51 2017       ;
 ; Quartus Prime Version              ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name                      ; p1                                          ;
-; Top-level Entity Name              ; DECODER                                     ;
+; Top-level Entity Name              ; PROCESSOR                                   ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 8                                           ;
-;     Total combinational functions  ; 8                                           ;
+; Total logic elements               ; 0                                           ;
+;     Total combinational functions  ; 0                                           ;
 ;     Dedicated logic registers      ; 0                                           ;
 ; Total registers                    ; 0                                           ;
-; Total pins                         ; 12                                          ;
+; Total pins                         ; 36                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -66,7 +81,7 @@ agreement for further details.
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                     ; EP4CE115F29C7      ;                    ;
-; Top-level entity name                                                      ; DECODER            ; p1                 ;
+; Top-level entity name                                                      ; PROCESSOR          ; p1                 ;
 ; Family name                                                                ; Cyclone IV E       ; Cyclone V          ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
@@ -162,45 +177,51 @@ agreement for further details.
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                       ;
-+----------------------------------+-----------------+------------------------+--------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path         ; Library ;
-+----------------------------------+-----------------+------------------------+--------------------------------------+---------+
-; DECODER.v                        ; yes             ; User Verilog HDL File  ; F:/Work/FPGA/Board/Lab9/P1/DECODER.v ;         ;
-+----------------------------------+-----------------+------------------------+--------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                           ;
++----------------------------------+-----------------+------------------------+------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path             ; Library ;
++----------------------------------+-----------------+------------------------+------------------------------------------+---------+
+; REGISTER.v                       ; yes             ; User Verilog HDL File  ; F:/Work/FPGA/Board/Lab9/P1/REGISTER.v    ;         ;
+; IREGISTER.v                      ; yes             ; User Verilog HDL File  ; F:/Work/FPGA/Board/Lab9/P1/IREGISTER.v   ;         ;
+; COUNTER.v                        ; yes             ; User Verilog HDL File  ; F:/Work/FPGA/Board/Lab9/P1/COUNTER.v     ;         ;
+; MULTIPLEXER.v                    ; yes             ; User Verilog HDL File  ; F:/Work/FPGA/Board/Lab9/P1/MULTIPLEXER.v ;         ;
+; CONTROLUNIT.v                    ; yes             ; User Verilog HDL File  ; F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v ;         ;
+; DECODER.v                        ; yes             ; User Verilog HDL File  ; F:/Work/FPGA/Board/Lab9/P1/DECODER.v     ;         ;
+; ALU.v                            ; yes             ; User Verilog HDL File  ; F:/Work/FPGA/Board/Lab9/P1/ALU.v         ;         ;
+; PROCESSOR.v                      ; yes             ; User Verilog HDL File  ; F:/Work/FPGA/Board/Lab9/P1/PROCESSOR.v   ;         ;
++----------------------------------+-----------------+------------------------+------------------------------------------+---------+
 
 
-+--------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary            ;
-+---------------------------------------------+----------+
-; Resource                                    ; Usage    ;
-+---------------------------------------------+----------+
-; Estimated Total logic elements              ; 8        ;
-;                                             ;          ;
-; Total combinational functions               ; 8        ;
-; Logic element usage by number of LUT inputs ;          ;
-;     -- 4 input functions                    ; 8        ;
-;     -- 3 input functions                    ; 0        ;
-;     -- <=2 input functions                  ; 0        ;
-;                                             ;          ;
-; Logic elements by mode                      ;          ;
-;     -- normal mode                          ; 8        ;
-;     -- arithmetic mode                      ; 0        ;
-;                                             ;          ;
-; Total registers                             ; 0        ;
-;     -- Dedicated logic registers            ; 0        ;
-;     -- I/O registers                        ; 0        ;
-;                                             ;          ;
-; I/O pins                                    ; 12       ;
-;                                             ;          ;
-; Embedded Multiplier 9-bit elements          ; 0        ;
-;                                             ;          ;
-; Maximum fan-out node                        ; EN~input ;
-; Maximum fan-out                             ; 8        ;
-; Total fan-out                               ; 52       ;
-; Average fan-out                             ; 1.63     ;
-+---------------------------------------------+----------+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+;                                             ;       ;
+; Total combinational functions               ; 0     ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 0     ;
+;     -- 3 input functions                    ; 0     ;
+;     -- <=2 input functions                  ; 0     ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 0     ;
+;     -- arithmetic mode                      ; 0     ;
+;                                             ;       ;
+; Total registers                             ; 0     ;
+;     -- Dedicated logic registers            ; 0     ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 36    ;
+;                                             ;       ;
+; Embedded Multiplier 9-bit elements          ; 0     ;
+;                                             ;       ;
+; Maximum fan-out node                        ; CLK   ;
+; Maximum fan-out                             ; 1     ;
+; Total fan-out                               ; 36    ;
+; Average fan-out                             ; 0.50  ;
++---------------------------------------------+-------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -208,9 +229,31 @@ agreement for further details.
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; |DECODER                   ; 8 (8)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 12   ; 0            ; |DECODER            ; DECODER     ; work         ;
+; |PROCESSOR                 ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 36   ; 0            ; |PROCESSOR          ; PROCESSOR   ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++--------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                             ;
++---------------------------------------+----------------------------------------+
+; Register name                         ; Reason for Removal                     ;
++---------------------------------------+----------------------------------------+
+; COUNTER:COUNT|COUNT[0,1]              ; Stuck at GND due to stuck port data_in ;
+; IREGISTER:IREG|CURRENT[6..8]          ; Lost fanout                            ;
+; IREGISTER:IREG|OUT[6..8]              ; Lost fanout                            ;
+; Total Number of Removed Registers = 8 ;                                        ;
++---------------------------------------+----------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                              ;
++------------------------+---------------------------+---------------------------------------------------------------------+
+; Register name          ; Reason for Removal        ; Registers Removed due to This Register                              ;
++------------------------+---------------------------+---------------------------------------------------------------------+
+; COUNTER:COUNT|COUNT[0] ; Stuck at GND              ; IREGISTER:IREG|OUT[8], IREGISTER:IREG|OUT[7], IREGISTER:IREG|OUT[6] ;
+;                        ; due to stuck port data_in ;                                                                     ;
++------------------------+---------------------------+---------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -228,18 +271,136 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
++-------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: REGISTER:REG_0 ;
++----------------+-------+------------------------------------+
+; Parameter Name ; Value ; Type                               ;
++----------------+-------+------------------------------------+
+; DATA_WIDTH     ; 16    ; Signed Integer                     ;
++----------------+-------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: REGISTER:REG_1 ;
++----------------+-------+------------------------------------+
+; Parameter Name ; Value ; Type                               ;
++----------------+-------+------------------------------------+
+; DATA_WIDTH     ; 16    ; Signed Integer                     ;
++----------------+-------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: REGISTER:REG_2 ;
++----------------+-------+------------------------------------+
+; Parameter Name ; Value ; Type                               ;
++----------------+-------+------------------------------------+
+; DATA_WIDTH     ; 16    ; Signed Integer                     ;
++----------------+-------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: REGISTER:REG_3 ;
++----------------+-------+------------------------------------+
+; Parameter Name ; Value ; Type                               ;
++----------------+-------+------------------------------------+
+; DATA_WIDTH     ; 16    ; Signed Integer                     ;
++----------------+-------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: REGISTER:REG_4 ;
++----------------+-------+------------------------------------+
+; Parameter Name ; Value ; Type                               ;
++----------------+-------+------------------------------------+
+; DATA_WIDTH     ; 16    ; Signed Integer                     ;
++----------------+-------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: REGISTER:REG_5 ;
++----------------+-------+------------------------------------+
+; Parameter Name ; Value ; Type                               ;
++----------------+-------+------------------------------------+
+; DATA_WIDTH     ; 16    ; Signed Integer                     ;
++----------------+-------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: REGISTER:REG_6 ;
++----------------+-------+------------------------------------+
+; Parameter Name ; Value ; Type                               ;
++----------------+-------+------------------------------------+
+; DATA_WIDTH     ; 16    ; Signed Integer                     ;
++----------------+-------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: REGISTER:REG_7 ;
++----------------+-------+------------------------------------+
+; Parameter Name ; Value ; Type                               ;
++----------------+-------+------------------------------------+
+; DATA_WIDTH     ; 16    ; Signed Integer                     ;
++----------------+-------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: REGISTER:REG_A ;
++----------------+-------+------------------------------------+
+; Parameter Name ; Value ; Type                               ;
++----------------+-------+------------------------------------+
+; DATA_WIDTH     ; 16    ; Signed Integer                     ;
++----------------+-------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: REGISTER:REG_G ;
++----------------+-------+------------------------------------+
+; Parameter Name ; Value ; Type                               ;
++----------------+-------+------------------------------------+
+; DATA_WIDTH     ; 16    ; Signed Integer                     ;
++----------------+-------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------+
+; Port Connectivity Checks: "CONTROLUNIT:CU|DECODER:DEC2" ;
++------+-------+----------+-------------------------------+
+; Port ; Type  ; Severity ; Details                       ;
++------+-------+----------+-------------------------------+
+; EN   ; Input ; Info     ; Stuck at VCC                  ;
++------+-------+----------+-------------------------------+
+
+
++---------------------------------------------------------+
+; Port Connectivity Checks: "CONTROLUNIT:CU|DECODER:DEC1" ;
++------+-------+----------+-------------------------------+
+; Port ; Type  ; Severity ; Details                       ;
++------+-------+----------+-------------------------------+
+; EN   ; Input ; Info     ; Stuck at VCC                  ;
++------+-------+----------+-------------------------------+
+
+
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 12                          ;
-; cycloneiii_lcell_comb ; 8                           ;
-;     normal            ; 8                           ;
-;         4 data inputs ; 8                           ;
+; boundary_port         ; 36                          ;
+; cycloneiii_lcell_comb ; 1                           ;
+;     normal            ; 1                           ;
+;         0 data inputs ; 1                           ;
 ;                       ;                             ;
-; Max LUT depth         ; 1.00                        ;
-; Average LUT depth     ; 1.00                        ;
+; Max LUT depth         ; 0.00                        ;
+; Average LUT depth     ; 0.00                        ;
 +-----------------------+-----------------------------+
 
 
@@ -258,12 +419,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
-    Info: Processing started: Wed Apr 26 18:22:17 2017
+    Info: Processing started: Thu Apr 27 09:12:40 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off p1 -c p1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
-Info (12021): Found 1 design units, including 1 entities, in source file p1.v
-    Info (12023): Found entity 1: p1 File: F:/Work/FPGA/Board/Lab9/P1/p1.v Line: 1
 Info (12021): Found 2 design units, including 2 entities, in source file register.v
     Info (12023): Found entity 1: REGISTER File: F:/Work/FPGA/Board/Lab9/P1/REGISTER.v Line: 1
     Info (12023): Found entity 2: testREGISTER File: F:/Work/FPGA/Board/Lab9/P1/REGISTER.v Line: 30
@@ -276,24 +435,112 @@ Info (12021): Found 2 design units, including 2 entities, in source file counter
 Info (12021): Found 2 design units, including 2 entities, in source file multiplexer.v
     Info (12023): Found entity 1: MULTIPLEXER File: F:/Work/FPGA/Board/Lab9/P1/MULTIPLEXER.v Line: 1
     Info (12023): Found entity 2: testMULTIPLEXER File: F:/Work/FPGA/Board/Lab9/P1/MULTIPLEXER.v Line: 69
-Info (12021): Found 2 design units, including 2 entities, in source file controlunit.v
+Info (12021): Found 1 design units, including 1 entities, in source file controlunit.v
     Info (12023): Found entity 1: CONTROLUNIT File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 1
-    Info (12023): Found entity 2: testCONTROLUNIT File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 21
 Info (12021): Found 2 design units, including 2 entities, in source file decoder.v
     Info (12023): Found entity 1: DECODER File: F:/Work/FPGA/Board/Lab9/P1/DECODER.v Line: 1
     Info (12023): Found entity 2: testDECODER File: F:/Work/FPGA/Board/Lab9/P1/DECODER.v Line: 64
-Info (12127): Elaborating entity "DECODER" for the top level hierarchy
-Info (286030): Timing-Driven Synthesis is running
+Info (12021): Found 2 design units, including 2 entities, in source file alu.v
+    Info (12023): Found entity 1: ALU File: F:/Work/FPGA/Board/Lab9/P1/ALU.v Line: 1
+    Info (12023): Found entity 2: testALU File: F:/Work/FPGA/Board/Lab9/P1/ALU.v Line: 22
+Info (12021): Found 1 design units, including 1 entities, in source file processor.v
+    Info (12023): Found entity 1: PROCESSOR File: F:/Work/FPGA/Board/Lab9/P1/PROCESSOR.v Line: 1
+Info (12127): Elaborating entity "PROCESSOR" for the top level hierarchy
+Warning (10034): Output port "BUS" at PROCESSOR.v(5) has no driver File: F:/Work/FPGA/Board/Lab9/P1/PROCESSOR.v Line: 5
+Info (12128): Elaborating entity "CONTROLUNIT" for hierarchy "CONTROLUNIT:CU" File: F:/Work/FPGA/Board/Lab9/P1/PROCESSOR.v Line: 29
+Warning (10240): Verilog HDL Always Construct warning at CONTROLUNIT.v(43): inferring latch(es) for variable "COUNTERCLR", which holds its previous value in one or more paths through the always construct File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 43
+Warning (10240): Verilog HDL Always Construct warning at CONTROLUNIT.v(43): inferring latch(es) for variable "MUXLINE", which holds its previous value in one or more paths through the always construct File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 43
+Warning (10240): Verilog HDL Always Construct warning at CONTROLUNIT.v(43): inferring latch(es) for variable "REGSELECTORS", which holds its previous value in one or more paths through the always construct File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 43
+Warning (10240): Verilog HDL Always Construct warning at CONTROLUNIT.v(43): inferring latch(es) for variable "DONE", which holds its previous value in one or more paths through the always construct File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 43
+Warning (10240): Verilog HDL Always Construct warning at CONTROLUNIT.v(43): inferring latch(es) for variable "ADDSUB", which holds its previous value in one or more paths through the always construct File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 43
+Warning (10240): Verilog HDL Always Construct warning at CONTROLUNIT.v(43): inferring latch(es) for variable "IREN", which holds its previous value in one or more paths through the always construct File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 43
+Info (10041): Inferred latch for "IREN" at CONTROLUNIT.v(43) File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 43
+Info (10041): Inferred latch for "ADDSUB" at CONTROLUNIT.v(43) File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 43
+Info (10041): Inferred latch for "DONE" at CONTROLUNIT.v(43) File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 43
+Info (10041): Inferred latch for "REGSELECTORS[0]" at CONTROLUNIT.v(43) File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 43
+Info (10041): Inferred latch for "REGSELECTORS[1]" at CONTROLUNIT.v(43) File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 43
+Info (10041): Inferred latch for "REGSELECTORS[2]" at CONTROLUNIT.v(43) File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 43
+Info (10041): Inferred latch for "REGSELECTORS[3]" at CONTROLUNIT.v(43) File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 43
+Info (10041): Inferred latch for "REGSELECTORS[4]" at CONTROLUNIT.v(43) File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 43
+Info (10041): Inferred latch for "REGSELECTORS[5]" at CONTROLUNIT.v(43) File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 43
+Info (10041): Inferred latch for "REGSELECTORS[6]" at CONTROLUNIT.v(43) File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 43
+Info (10041): Inferred latch for "REGSELECTORS[7]" at CONTROLUNIT.v(43) File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 43
+Info (10041): Inferred latch for "REGSELECTORS[8]" at CONTROLUNIT.v(43) File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 43
+Info (10041): Inferred latch for "REGSELECTORS[9]" at CONTROLUNIT.v(43) File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 43
+Info (10041): Inferred latch for "MUXLINE[0]" at CONTROLUNIT.v(43) File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 43
+Info (10041): Inferred latch for "MUXLINE[1]" at CONTROLUNIT.v(43) File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 43
+Info (10041): Inferred latch for "MUXLINE[2]" at CONTROLUNIT.v(43) File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 43
+Info (10041): Inferred latch for "MUXLINE[3]" at CONTROLUNIT.v(43) File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 43
+Info (10041): Inferred latch for "MUXLINE[4]" at CONTROLUNIT.v(43) File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 43
+Info (10041): Inferred latch for "MUXLINE[5]" at CONTROLUNIT.v(43) File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 43
+Info (10041): Inferred latch for "MUXLINE[6]" at CONTROLUNIT.v(43) File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 43
+Info (10041): Inferred latch for "MUXLINE[7]" at CONTROLUNIT.v(43) File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 43
+Info (10041): Inferred latch for "MUXLINE[8]" at CONTROLUNIT.v(43) File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 43
+Info (10041): Inferred latch for "MUXLINE[9]" at CONTROLUNIT.v(43) File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 43
+Info (10041): Inferred latch for "COUNTERCLR" at CONTROLUNIT.v(43) File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 43
+Info (12128): Elaborating entity "DECODER" for hierarchy "CONTROLUNIT:CU|DECODER:DEC1" File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 34
+Info (12128): Elaborating entity "REGISTER" for hierarchy "REGISTER:REG_0" File: F:/Work/FPGA/Board/Lab9/P1/PROCESSOR.v Line: 37
+Info (12128): Elaborating entity "IREGISTER" for hierarchy "IREGISTER:IREG" File: F:/Work/FPGA/Board/Lab9/P1/PROCESSOR.v Line: 99
+Warning (10230): Verilog HDL assignment warning at IREGISTER.v(9): truncated value with size 10 to match size of target (9) File: F:/Work/FPGA/Board/Lab9/P1/IREGISTER.v Line: 9
+Info (12128): Elaborating entity "ALU" for hierarchy "ALU:ALUUNIT" File: F:/Work/FPGA/Board/Lab9/P1/PROCESSOR.v Line: 107
+Info (12128): Elaborating entity "COUNTER" for hierarchy "COUNTER:COUNT" File: F:/Work/FPGA/Board/Lab9/P1/PROCESSOR.v Line: 114
+Info (12128): Elaborating entity "MULTIPLEXER" for hierarchy "MULTIPLEXER:MUX" File: F:/Work/FPGA/Board/Lab9/P1/PROCESSOR.v Line: 130
+Info (10264): Verilog HDL Case Statement information at MULTIPLEXER.v(19): all case item expressions in this case statement are onehot File: F:/Work/FPGA/Board/Lab9/P1/MULTIPLEXER.v Line: 19
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "BUS[0]" is stuck at GND File: F:/Work/FPGA/Board/Lab9/P1/PROCESSOR.v Line: 5
+    Warning (13410): Pin "BUS[1]" is stuck at GND File: F:/Work/FPGA/Board/Lab9/P1/PROCESSOR.v Line: 5
+    Warning (13410): Pin "BUS[2]" is stuck at GND File: F:/Work/FPGA/Board/Lab9/P1/PROCESSOR.v Line: 5
+    Warning (13410): Pin "BUS[3]" is stuck at GND File: F:/Work/FPGA/Board/Lab9/P1/PROCESSOR.v Line: 5
+    Warning (13410): Pin "BUS[4]" is stuck at GND File: F:/Work/FPGA/Board/Lab9/P1/PROCESSOR.v Line: 5
+    Warning (13410): Pin "BUS[5]" is stuck at GND File: F:/Work/FPGA/Board/Lab9/P1/PROCESSOR.v Line: 5
+    Warning (13410): Pin "BUS[6]" is stuck at GND File: F:/Work/FPGA/Board/Lab9/P1/PROCESSOR.v Line: 5
+    Warning (13410): Pin "BUS[7]" is stuck at GND File: F:/Work/FPGA/Board/Lab9/P1/PROCESSOR.v Line: 5
+    Warning (13410): Pin "BUS[8]" is stuck at GND File: F:/Work/FPGA/Board/Lab9/P1/PROCESSOR.v Line: 5
+    Warning (13410): Pin "BUS[9]" is stuck at GND File: F:/Work/FPGA/Board/Lab9/P1/PROCESSOR.v Line: 5
+    Warning (13410): Pin "BUS[10]" is stuck at GND File: F:/Work/FPGA/Board/Lab9/P1/PROCESSOR.v Line: 5
+    Warning (13410): Pin "BUS[11]" is stuck at GND File: F:/Work/FPGA/Board/Lab9/P1/PROCESSOR.v Line: 5
+    Warning (13410): Pin "BUS[12]" is stuck at GND File: F:/Work/FPGA/Board/Lab9/P1/PROCESSOR.v Line: 5
+    Warning (13410): Pin "BUS[13]" is stuck at GND File: F:/Work/FPGA/Board/Lab9/P1/PROCESSOR.v Line: 5
+    Warning (13410): Pin "BUS[14]" is stuck at GND File: F:/Work/FPGA/Board/Lab9/P1/PROCESSOR.v Line: 5
+    Warning (13410): Pin "BUS[15]" is stuck at GND File: F:/Work/FPGA/Board/Lab9/P1/PROCESSOR.v Line: 5
+    Warning (13410): Pin "DONE" is stuck at GND File: F:/Work/FPGA/Board/Lab9/P1/PROCESSOR.v Line: 7
+Info (17049): 6 registers lost all their fanouts during netlist optimizations.
+Info (144001): Generated suppressed messages file F:/Work/FPGA/Board/Lab9/P1/output_files/p1.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 20 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 4 input pins
-    Info (21059): Implemented 8 output pins
-    Info (21061): Implemented 8 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
+Warning (21074): Design contains 19 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "CLK" File: F:/Work/FPGA/Board/Lab9/P1/PROCESSOR.v Line: 3
+    Warning (15610): No output dependent on input pin "RUN" File: F:/Work/FPGA/Board/Lab9/P1/PROCESSOR.v Line: 3
+    Warning (15610): No output dependent on input pin "RESET" File: F:/Work/FPGA/Board/Lab9/P1/PROCESSOR.v Line: 3
+    Warning (15610): No output dependent on input pin "DIN[0]" File: F:/Work/FPGA/Board/Lab9/P1/PROCESSOR.v Line: 4
+    Warning (15610): No output dependent on input pin "DIN[1]" File: F:/Work/FPGA/Board/Lab9/P1/PROCESSOR.v Line: 4
+    Warning (15610): No output dependent on input pin "DIN[2]" File: F:/Work/FPGA/Board/Lab9/P1/PROCESSOR.v Line: 4
+    Warning (15610): No output dependent on input pin "DIN[3]" File: F:/Work/FPGA/Board/Lab9/P1/PROCESSOR.v Line: 4
+    Warning (15610): No output dependent on input pin "DIN[4]" File: F:/Work/FPGA/Board/Lab9/P1/PROCESSOR.v Line: 4
+    Warning (15610): No output dependent on input pin "DIN[5]" File: F:/Work/FPGA/Board/Lab9/P1/PROCESSOR.v Line: 4
+    Warning (15610): No output dependent on input pin "DIN[6]" File: F:/Work/FPGA/Board/Lab9/P1/PROCESSOR.v Line: 4
+    Warning (15610): No output dependent on input pin "DIN[7]" File: F:/Work/FPGA/Board/Lab9/P1/PROCESSOR.v Line: 4
+    Warning (15610): No output dependent on input pin "DIN[8]" File: F:/Work/FPGA/Board/Lab9/P1/PROCESSOR.v Line: 4
+    Warning (15610): No output dependent on input pin "DIN[9]" File: F:/Work/FPGA/Board/Lab9/P1/PROCESSOR.v Line: 4
+    Warning (15610): No output dependent on input pin "DIN[10]" File: F:/Work/FPGA/Board/Lab9/P1/PROCESSOR.v Line: 4
+    Warning (15610): No output dependent on input pin "DIN[11]" File: F:/Work/FPGA/Board/Lab9/P1/PROCESSOR.v Line: 4
+    Warning (15610): No output dependent on input pin "DIN[12]" File: F:/Work/FPGA/Board/Lab9/P1/PROCESSOR.v Line: 4
+    Warning (15610): No output dependent on input pin "DIN[13]" File: F:/Work/FPGA/Board/Lab9/P1/PROCESSOR.v Line: 4
+    Warning (15610): No output dependent on input pin "DIN[14]" File: F:/Work/FPGA/Board/Lab9/P1/PROCESSOR.v Line: 4
+    Warning (15610): No output dependent on input pin "DIN[15]" File: F:/Work/FPGA/Board/Lab9/P1/PROCESSOR.v Line: 4
+Info (21057): Implemented 36 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 19 input pins
+    Info (21059): Implemented 17 output pins
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 47 warnings
     Info: Peak virtual memory: 588 megabytes
-    Info: Processing ended: Wed Apr 26 18:22:32 2017
-    Info: Elapsed time: 00:00:15
-    Info: Total CPU time (on all processors): 00:00:32
+    Info: Processing ended: Thu Apr 27 09:12:51 2017
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:28
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in F:/Work/FPGA/Board/Lab9/P1/output_files/p1.map.smsg.
 
 

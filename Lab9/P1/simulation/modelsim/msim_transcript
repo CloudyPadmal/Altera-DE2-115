@@ -10,26 +10,27 @@
 # Copying C:/intelFPGA_lite/16.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vlog -vlog01compat -work work +incdir+F:/Work/FPGA/Board/Lab9/P1 {F:/Work/FPGA/Board/Lab9/P1/DECODER.v}
+# vlog -vlog01compat -work work +incdir+F:/Work/FPGA/Board/Lab9/P1 {F:/Work/FPGA/Board/Lab9/P1/ALU.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:01:59 on Apr 27,2017
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+F:/Work/FPGA/Board/Lab9/P1" F:/Work/FPGA/Board/Lab9/P1/DECODER.v 
-# -- Compiling module DECODER
-# -- Compiling module testDECODER
+# Start time: 07:07:42 on Apr 27,2017
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+F:/Work/FPGA/Board/Lab9/P1" F:/Work/FPGA/Board/Lab9/P1/ALU.v 
+# -- Compiling module ALU
+# -- Compiling module testALU
 # 
 # Top level modules:
-# 	testDECODER
-# End time: 00:01:59 on Apr 27,2017, Elapsed time: 0:00:00
+# 	testALU
+# End time: 07:07:43 on Apr 27,2017, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
-vsim work.testDECODER
-# vsim work.testDECODER 
-# Start time: 00:02:08 on Apr 27,2017
-# Loading work.testDECODER
-# Loading work.DECODER
-add wave -position end  sim:/testDECODER/LINEIN
-add wave -position end  sim:/testDECODER/EN
-add wave -position end  sim:/testDECODER/LINEOUT
+vsim -gui -l msim_transcript work.testALU
+# vsim -gui -l msim_transcript work.testALU 
+# Start time: 07:07:51 on Apr 27,2017
+# Loading work.testALU
+# Loading work.ALU
+add wave -position end  sim:/testALU/LINEA
+add wave -position end  sim:/testALU/LINEB
+add wave -position end  sim:/testALU/ADD
+add wave -position end  sim:/testALU/LINEOUT
 run -all
-# End time: 00:02:56 on Apr 27,2017, Elapsed time: 0:00:48
+# End time: 07:08:27 on Apr 27,2017, Elapsed time: 0:00:36
 # Errors: 0, Warnings: 0
