@@ -8,40 +8,63 @@ z2
 !i10f 100
 cModel Technology
 Z0 dF:/Work/FPGA/Board/Lab9/P1/simulation/modelsim
-vALU
-Z1 !s110 1493257063
+vCONTROLUNIT
+Z1 !s110 1493294000
 !i10b 1
-!s100 bHS<Dn=8P><T`[PTRMLM00
-I]njEW08H[>1T^]R5?[?WM3
+!s100 [m@cg_TPA=hHB_3DM1J5j0
+I]bYM:P06j:ID_P<319>6]0
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-Z3 w1493256985
-Z4 8F:/Work/FPGA/Board/Lab9/P1/ALU.v
-Z5 FF:/Work/FPGA/Board/Lab9/P1/ALU.v
+Z3 w1493293040
+Z4 8F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v
+Z5 FF:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v
 L0 1
 Z6 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z7 !s108 1493257062.000000
-Z8 !s107 F:/Work/FPGA/Board/Lab9/P1/ALU.v|
-Z9 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/Work/FPGA/Board/Lab9/P1|F:/Work/FPGA/Board/Lab9/P1/ALU.v|
+Z7 !s108 1493294000.000000
+Z8 !s107 F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v|
+Z9 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/Work/FPGA/Board/Lab9/P1|F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v|
 !i113 1
 Z10 o-vlog01compat -work work
 Z11 !s92 -vlog01compat -work work +incdir+F:/Work/FPGA/Board/Lab9/P1
 Z12 tCvgOpt 0
-n@a@l@u
-vtestALU
+n@c@o@n@t@r@o@l@u@n@i@t
+vDECODER
 R1
 !i10b 1
-!s100 LI:WedX0=0e`0[^FVc5nD3
-IS4llcLPAWiT]4BNiUI_M03
+!s100 MVJT9b<N`W1_XzRUKCf331
+Ij^=Wi4dWh<D=[5LMNXG3z2
+R2
+R0
+Z13 w1493211133
+Z14 8F:/Work/FPGA/Board/Lab9/P1/DECODER.v
+Z15 FF:/Work/FPGA/Board/Lab9/P1/DECODER.v
+L0 1
+R6
+r1
+!s85 0
+31
+R7
+Z16 !s107 F:/Work/FPGA/Board/Lab9/P1/DECODER.v|
+Z17 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/Work/FPGA/Board/Lab9/P1|F:/Work/FPGA/Board/Lab9/P1/DECODER.v|
+!i113 1
+R10
+R11
+R12
+n@d@e@c@o@d@e@r
+vtestCONTROLUNIT
+R1
+!i10b 1
+!s100 U9SbcCQJFKj8LS`Q@ozgV3
+IC:i8a9AzaX_TJgGYCJk4A0
 R2
 R0
 R3
 R4
 R5
-L0 22
+L0 158
 R6
 r1
 !s85 0
@@ -53,4 +76,27 @@ R9
 R10
 R11
 R12
-ntest@a@l@u
+ntest@c@o@n@t@r@o@l@u@n@i@t
+vtestDECODER
+R1
+!i10b 1
+!s100 BI[0=bFaAP@G_hJK<Y]@>2
+IkmdVW^l@a@d[J=OlJng<f3
+R2
+R0
+R13
+R14
+R15
+L0 64
+R6
+r1
+!s85 0
+31
+R7
+R16
+R17
+!i113 1
+R10
+R11
+R12
+ntest@d@e@c@o@d@e@r

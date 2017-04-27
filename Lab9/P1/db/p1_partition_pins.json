@@ -2,7 +2,140 @@
 	"partitions" : [
 		{
 			"name" : "Top",
-			"pins" : []
+			"pins" : [
+				{
+					"name" : "MUXLINE[0]",
+					"strict" : false
+				},
+				{
+					"name" : "MUXLINE[1]",
+					"strict" : false
+				},
+				{
+					"name" : "MUXLINE[2]",
+					"strict" : false
+				},
+				{
+					"name" : "MUXLINE[3]",
+					"strict" : false
+				},
+				{
+					"name" : "MUXLINE[4]",
+					"strict" : false
+				},
+				{
+					"name" : "MUXLINE[5]",
+					"strict" : false
+				},
+				{
+					"name" : "MUXLINE[6]",
+					"strict" : false
+				},
+				{
+					"name" : "MUXLINE[7]",
+					"strict" : false
+				},
+				{
+					"name" : "MUXLINE[9]",
+					"strict" : false
+				},
+				{
+					"name" : "REGSELECTORS[0]",
+					"strict" : false
+				},
+				{
+					"name" : "REGSELECTORS[1]",
+					"strict" : false
+				},
+				{
+					"name" : "REGSELECTORS[2]",
+					"strict" : false
+				},
+				{
+					"name" : "REGSELECTORS[3]",
+					"strict" : false
+				},
+				{
+					"name" : "REGSELECTORS[4]",
+					"strict" : false
+				},
+				{
+					"name" : "REGSELECTORS[5]",
+					"strict" : false
+				},
+				{
+					"name" : "REGSELECTORS[6]",
+					"strict" : false
+				},
+				{
+					"name" : "REGSELECTORS[7]",
+					"strict" : false
+				},
+				{
+					"name" : "REGSELECTORS[8]",
+					"strict" : false
+				},
+				{
+					"name" : "REGSELECTORS[9]",
+					"strict" : false
+				},
+				{
+					"name" : "ADDSUB",
+					"strict" : false
+				},
+				{
+					"name" : "DONE",
+					"strict" : false
+				},
+				{
+					"name" : "IRLINE[0]",
+					"strict" : false
+				},
+				{
+					"name" : "COUNTERLINE[0]",
+					"strict" : false
+				},
+				{
+					"name" : "IRLINE[7]",
+					"strict" : false
+				},
+				{
+					"name" : "IRLINE[8]",
+					"strict" : false
+				},
+				{
+					"name" : "COUNTERLINE[1]",
+					"strict" : false
+				},
+				{
+					"name" : "IRLINE[1]",
+					"strict" : false
+				},
+				{
+					"name" : "IRLINE[2]",
+					"strict" : false
+				},
+				{
+					"name" : "IRLINE[3]",
+					"strict" : false
+				},
+				{
+					"name" : "IRLINE[4]",
+					"strict" : false
+				},
+				{
+					"name" : "IRLINE[6]",
+					"strict" : false
+				},
+				{
+					"name" : "IRLINE[5]",
+					"strict" : false
+				},
+				{
+					"name" : "RUN",
+					"strict" : false
+				}
+			]
 		}
 	]
 }
