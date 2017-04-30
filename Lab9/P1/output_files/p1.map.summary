@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Thu Apr 27 17:07:42 2017
+Analysis & Synthesis Status : Successful - Sun Apr 30 16:13:24 2017
 Quartus Prime Version : 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 Revision Name : p1
-Top-level Entity Name : CONTROLUNIT
+Top-level Entity Name : PROCESSOR
 Family : Cyclone IV E
-Total logic elements : 63
-    Total combinational functions : 63
-    Dedicated logic registers : 0
-Total registers : 0
-Total pins : 37
+Total logic elements : 320
+    Total combinational functions : 208
+    Dedicated logic registers : 130
+Total registers : 130
+Total pins : 186
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0

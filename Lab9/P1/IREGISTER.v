@@ -5,19 +5,11 @@ module IREGISTER
     output reg [8:0] OUT
 );
 
-    // Temp Holder
-    reg [8:0] CURRENT = 10'b0_0000_0000;
-
     always @ (posedge CLK)
         begin
             if (WE)
                 begin
                     OUT <= IN;
-                    CURRENT <= IN;
-                end
-            else
-                begin
-                    OUT <= CURRENT;
                 end
         end
 

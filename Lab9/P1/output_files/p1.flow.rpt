@@ -1,5 +1,5 @@
 Flow report for p1
-Thu Apr 27 17:07:42 2017
+Sun Apr 30 16:13:24 2017
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -41,18 +41,18 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Thu Apr 27 17:07:42 2017       ;
+; Flow Status                        ; Successful - Sun Apr 30 16:13:24 2017       ;
 ; Quartus Prime Version              ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name                      ; p1                                          ;
-; Top-level Entity Name              ; CONTROLUNIT                                 ;
+; Top-level Entity Name              ; PROCESSOR                                   ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE115F29C7                               ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 63                                          ;
-;     Total combinational functions  ; 63                                          ;
-;     Dedicated logic registers      ; 0                                           ;
-; Total registers                    ; 0                                           ;
-; Total pins                         ; 37                                          ;
+; Total logic elements               ; 320                                         ;
+;     Total combinational functions  ; 208                                         ;
+;     Dedicated logic registers      ; 130                                         ;
+; Total registers                    ; 130                                         ;
+; Total pins                         ; 186                                         ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -65,7 +65,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/27/2017 17:07:28 ;
+; Start date & time ; 04/30/2017 16:13:12 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; p1                  ;
 +-------------------+---------------------+
@@ -76,17 +76,17 @@ agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 1097044241719.149329304804680          ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 1097044241719.149354899104616          ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                            ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)              ; <None>        ; --          ; --             ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --             ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --             ;
 ; NOMINAL_CORE_SUPPLY_VOLTAGE         ; 1.2V                                   ; --            ; --          ; --             ;
-; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; CONTROLUNIT ; Top            ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; CONTROLUNIT ; Top            ;
-; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; CONTROLUNIT ; Top            ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; PROCESSOR   ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; PROCESSOR   ; Top            ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; PROCESSOR   ; Top            ;
 ; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --            ; --          ; --             ;
-; TOP_LEVEL_ENTITY                    ; CONTROLUNIT                            ; p1            ; --          ; --             ;
+; TOP_LEVEL_ENTITY                    ; PROCESSOR                              ; p1            ; --          ; --             ;
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
 
 
@@ -95,8 +95,8 @@ agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:14     ; 1.0                     ; 586 MB              ; 00:00:30                           ;
-; Total                ; 00:00:14     ; --                      ; --                  ; 00:00:30                           ;
+; Analysis & Synthesis ; 00:00:12     ; 1.0                     ; 588 MB              ; 00:00:28                           ;
+; Total                ; 00:00:12     ; --                      ; --                  ; 00:00:28                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

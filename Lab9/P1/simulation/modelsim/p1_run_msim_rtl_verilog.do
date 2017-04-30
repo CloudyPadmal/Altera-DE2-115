@@ -5,6 +5,11 @@ if {[file exists rtl_work]} {
 vlib rtl_work
 vmap work rtl_work
 
+vlog -vlog01compat -work work +incdir+F:/Work/FPGA/Board/Lab9/P1 {F:/Work/FPGA/Board/Lab9/P1/REGISTER.v}
+vlog -vlog01compat -work work +incdir+F:/Work/FPGA/Board/Lab9/P1 {F:/Work/FPGA/Board/Lab9/P1/COUNTER.v}
+vlog -vlog01compat -work work +incdir+F:/Work/FPGA/Board/Lab9/P1 {F:/Work/FPGA/Board/Lab9/P1/MULTIPLEXER.v}
 vlog -vlog01compat -work work +incdir+F:/Work/FPGA/Board/Lab9/P1 {F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v}
 vlog -vlog01compat -work work +incdir+F:/Work/FPGA/Board/Lab9/P1 {F:/Work/FPGA/Board/Lab9/P1/DECODER.v}
+vlog -vlog01compat -work work +incdir+F:/Work/FPGA/Board/Lab9/P1 {F:/Work/FPGA/Board/Lab9/P1/ALU.v}
+vlog -vlog01compat -work work +incdir+F:/Work/FPGA/Board/Lab9/P1 {F:/Work/FPGA/Board/Lab9/P1/PROCESSOR.v}
 

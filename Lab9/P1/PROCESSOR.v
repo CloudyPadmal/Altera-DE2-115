@@ -3,27 +3,40 @@ module PROCESSOR
     input CLK, RUN, RESET,
     input [15:0] DIN,
     output [15:0] BUS,
-    output DONE
+    output [15:0] DEMO1, DEMO2, DEMO3, DEMO4, DEMO5, DEMO6, DEMO7, DEMO8,
+    output DONE,
+    output [1:0] COUNTtoCUs,
+    output [9:0] MUXSELECTORSs, REGSELECTORSs
 );
 
     // Internal Wiring
     wire [15:0] R0toMUX, R1toMUX, R2toMUX, R3toMUX, R4toMUX, R5toMUX, R6toMUX, R7toMUX;
     wire [15:0] RGtoMUX, MUXtoRN, RAtoALU, ALUtoRG;
     wire [9:0] MUXSELECTORS, REGSELECTORS;
-    wire ADDSUB, IREN, COUNTCLR;
-    wire [8:0] IRtoCU;
+    wire ADDSUB, COUNTCLR;
     wire [1:0] COUNTtoCU;
+    
+    assign COUNTtoCUs = COUNTtoCU;
+    assign MUXSELECTORSs = MUXSELECTORS;
+    assign REGSELECTORSs = REGSELECTORS;
+    assign DEMO1 = R0toMUX;
+    assign DEMO2 = R1toMUX;
+    assign DEMO3 = R2toMUX;
+    assign DEMO4 = R3toMUX;
+    assign DEMO5 = R4toMUX;
+    assign DEMO6 = R5toMUX;
+    assign DEMO7 = R6toMUX;
+    assign DEMO8 = R7toMUX;
 
     // Instantiate CU
     CONTROLUNIT CU(
+        .CLK(CLK),
         .RUN(RUN),
-        .RESET(RESET),
         .COUNTERLINE(COUNTtoCU),
-        .IRLINE(IRtoCU),
+        .IRLINE(DIN[8:0]),
         .MUXLINE(MUXSELECTORS),
         .REGSELECTORS(REGSELECTORS),
         .ADDSUB(ADDSUB),
-        .IREN(IREN),
         .COUNTERCLR(COUNTCLR),
         .DONE(DONE)
     );
@@ -90,14 +103,6 @@ module PROCESSOR
         .OUT(RGtoMUX)
     );
     
-    // Instantiate IREGISTER
-    IREGISTER IREG(
-        .IN(DIN[8:0]),
-        .CLK(CLK),
-        .WE(IREN),
-        .OUT(IRtoCU)
-    );
-    
     // Instantiate ALU
     ALU ALUUNIT(
         .LINEA(RAtoALU),
@@ -109,7 +114,7 @@ module PROCESSOR
     // Instantiate Counter
     COUNTER COUNT(
         .CLK(CLK),
-        .CLR(COUNTCLR),
+        .CLR(RESET),
         .COUNT(COUNTtoCU)
     );
     
@@ -128,5 +133,86 @@ module PROCESSOR
         .SLCTR(MUXSELECTORS),
         .OUT(MUXtoRN)
     );
+    
+    assign BUS = MUXtoRN;
 
 endmodule
+
+module tP;
+
+    reg CLK;
+    reg RUN;
+    reg RESET;
+    reg [15:0] DIN;
+    wire [15:0] BUS;
+    wire [15:0] DEMO1, DEMO2, DEMO3, DEMO4, DEMO5, DEMO6, DEMO7, DEMO8;
+    wire DONE;
+    wire [1:0] COUNTtoCUs;
+    wire [9:0] MUXSELECTORSs, REGSELECTORSs;
+    
+    // Instantiate the Processor
+    PROCESSOR UUT(
+        .CLK(CLK),
+        .RUN(RUN),
+        .RESET(RESET),
+        .DIN(DIN),
+        .DEMO1(DEMO1),
+        .DEMO2(DEMO2),
+        .DEMO3(DEMO3),
+        .DEMO4(DEMO4),
+        .DEMO5(DEMO5),
+        .DEMO6(DEMO6),
+        .DEMO7(DEMO7),
+        .DEMO8(DEMO8),
+        .BUS(BUS),
+        .DONE(DONE),
+        .COUNTtoCUs(COUNTtoCUs),
+        .MUXSELECTORSs(MUXSELECTORSs),
+        .REGSELECTORSs(REGSELECTORSs)
+    );
+    
+    // Instantiate Registers
+    initial begin
+        CLK = 1'b0;
+        RUN = 1'b1; 
+        RESET = 1'b0;
+    end
+    
+    // Test I1 (RX <- DIN)
+    initial begin
+        #1
+        CLK = 1'b1;
+        RESET = 1'b1;
+        DIN = {7'b000_0000, 3'b010, 3'b001, 3'b010};
+        #1
+        CLK = 1'b0;
+        RESET = 1'b0;       
+        #1
+        CLK = 1'b1;
+        #1
+        CLK = 1'b0;
+        #1
+        CLK = 1'b1;
+        DIN = {7'b111_0111, 3'b010, 3'b101, 3'b110};
+        #1
+        CLK = 1'b0;
+        #1
+        CLK = 1'b1;
+        DIN = {7'b000_1100, 3'b011, 3'b011, 3'b110};
+        #1
+        CLK = 1'b0;
+        #1
+        CLK = 1'b1;
+        DIN = {7'b010_1100, 3'b100, 3'b001, 3'b100};
+        #1
+        CLK = 1'b0;
+        #1
+        CLK = 1'b1;
+        #1
+        CLK = 1'b0;
+        #1
+        CLK = 1'b1;
+    end
+
+endmodule
+
