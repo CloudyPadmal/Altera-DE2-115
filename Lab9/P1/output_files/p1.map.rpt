@@ -1,5 +1,5 @@
 Analysis & Synthesis report for p1
-Sun Apr 30 16:13:24 2017
+Tue May 02 20:29:24 2017
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -15,26 +15,24 @@ Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
   7. Analysis & Synthesis Resource Utilization by Entity
   8. User-Specified and Inferred Latches
   9. Registers Removed During Synthesis
- 10. Removed Registers Triggering Further Register Optimizations
- 11. General Register Statistics
- 12. Multiplexer Restructuring Statistics (Restructuring Performed)
- 13. Parameter Settings for User Entity Instance: REGISTER:REG_0
- 14. Parameter Settings for User Entity Instance: REGISTER:REG_1
- 15. Parameter Settings for User Entity Instance: REGISTER:REG_2
- 16. Parameter Settings for User Entity Instance: REGISTER:REG_3
- 17. Parameter Settings for User Entity Instance: REGISTER:REG_4
- 18. Parameter Settings for User Entity Instance: REGISTER:REG_5
- 19. Parameter Settings for User Entity Instance: REGISTER:REG_6
- 20. Parameter Settings for User Entity Instance: REGISTER:REG_7
- 21. Parameter Settings for User Entity Instance: REGISTER:REG_A
- 22. Parameter Settings for User Entity Instance: REGISTER:REG_G
- 23. Port Connectivity Checks: "CONTROLUNIT:CU|DECODER:DEC2"
- 24. Port Connectivity Checks: "CONTROLUNIT:CU|DECODER:DEC1"
- 25. Port Connectivity Checks: "CONTROLUNIT:CU"
- 26. Post-Synthesis Netlist Statistics for Top Partition
- 27. Elapsed Time Per Partition
- 28. Analysis & Synthesis Messages
- 29. Analysis & Synthesis Suppressed Messages
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for User Entity Instance: REGISTER:REG_0
+ 13. Parameter Settings for User Entity Instance: REGISTER:REG_1
+ 14. Parameter Settings for User Entity Instance: REGISTER:REG_2
+ 15. Parameter Settings for User Entity Instance: REGISTER:REG_3
+ 16. Parameter Settings for User Entity Instance: REGISTER:REG_4
+ 17. Parameter Settings for User Entity Instance: REGISTER:REG_5
+ 18. Parameter Settings for User Entity Instance: REGISTER:REG_6
+ 19. Parameter Settings for User Entity Instance: REGISTER:REG_7
+ 20. Parameter Settings for User Entity Instance: REGISTER:REG_A
+ 21. Parameter Settings for User Entity Instance: REGISTER:REG_G
+ 22. Port Connectivity Checks: "CONTROLUNIT:CU|DECODER:DEC2"
+ 23. Port Connectivity Checks: "CONTROLUNIT:CU|DECODER:DEC1"
+ 24. Post-Synthesis Netlist Statistics for Top Partition
+ 25. Elapsed Time Per Partition
+ 26. Analysis & Synthesis Messages
+ 27. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -61,16 +59,16 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Apr 30 16:13:24 2017       ;
+; Analysis & Synthesis Status        ; Successful - Tue May 02 20:29:24 2017       ;
 ; Quartus Prime Version              ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name                      ; p1                                          ;
 ; Top-level Entity Name              ; PROCESSOR                                   ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 320                                         ;
-;     Total combinational functions  ; 208                                         ;
-;     Dedicated logic registers      ; 130                                         ;
-; Total registers                    ; 130                                         ;
-; Total pins                         ; 186                                         ;
+; Total logic elements               ; 377                                         ;
+;     Total combinational functions  ; 240                                         ;
+;     Dedicated logic registers      ; 171                                         ;
+; Total registers                    ; 171                                         ;
+; Total pins                         ; 222                                         ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -201,30 +199,30 @@ agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 320       ;
+; Estimated Total logic elements              ; 377       ;
 ;                                             ;           ;
-; Total combinational functions               ; 208       ;
+; Total combinational functions               ; 240       ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 142       ;
-;     -- 3 input functions                    ; 50        ;
-;     -- <=2 input functions                  ; 16        ;
+;     -- 4 input functions                    ; 156       ;
+;     -- 3 input functions                    ; 52        ;
+;     -- <=2 input functions                  ; 32        ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 208       ;
-;     -- arithmetic mode                      ; 0         ;
+;     -- normal mode                          ; 224       ;
+;     -- arithmetic mode                      ; 16        ;
 ;                                             ;           ;
-; Total registers                             ; 130       ;
-;     -- Dedicated logic registers            ; 130       ;
+; Total registers                             ; 171       ;
+;     -- Dedicated logic registers            ; 171       ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
-; I/O pins                                    ; 186       ;
+; I/O pins                                    ; 222       ;
 ;                                             ;           ;
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; CLK~input ;
-; Maximum fan-out                             ; 130       ;
-; Total fan-out                               ; 1490      ;
-; Average fan-out                             ; 2.10      ;
+; Maximum fan-out                             ; 171       ;
+; Total fan-out                               ; 1780      ;
+; Average fan-out                             ; 2.08      ;
 +---------------------------------------------+-----------+
 
 
@@ -233,8 +231,9 @@ agreement for further details.
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name        ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------+-------------+--------------+
-; |PROCESSOR                 ; 208 (0)             ; 130 (0)                   ; 0           ; 0            ; 0       ; 0         ; 186  ; 0            ; |PROCESSOR                 ; PROCESSOR   ; work         ;
-;    |CONTROLUNIT:CU|        ; 72 (72)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |PROCESSOR|CONTROLUNIT:CU  ; CONTROLUNIT ; work         ;
+; |PROCESSOR                 ; 240 (0)             ; 171 (0)                   ; 0           ; 0            ; 0       ; 0         ; 222  ; 0            ; |PROCESSOR                 ; PROCESSOR   ; work         ;
+;    |ALU:ALUUNIT|           ; 33 (33)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |PROCESSOR|ALU:ALUUNIT     ; ALU         ; work         ;
+;    |CONTROLUNIT:CU|        ; 71 (71)             ; 9 (9)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |PROCESSOR|CONTROLUNIT:CU  ; CONTROLUNIT ; work         ;
 ;    |COUNTER:COUNT|         ; 2 (2)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |PROCESSOR|COUNTER:COUNT   ; COUNTER     ; work         ;
 ;    |MULTIPLEXER:MUX|       ; 134 (134)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |PROCESSOR|MULTIPLEXER:MUX ; MULTIPLEXER ; work         ;
 ;    |REGISTER:REG_0|        ; 0 (0)               ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |PROCESSOR|REGISTER:REG_0  ; REGISTER    ; work         ;
@@ -245,6 +244,8 @@ agreement for further details.
 ;    |REGISTER:REG_5|        ; 0 (0)               ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |PROCESSOR|REGISTER:REG_5  ; REGISTER    ; work         ;
 ;    |REGISTER:REG_6|        ; 0 (0)               ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |PROCESSOR|REGISTER:REG_6  ; REGISTER    ; work         ;
 ;    |REGISTER:REG_7|        ; 0 (0)               ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |PROCESSOR|REGISTER:REG_7  ; REGISTER    ; work         ;
+;    |REGISTER:REG_A|        ; 0 (0)               ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |PROCESSOR|REGISTER:REG_A  ; REGISTER    ; work         ;
+;    |REGISTER:REG_G|        ; 0 (0)               ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |PROCESSOR|REGISTER:REG_G  ; REGISTER    ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -262,7 +263,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; CONTROLUNIT:CU|MUXLINE[5]                           ; CONTROLUNIT:CU|MUXLINE[9] ; yes                    ;
 ; CONTROLUNIT:CU|MUXLINE[6]                           ; CONTROLUNIT:CU|MUXLINE[9] ; yes                    ;
 ; CONTROLUNIT:CU|MUXLINE[7]                           ; CONTROLUNIT:CU|MUXLINE[9] ; yes                    ;
+; CONTROLUNIT:CU|MUXLINE[8]                           ; CONTROLUNIT:CU|MUXLINE[9] ; yes                    ;
 ; CONTROLUNIT:CU|MUXLINE[9]                           ; CONTROLUNIT:CU|MUXLINE[9] ; yes                    ;
+; CONTROLUNIT:CU|ADDSUB                               ; CONTROLUNIT:CU|ADDSUB     ; yes                    ;
 ; CONTROLUNIT:CU|DONE                                 ; CONTROLUNIT:CU|DONE       ; yes                    ;
 ; CONTROLUNIT:CU|REGSELECTORS[0]                      ; CONTROLUNIT:CU|MUXLINE[9] ; yes                    ;
 ; CONTROLUNIT:CU|REGSELECTORS[1]                      ; CONTROLUNIT:CU|MUXLINE[9] ; yes                    ;
@@ -274,17 +277,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; CONTROLUNIT:CU|REGSELECTORS[7]                      ; CONTROLUNIT:CU|MUXLINE[9] ; yes                    ;
 ; CONTROLUNIT:CU|REGSELECTORS[8]                      ; CONTROLUNIT:CU|MUXLINE[9] ; yes                    ;
 ; CONTROLUNIT:CU|REGSELECTORS[9]                      ; CONTROLUNIT:CU|MUXLINE[9] ; yes                    ;
-; CONTROLUNIT:CU|IRtoCU[0]                            ; CONTROLUNIT:CU|IRtoCU[0]  ; yes                    ;
-; CONTROLUNIT:CU|IRtoCU[1]                            ; CONTROLUNIT:CU|IRtoCU[0]  ; yes                    ;
-; CONTROLUNIT:CU|IRtoCU[2]                            ; CONTROLUNIT:CU|IRtoCU[0]  ; yes                    ;
-; CONTROLUNIT:CU|IRtoCU[3]                            ; CONTROLUNIT:CU|IRtoCU[0]  ; yes                    ;
-; CONTROLUNIT:CU|IRtoCU[4]                            ; CONTROLUNIT:CU|IRtoCU[0]  ; yes                    ;
-; CONTROLUNIT:CU|IRtoCU[5]                            ; CONTROLUNIT:CU|IRtoCU[0]  ; yes                    ;
-; CONTROLUNIT:CU|IRtoCU[6]                            ; CONTROLUNIT:CU|IRtoCU[0]  ; yes                    ;
-; CONTROLUNIT:CU|IRtoCU[8]                            ; CONTROLUNIT:CU|IRtoCU[0]  ; yes                    ;
-; CONTROLUNIT:CU|IRtoCU[7]                            ; CONTROLUNIT:CU|IRtoCU[0]  ; yes                    ;
-; CONTROLUNIT:CU|IREN                                 ; CONTROLUNIT:CU|IREN       ; yes                    ;
-; Number of user-specified and inferred latches = 30  ;                           ;                        ;
+; CONTROLUNIT:CU|COUNTERCLR                           ; CONTROLUNIT:CU|COUNTERCLR ; yes                    ;
+; Number of user-specified and inferred latches = 23  ;                           ;                        ;
 +-----------------------------------------------------+---------------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
@@ -294,10 +288,6 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +-----------------------------------------+----------------------------------------+
 ; Register name                           ; Reason for Removal                     ;
 +-----------------------------------------+----------------------------------------+
-; REGISTER:REG_G|OUT[0..15]               ; Lost fanout                            ;
-; REGISTER:REG_G|CURRENT[0..15]           ; Lost fanout                            ;
-; REGISTER:REG_A|CURRENT[0..15]           ; Lost fanout                            ;
-; REGISTER:REG_A|OUT[0..15]               ; Lost fanout                            ;
 ; REGISTER:REG_0|OUT[0]                   ; Merged with REGISTER:REG_0|CURRENT[0]  ;
 ; REGISTER:REG_1|OUT[0]                   ; Merged with REGISTER:REG_1|CURRENT[0]  ;
 ; REGISTER:REG_2|OUT[0]                   ; Merged with REGISTER:REG_2|CURRENT[0]  ;
@@ -306,6 +296,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; REGISTER:REG_5|OUT[0]                   ; Merged with REGISTER:REG_5|CURRENT[0]  ;
 ; REGISTER:REG_6|OUT[0]                   ; Merged with REGISTER:REG_6|CURRENT[0]  ;
 ; REGISTER:REG_7|OUT[0]                   ; Merged with REGISTER:REG_7|CURRENT[0]  ;
+; REGISTER:REG_G|OUT[0]                   ; Merged with REGISTER:REG_G|CURRENT[0]  ;
 ; REGISTER:REG_0|OUT[1]                   ; Merged with REGISTER:REG_0|CURRENT[1]  ;
 ; REGISTER:REG_1|OUT[1]                   ; Merged with REGISTER:REG_1|CURRENT[1]  ;
 ; REGISTER:REG_2|OUT[1]                   ; Merged with REGISTER:REG_2|CURRENT[1]  ;
@@ -314,6 +305,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; REGISTER:REG_5|OUT[1]                   ; Merged with REGISTER:REG_5|CURRENT[1]  ;
 ; REGISTER:REG_6|OUT[1]                   ; Merged with REGISTER:REG_6|CURRENT[1]  ;
 ; REGISTER:REG_7|OUT[1]                   ; Merged with REGISTER:REG_7|CURRENT[1]  ;
+; REGISTER:REG_G|OUT[1]                   ; Merged with REGISTER:REG_G|CURRENT[1]  ;
 ; REGISTER:REG_0|OUT[2]                   ; Merged with REGISTER:REG_0|CURRENT[2]  ;
 ; REGISTER:REG_1|OUT[2]                   ; Merged with REGISTER:REG_1|CURRENT[2]  ;
 ; REGISTER:REG_2|OUT[2]                   ; Merged with REGISTER:REG_2|CURRENT[2]  ;
@@ -322,6 +314,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; REGISTER:REG_5|OUT[2]                   ; Merged with REGISTER:REG_5|CURRENT[2]  ;
 ; REGISTER:REG_6|OUT[2]                   ; Merged with REGISTER:REG_6|CURRENT[2]  ;
 ; REGISTER:REG_7|OUT[2]                   ; Merged with REGISTER:REG_7|CURRENT[2]  ;
+; REGISTER:REG_G|OUT[2]                   ; Merged with REGISTER:REG_G|CURRENT[2]  ;
 ; REGISTER:REG_0|OUT[3]                   ; Merged with REGISTER:REG_0|CURRENT[3]  ;
 ; REGISTER:REG_1|OUT[3]                   ; Merged with REGISTER:REG_1|CURRENT[3]  ;
 ; REGISTER:REG_2|OUT[3]                   ; Merged with REGISTER:REG_2|CURRENT[3]  ;
@@ -330,6 +323,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; REGISTER:REG_5|OUT[3]                   ; Merged with REGISTER:REG_5|CURRENT[3]  ;
 ; REGISTER:REG_6|OUT[3]                   ; Merged with REGISTER:REG_6|CURRENT[3]  ;
 ; REGISTER:REG_7|OUT[3]                   ; Merged with REGISTER:REG_7|CURRENT[3]  ;
+; REGISTER:REG_G|OUT[3]                   ; Merged with REGISTER:REG_G|CURRENT[3]  ;
 ; REGISTER:REG_0|OUT[4]                   ; Merged with REGISTER:REG_0|CURRENT[4]  ;
 ; REGISTER:REG_1|OUT[4]                   ; Merged with REGISTER:REG_1|CURRENT[4]  ;
 ; REGISTER:REG_2|OUT[4]                   ; Merged with REGISTER:REG_2|CURRENT[4]  ;
@@ -338,6 +332,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; REGISTER:REG_5|OUT[4]                   ; Merged with REGISTER:REG_5|CURRENT[4]  ;
 ; REGISTER:REG_6|OUT[4]                   ; Merged with REGISTER:REG_6|CURRENT[4]  ;
 ; REGISTER:REG_7|OUT[4]                   ; Merged with REGISTER:REG_7|CURRENT[4]  ;
+; REGISTER:REG_G|OUT[4]                   ; Merged with REGISTER:REG_G|CURRENT[4]  ;
 ; REGISTER:REG_0|OUT[5]                   ; Merged with REGISTER:REG_0|CURRENT[5]  ;
 ; REGISTER:REG_1|OUT[5]                   ; Merged with REGISTER:REG_1|CURRENT[5]  ;
 ; REGISTER:REG_2|OUT[5]                   ; Merged with REGISTER:REG_2|CURRENT[5]  ;
@@ -346,6 +341,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; REGISTER:REG_5|OUT[5]                   ; Merged with REGISTER:REG_5|CURRENT[5]  ;
 ; REGISTER:REG_6|OUT[5]                   ; Merged with REGISTER:REG_6|CURRENT[5]  ;
 ; REGISTER:REG_7|OUT[5]                   ; Merged with REGISTER:REG_7|CURRENT[5]  ;
+; REGISTER:REG_G|OUT[5]                   ; Merged with REGISTER:REG_G|CURRENT[5]  ;
 ; REGISTER:REG_0|OUT[6]                   ; Merged with REGISTER:REG_0|CURRENT[6]  ;
 ; REGISTER:REG_1|OUT[6]                   ; Merged with REGISTER:REG_1|CURRENT[6]  ;
 ; REGISTER:REG_2|OUT[6]                   ; Merged with REGISTER:REG_2|CURRENT[6]  ;
@@ -354,6 +350,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; REGISTER:REG_5|OUT[6]                   ; Merged with REGISTER:REG_5|CURRENT[6]  ;
 ; REGISTER:REG_6|OUT[6]                   ; Merged with REGISTER:REG_6|CURRENT[6]  ;
 ; REGISTER:REG_7|OUT[6]                   ; Merged with REGISTER:REG_7|CURRENT[6]  ;
+; REGISTER:REG_G|OUT[6]                   ; Merged with REGISTER:REG_G|CURRENT[6]  ;
 ; REGISTER:REG_0|OUT[7]                   ; Merged with REGISTER:REG_0|CURRENT[7]  ;
 ; REGISTER:REG_1|OUT[7]                   ; Merged with REGISTER:REG_1|CURRENT[7]  ;
 ; REGISTER:REG_2|OUT[7]                   ; Merged with REGISTER:REG_2|CURRENT[7]  ;
@@ -362,6 +359,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; REGISTER:REG_5|OUT[7]                   ; Merged with REGISTER:REG_5|CURRENT[7]  ;
 ; REGISTER:REG_6|OUT[7]                   ; Merged with REGISTER:REG_6|CURRENT[7]  ;
 ; REGISTER:REG_7|OUT[7]                   ; Merged with REGISTER:REG_7|CURRENT[7]  ;
+; REGISTER:REG_G|OUT[7]                   ; Merged with REGISTER:REG_G|CURRENT[7]  ;
 ; REGISTER:REG_0|OUT[8]                   ; Merged with REGISTER:REG_0|CURRENT[8]  ;
 ; REGISTER:REG_1|OUT[8]                   ; Merged with REGISTER:REG_1|CURRENT[8]  ;
 ; REGISTER:REG_2|OUT[8]                   ; Merged with REGISTER:REG_2|CURRENT[8]  ;
@@ -370,6 +368,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; REGISTER:REG_5|OUT[8]                   ; Merged with REGISTER:REG_5|CURRENT[8]  ;
 ; REGISTER:REG_6|OUT[8]                   ; Merged with REGISTER:REG_6|CURRENT[8]  ;
 ; REGISTER:REG_7|OUT[8]                   ; Merged with REGISTER:REG_7|CURRENT[8]  ;
+; REGISTER:REG_G|OUT[8]                   ; Merged with REGISTER:REG_G|CURRENT[8]  ;
 ; REGISTER:REG_0|OUT[9]                   ; Merged with REGISTER:REG_0|CURRENT[9]  ;
 ; REGISTER:REG_1|OUT[9]                   ; Merged with REGISTER:REG_1|CURRENT[9]  ;
 ; REGISTER:REG_2|OUT[9]                   ; Merged with REGISTER:REG_2|CURRENT[9]  ;
@@ -378,6 +377,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; REGISTER:REG_5|OUT[9]                   ; Merged with REGISTER:REG_5|CURRENT[9]  ;
 ; REGISTER:REG_6|OUT[9]                   ; Merged with REGISTER:REG_6|CURRENT[9]  ;
 ; REGISTER:REG_7|OUT[9]                   ; Merged with REGISTER:REG_7|CURRENT[9]  ;
+; REGISTER:REG_G|OUT[9]                   ; Merged with REGISTER:REG_G|CURRENT[9]  ;
 ; REGISTER:REG_0|OUT[10]                  ; Merged with REGISTER:REG_0|CURRENT[10] ;
 ; REGISTER:REG_1|OUT[10]                  ; Merged with REGISTER:REG_1|CURRENT[10] ;
 ; REGISTER:REG_2|OUT[10]                  ; Merged with REGISTER:REG_2|CURRENT[10] ;
@@ -386,6 +386,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; REGISTER:REG_5|OUT[10]                  ; Merged with REGISTER:REG_5|CURRENT[10] ;
 ; REGISTER:REG_6|OUT[10]                  ; Merged with REGISTER:REG_6|CURRENT[10] ;
 ; REGISTER:REG_7|OUT[10]                  ; Merged with REGISTER:REG_7|CURRENT[10] ;
+; REGISTER:REG_G|OUT[10]                  ; Merged with REGISTER:REG_G|CURRENT[10] ;
 ; REGISTER:REG_0|OUT[11]                  ; Merged with REGISTER:REG_0|CURRENT[11] ;
 ; REGISTER:REG_1|OUT[11]                  ; Merged with REGISTER:REG_1|CURRENT[11] ;
 ; REGISTER:REG_2|OUT[11]                  ; Merged with REGISTER:REG_2|CURRENT[11] ;
@@ -394,6 +395,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; REGISTER:REG_5|OUT[11]                  ; Merged with REGISTER:REG_5|CURRENT[11] ;
 ; REGISTER:REG_6|OUT[11]                  ; Merged with REGISTER:REG_6|CURRENT[11] ;
 ; REGISTER:REG_7|OUT[11]                  ; Merged with REGISTER:REG_7|CURRENT[11] ;
+; REGISTER:REG_G|OUT[11]                  ; Merged with REGISTER:REG_G|CURRENT[11] ;
 ; REGISTER:REG_0|OUT[12]                  ; Merged with REGISTER:REG_0|CURRENT[12] ;
 ; REGISTER:REG_1|OUT[12]                  ; Merged with REGISTER:REG_1|CURRENT[12] ;
 ; REGISTER:REG_2|OUT[12]                  ; Merged with REGISTER:REG_2|CURRENT[12] ;
@@ -402,6 +404,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; REGISTER:REG_5|OUT[12]                  ; Merged with REGISTER:REG_5|CURRENT[12] ;
 ; REGISTER:REG_6|OUT[12]                  ; Merged with REGISTER:REG_6|CURRENT[12] ;
 ; REGISTER:REG_7|OUT[12]                  ; Merged with REGISTER:REG_7|CURRENT[12] ;
+; REGISTER:REG_G|OUT[12]                  ; Merged with REGISTER:REG_G|CURRENT[12] ;
 ; REGISTER:REG_0|OUT[13]                  ; Merged with REGISTER:REG_0|CURRENT[13] ;
 ; REGISTER:REG_1|OUT[13]                  ; Merged with REGISTER:REG_1|CURRENT[13] ;
 ; REGISTER:REG_2|OUT[13]                  ; Merged with REGISTER:REG_2|CURRENT[13] ;
@@ -410,6 +413,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; REGISTER:REG_5|OUT[13]                  ; Merged with REGISTER:REG_5|CURRENT[13] ;
 ; REGISTER:REG_6|OUT[13]                  ; Merged with REGISTER:REG_6|CURRENT[13] ;
 ; REGISTER:REG_7|OUT[13]                  ; Merged with REGISTER:REG_7|CURRENT[13] ;
+; REGISTER:REG_G|OUT[13]                  ; Merged with REGISTER:REG_G|CURRENT[13] ;
 ; REGISTER:REG_0|OUT[14]                  ; Merged with REGISTER:REG_0|CURRENT[14] ;
 ; REGISTER:REG_1|OUT[14]                  ; Merged with REGISTER:REG_1|CURRENT[14] ;
 ; REGISTER:REG_2|OUT[14]                  ; Merged with REGISTER:REG_2|CURRENT[14] ;
@@ -418,6 +422,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; REGISTER:REG_5|OUT[14]                  ; Merged with REGISTER:REG_5|CURRENT[14] ;
 ; REGISTER:REG_6|OUT[14]                  ; Merged with REGISTER:REG_6|CURRENT[14] ;
 ; REGISTER:REG_7|OUT[14]                  ; Merged with REGISTER:REG_7|CURRENT[14] ;
+; REGISTER:REG_G|OUT[14]                  ; Merged with REGISTER:REG_G|CURRENT[14] ;
 ; REGISTER:REG_0|OUT[15]                  ; Merged with REGISTER:REG_0|CURRENT[15] ;
 ; REGISTER:REG_1|OUT[15]                  ; Merged with REGISTER:REG_1|CURRENT[15] ;
 ; REGISTER:REG_2|OUT[15]                  ; Merged with REGISTER:REG_2|CURRENT[15] ;
@@ -426,33 +431,25 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; REGISTER:REG_5|OUT[15]                  ; Merged with REGISTER:REG_5|CURRENT[15] ;
 ; REGISTER:REG_6|OUT[15]                  ; Merged with REGISTER:REG_6|CURRENT[15] ;
 ; REGISTER:REG_7|OUT[15]                  ; Merged with REGISTER:REG_7|CURRENT[15] ;
-; Total Number of Removed Registers = 192 ;                                        ;
+; REGISTER:REG_G|OUT[15]                  ; Merged with REGISTER:REG_G|CURRENT[15] ;
+; REGISTER:REG_A|OUT[0]                   ; Merged with REGISTER:REG_A|CURRENT[0]  ;
+; REGISTER:REG_A|OUT[1]                   ; Merged with REGISTER:REG_A|CURRENT[1]  ;
+; REGISTER:REG_A|OUT[2]                   ; Merged with REGISTER:REG_A|CURRENT[2]  ;
+; REGISTER:REG_A|OUT[3]                   ; Merged with REGISTER:REG_A|CURRENT[3]  ;
+; REGISTER:REG_A|OUT[4]                   ; Merged with REGISTER:REG_A|CURRENT[4]  ;
+; REGISTER:REG_A|OUT[5]                   ; Merged with REGISTER:REG_A|CURRENT[5]  ;
+; REGISTER:REG_A|OUT[6]                   ; Merged with REGISTER:REG_A|CURRENT[6]  ;
+; REGISTER:REG_A|OUT[7]                   ; Merged with REGISTER:REG_A|CURRENT[7]  ;
+; REGISTER:REG_A|OUT[8]                   ; Merged with REGISTER:REG_A|CURRENT[8]  ;
+; REGISTER:REG_A|OUT[9]                   ; Merged with REGISTER:REG_A|CURRENT[9]  ;
+; REGISTER:REG_A|OUT[10]                  ; Merged with REGISTER:REG_A|CURRENT[10] ;
+; REGISTER:REG_A|OUT[11]                  ; Merged with REGISTER:REG_A|CURRENT[11] ;
+; REGISTER:REG_A|OUT[12]                  ; Merged with REGISTER:REG_A|CURRENT[12] ;
+; REGISTER:REG_A|OUT[13]                  ; Merged with REGISTER:REG_A|CURRENT[13] ;
+; REGISTER:REG_A|OUT[14]                  ; Merged with REGISTER:REG_A|CURRENT[14] ;
+; REGISTER:REG_A|OUT[15]                  ; Merged with REGISTER:REG_A|CURRENT[15] ;
+; Total Number of Removed Registers = 160 ;                                        ;
 +-----------------------------------------+----------------------------------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                              ;
-+------------------------+--------------------+----------------------------------------------------------------------------+
-; Register name          ; Reason for Removal ; Registers Removed due to This Register                                     ;
-+------------------------+--------------------+----------------------------------------------------------------------------+
-; REGISTER:REG_G|OUT[0]  ; Lost Fanouts       ; REGISTER:REG_G|CURRENT[0], REGISTER:REG_A|OUT[12], REGISTER:REG_A|OUT[13], ;
-;                        ;                    ; REGISTER:REG_A|OUT[14], REGISTER:REG_A|OUT[15]                             ;
-; REGISTER:REG_G|OUT[1]  ; Lost Fanouts       ; REGISTER:REG_G|CURRENT[1]                                                  ;
-; REGISTER:REG_G|OUT[2]  ; Lost Fanouts       ; REGISTER:REG_G|CURRENT[2]                                                  ;
-; REGISTER:REG_G|OUT[3]  ; Lost Fanouts       ; REGISTER:REG_G|CURRENT[3]                                                  ;
-; REGISTER:REG_G|OUT[4]  ; Lost Fanouts       ; REGISTER:REG_G|CURRENT[4]                                                  ;
-; REGISTER:REG_G|OUT[5]  ; Lost Fanouts       ; REGISTER:REG_G|CURRENT[5]                                                  ;
-; REGISTER:REG_G|OUT[6]  ; Lost Fanouts       ; REGISTER:REG_G|CURRENT[6]                                                  ;
-; REGISTER:REG_G|OUT[7]  ; Lost Fanouts       ; REGISTER:REG_G|CURRENT[7]                                                  ;
-; REGISTER:REG_G|OUT[8]  ; Lost Fanouts       ; REGISTER:REG_G|CURRENT[8]                                                  ;
-; REGISTER:REG_G|OUT[9]  ; Lost Fanouts       ; REGISTER:REG_G|CURRENT[9]                                                  ;
-; REGISTER:REG_G|OUT[10] ; Lost Fanouts       ; REGISTER:REG_G|CURRENT[10]                                                 ;
-; REGISTER:REG_G|OUT[11] ; Lost Fanouts       ; REGISTER:REG_G|CURRENT[11]                                                 ;
-; REGISTER:REG_G|OUT[12] ; Lost Fanouts       ; REGISTER:REG_G|CURRENT[12]                                                 ;
-; REGISTER:REG_G|OUT[13] ; Lost Fanouts       ; REGISTER:REG_G|CURRENT[13]                                                 ;
-; REGISTER:REG_G|OUT[14] ; Lost Fanouts       ; REGISTER:REG_G|CURRENT[14]                                                 ;
-; REGISTER:REG_G|OUT[15] ; Lost Fanouts       ; REGISTER:REG_G|CURRENT[15]                                                 ;
-+------------------------+--------------------+----------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -460,12 +457,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 130   ;
+; Total registers                              ; 171   ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 128   ;
+; Number of registers using Clock Enable       ; 169   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -475,9 +472,9 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output            ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------+
-; 7:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; No         ; |PROCESSOR|CONTROLUNIT:CU|Mux34       ;
-; 7:1                ; 8 bits    ; 32 LEs        ; 8 LEs                ; 24 LEs                 ; No         ; |PROCESSOR|CONTROLUNIT:CU|Mux17       ;
-; 10:1               ; 16 bits   ; 96 LEs        ; 96 LEs               ; 0 LEs                  ; No         ; |PROCESSOR|MULTIPLEXER:MUX|Selector15 ;
+; 7:1                ; 8 bits    ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; No         ; |PROCESSOR|CONTROLUNIT:CU|Mux30       ;
+; 7:1                ; 8 bits    ; 32 LEs        ; 8 LEs                ; 24 LEs                 ; No         ; |PROCESSOR|CONTROLUNIT:CU|Mux6        ;
+; 11:1               ; 16 bits   ; 112 LEs       ; 112 LEs              ; 0 LEs                  ; No         ; |PROCESSOR|MULTIPLEXER:MUX|Selector15 ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------+
 
 
@@ -599,33 +596,26 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+-------+----------+-------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "CONTROLUNIT:CU"                                                                           ;
-+------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port       ; Type   ; Severity ; Details                                                                             ;
-+------------+--------+----------+-------------------------------------------------------------------------------------+
-; COUNTERCLR ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------------+--------+----------+-------------------------------------------------------------------------------------+
-
-
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 186                         ;
-; cycloneiii_ff         ; 130                         ;
-;     ENA               ; 128                         ;
+; boundary_port         ; 222                         ;
+; cycloneiii_ff         ; 171                         ;
+;     ENA               ; 169                         ;
 ;     plain             ; 2                           ;
-; cycloneiii_lcell_comb ; 209                         ;
-;     normal            ; 209                         ;
-;         0 data inputs ; 1                           ;
-;         2 data inputs ; 16                          ;
-;         3 data inputs ; 50                          ;
-;         4 data inputs ; 142                         ;
+; cycloneiii_lcell_comb ; 240                         ;
+;     arith             ; 16                          ;
+;         2 data inputs ; 1                           ;
+;         3 data inputs ; 15                          ;
+;     normal            ; 224                         ;
+;         2 data inputs ; 31                          ;
+;         3 data inputs ; 37                          ;
+;         4 data inputs ; 156                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 5.00                        ;
-; Average LUT depth     ; 3.35                        ;
+; Max LUT depth         ; 8.80                        ;
+; Average LUT depth     ; 5.61                        ;
 +-----------------------+-----------------------------+
 
 
@@ -634,7 +624,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -644,7 +634,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
-    Info: Processing started: Sun Apr 30 16:13:11 2017
+    Info: Processing started: Tue May 02 20:29:11 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off p1 -c p1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -662,123 +652,114 @@ Info (12021): Found 2 design units, including 2 entities, in source file multipl
     Info (12023): Found entity 2: testMULTIPLEXER File: F:/Work/FPGA/Board/Lab9/P1/MULTIPLEXER.v Line: 69
 Info (12021): Found 2 design units, including 2 entities, in source file controlunit.v
     Info (12023): Found entity 1: CONTROLUNIT File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 1
-    Info (12023): Found entity 2: tC File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 163
+    Info (12023): Found entity 2: tC File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 161
 Info (12021): Found 2 design units, including 2 entities, in source file decoder.v
     Info (12023): Found entity 1: DECODER File: F:/Work/FPGA/Board/Lab9/P1/DECODER.v Line: 1
     Info (12023): Found entity 2: testDECODER File: F:/Work/FPGA/Board/Lab9/P1/DECODER.v Line: 64
 Info (12021): Found 2 design units, including 2 entities, in source file alu.v
     Info (12023): Found entity 1: ALU File: F:/Work/FPGA/Board/Lab9/P1/ALU.v Line: 1
-    Info (12023): Found entity 2: testALU File: F:/Work/FPGA/Board/Lab9/P1/ALU.v Line: 22
+    Info (12023): Found entity 2: testALU File: F:/Work/FPGA/Board/Lab9/P1/ALU.v Line: 25
 Info (12021): Found 2 design units, including 2 entities, in source file processor.v
     Info (12023): Found entity 1: PROCESSOR File: F:/Work/FPGA/Board/Lab9/P1/PROCESSOR.v Line: 1
-    Info (12023): Found entity 2: tP File: F:/Work/FPGA/Board/Lab9/P1/PROCESSOR.v Line: 141
+    Info (12023): Found entity 2: tP File: F:/Work/FPGA/Board/Lab9/P1/PROCESSOR.v Line: 149
 Info (12127): Elaborating entity "PROCESSOR" for the top level hierarchy
-Info (12128): Elaborating entity "CONTROLUNIT" for hierarchy "CONTROLUNIT:CU" File: F:/Work/FPGA/Board/Lab9/P1/PROCESSOR.v Line: 42
-Warning (10240): Verilog HDL Always Construct warning at CONTROLUNIT.v(43): inferring latch(es) for variable "IRtoCU", which holds its previous value in one or more paths through the always construct File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 43
-Warning (10270): Verilog HDL Case Statement warning at CONTROLUNIT.v(69): incomplete case statement has no default case item File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 69
-Warning (10270): Verilog HDL Case Statement warning at CONTROLUNIT.v(110): incomplete case statement has no default case item File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 110
-Warning (10270): Verilog HDL Case Statement warning at CONTROLUNIT.v(133): incomplete case statement has no default case item File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 133
-Warning (10240): Verilog HDL Always Construct warning at CONTROLUNIT.v(54): inferring latch(es) for variable "MUXLINE", which holds its previous value in one or more paths through the always construct File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 54
-Warning (10240): Verilog HDL Always Construct warning at CONTROLUNIT.v(54): inferring latch(es) for variable "REGSELECTORS", which holds its previous value in one or more paths through the always construct File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 54
-Warning (10240): Verilog HDL Always Construct warning at CONTROLUNIT.v(54): inferring latch(es) for variable "DONE", which holds its previous value in one or more paths through the always construct File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 54
-Warning (10240): Verilog HDL Always Construct warning at CONTROLUNIT.v(54): inferring latch(es) for variable "COUNTERCLR", which holds its previous value in one or more paths through the always construct File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 54
-Warning (10240): Verilog HDL Always Construct warning at CONTROLUNIT.v(54): inferring latch(es) for variable "ADDSUB", which holds its previous value in one or more paths through the always construct File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 54
-Warning (10240): Verilog HDL Always Construct warning at CONTROLUNIT.v(54): inferring latch(es) for variable "IREN", which holds its previous value in one or more paths through the always construct File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 54
-Info (10041): Inferred latch for "COUNTERCLR" at CONTROLUNIT.v(54) File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 54
-Info (10041): Inferred latch for "IREN" at CONTROLUNIT.v(54) File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 54
-Info (10041): Inferred latch for "ADDSUB" at CONTROLUNIT.v(54) File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 54
-Info (10041): Inferred latch for "DONE" at CONTROLUNIT.v(54) File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 54
-Info (10041): Inferred latch for "REGSELECTORS[0]" at CONTROLUNIT.v(54) File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 54
-Info (10041): Inferred latch for "REGSELECTORS[1]" at CONTROLUNIT.v(54) File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 54
-Info (10041): Inferred latch for "REGSELECTORS[2]" at CONTROLUNIT.v(54) File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 54
-Info (10041): Inferred latch for "REGSELECTORS[3]" at CONTROLUNIT.v(54) File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 54
-Info (10041): Inferred latch for "REGSELECTORS[4]" at CONTROLUNIT.v(54) File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 54
-Info (10041): Inferred latch for "REGSELECTORS[5]" at CONTROLUNIT.v(54) File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 54
-Info (10041): Inferred latch for "REGSELECTORS[6]" at CONTROLUNIT.v(54) File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 54
-Info (10041): Inferred latch for "REGSELECTORS[7]" at CONTROLUNIT.v(54) File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 54
-Info (10041): Inferred latch for "REGSELECTORS[8]" at CONTROLUNIT.v(54) File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 54
-Info (10041): Inferred latch for "REGSELECTORS[9]" at CONTROLUNIT.v(54) File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 54
-Info (10041): Inferred latch for "MUXLINE[0]" at CONTROLUNIT.v(54) File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 54
-Info (10041): Inferred latch for "MUXLINE[1]" at CONTROLUNIT.v(54) File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 54
-Info (10041): Inferred latch for "MUXLINE[2]" at CONTROLUNIT.v(54) File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 54
-Info (10041): Inferred latch for "MUXLINE[3]" at CONTROLUNIT.v(54) File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 54
-Info (10041): Inferred latch for "MUXLINE[4]" at CONTROLUNIT.v(54) File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 54
-Info (10041): Inferred latch for "MUXLINE[5]" at CONTROLUNIT.v(54) File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 54
-Info (10041): Inferred latch for "MUXLINE[6]" at CONTROLUNIT.v(54) File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 54
-Info (10041): Inferred latch for "MUXLINE[7]" at CONTROLUNIT.v(54) File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 54
-Info (10041): Inferred latch for "MUXLINE[8]" at CONTROLUNIT.v(54) File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 54
-Info (10041): Inferred latch for "MUXLINE[9]" at CONTROLUNIT.v(54) File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 54
-Info (10041): Inferred latch for "IRtoCU[0]" at CONTROLUNIT.v(43) File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 43
-Info (10041): Inferred latch for "IRtoCU[1]" at CONTROLUNIT.v(43) File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 43
-Info (10041): Inferred latch for "IRtoCU[2]" at CONTROLUNIT.v(43) File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 43
-Info (10041): Inferred latch for "IRtoCU[3]" at CONTROLUNIT.v(43) File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 43
-Info (10041): Inferred latch for "IRtoCU[4]" at CONTROLUNIT.v(43) File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 43
-Info (10041): Inferred latch for "IRtoCU[5]" at CONTROLUNIT.v(43) File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 43
-Info (10041): Inferred latch for "IRtoCU[6]" at CONTROLUNIT.v(43) File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 43
-Info (10041): Inferred latch for "IRtoCU[7]" at CONTROLUNIT.v(43) File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 43
-Info (10041): Inferred latch for "IRtoCU[8]" at CONTROLUNIT.v(43) File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 43
-Info (12128): Elaborating entity "DECODER" for hierarchy "CONTROLUNIT:CU|DECODER:DEC1" File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 34
-Info (12128): Elaborating entity "REGISTER" for hierarchy "REGISTER:REG_0" File: F:/Work/FPGA/Board/Lab9/P1/PROCESSOR.v Line: 50
-Info (12128): Elaborating entity "ALU" for hierarchy "ALU:ALUUNIT" File: F:/Work/FPGA/Board/Lab9/P1/PROCESSOR.v Line: 112
-Info (12128): Elaborating entity "COUNTER" for hierarchy "COUNTER:COUNT" File: F:/Work/FPGA/Board/Lab9/P1/PROCESSOR.v Line: 119
-Info (12128): Elaborating entity "MULTIPLEXER" for hierarchy "MULTIPLEXER:MUX" File: F:/Work/FPGA/Board/Lab9/P1/PROCESSOR.v Line: 135
+Info (12128): Elaborating entity "CONTROLUNIT" for hierarchy "CONTROLUNIT:CU" File: F:/Work/FPGA/Board/Lab9/P1/PROCESSOR.v Line: 49
+Warning (10270): Verilog HDL Case Statement warning at CONTROLUNIT.v(67): incomplete case statement has no default case item File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 67
+Warning (10270): Verilog HDL Case Statement warning at CONTROLUNIT.v(108): incomplete case statement has no default case item File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 108
+Warning (10270): Verilog HDL Case Statement warning at CONTROLUNIT.v(131): incomplete case statement has no default case item File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 131
+Warning (10240): Verilog HDL Always Construct warning at CONTROLUNIT.v(53): inferring latch(es) for variable "MUXLINE", which holds its previous value in one or more paths through the always construct File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 53
+Warning (10240): Verilog HDL Always Construct warning at CONTROLUNIT.v(53): inferring latch(es) for variable "REGSELECTORS", which holds its previous value in one or more paths through the always construct File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 53
+Warning (10240): Verilog HDL Always Construct warning at CONTROLUNIT.v(53): inferring latch(es) for variable "DONE", which holds its previous value in one or more paths through the always construct File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 53
+Warning (10240): Verilog HDL Always Construct warning at CONTROLUNIT.v(53): inferring latch(es) for variable "COUNTERCLR", which holds its previous value in one or more paths through the always construct File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 53
+Warning (10240): Verilog HDL Always Construct warning at CONTROLUNIT.v(53): inferring latch(es) for variable "ADDSUB", which holds its previous value in one or more paths through the always construct File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 53
+Info (10041): Inferred latch for "COUNTERCLR" at CONTROLUNIT.v(53) File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 53
+Info (10041): Inferred latch for "ADDSUB" at CONTROLUNIT.v(53) File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 53
+Info (10041): Inferred latch for "DONE" at CONTROLUNIT.v(53) File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 53
+Info (10041): Inferred latch for "REGSELECTORS[0]" at CONTROLUNIT.v(53) File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 53
+Info (10041): Inferred latch for "REGSELECTORS[1]" at CONTROLUNIT.v(53) File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 53
+Info (10041): Inferred latch for "REGSELECTORS[2]" at CONTROLUNIT.v(53) File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 53
+Info (10041): Inferred latch for "REGSELECTORS[3]" at CONTROLUNIT.v(53) File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 53
+Info (10041): Inferred latch for "REGSELECTORS[4]" at CONTROLUNIT.v(53) File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 53
+Info (10041): Inferred latch for "REGSELECTORS[5]" at CONTROLUNIT.v(53) File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 53
+Info (10041): Inferred latch for "REGSELECTORS[6]" at CONTROLUNIT.v(53) File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 53
+Info (10041): Inferred latch for "REGSELECTORS[7]" at CONTROLUNIT.v(53) File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 53
+Info (10041): Inferred latch for "REGSELECTORS[8]" at CONTROLUNIT.v(53) File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 53
+Info (10041): Inferred latch for "REGSELECTORS[9]" at CONTROLUNIT.v(53) File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 53
+Info (10041): Inferred latch for "MUXLINE[0]" at CONTROLUNIT.v(53) File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 53
+Info (10041): Inferred latch for "MUXLINE[1]" at CONTROLUNIT.v(53) File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 53
+Info (10041): Inferred latch for "MUXLINE[2]" at CONTROLUNIT.v(53) File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 53
+Info (10041): Inferred latch for "MUXLINE[3]" at CONTROLUNIT.v(53) File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 53
+Info (10041): Inferred latch for "MUXLINE[4]" at CONTROLUNIT.v(53) File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 53
+Info (10041): Inferred latch for "MUXLINE[5]" at CONTROLUNIT.v(53) File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 53
+Info (10041): Inferred latch for "MUXLINE[6]" at CONTROLUNIT.v(53) File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 53
+Info (10041): Inferred latch for "MUXLINE[7]" at CONTROLUNIT.v(53) File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 53
+Info (10041): Inferred latch for "MUXLINE[8]" at CONTROLUNIT.v(53) File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 53
+Info (10041): Inferred latch for "MUXLINE[9]" at CONTROLUNIT.v(53) File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 53
+Info (12128): Elaborating entity "DECODER" for hierarchy "CONTROLUNIT:CU|DECODER:DEC1" File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 36
+Info (12128): Elaborating entity "REGISTER" for hierarchy "REGISTER:REG_0" File: F:/Work/FPGA/Board/Lab9/P1/PROCESSOR.v Line: 57
+Info (12128): Elaborating entity "ALU" for hierarchy "ALU:ALUUNIT" File: F:/Work/FPGA/Board/Lab9/P1/PROCESSOR.v Line: 120
+Info (12128): Elaborating entity "COUNTER" for hierarchy "COUNTER:COUNT" File: F:/Work/FPGA/Board/Lab9/P1/PROCESSOR.v Line: 127
+Info (12128): Elaborating entity "MULTIPLEXER" for hierarchy "MULTIPLEXER:MUX" File: F:/Work/FPGA/Board/Lab9/P1/PROCESSOR.v Line: 143
 Info (10264): Verilog HDL Case Statement information at MULTIPLEXER.v(19): all case item expressions in this case statement are onehot File: F:/Work/FPGA/Board/Lab9/P1/MULTIPLEXER.v Line: 19
-Warning (13012): Latch CONTROLUNIT:CU|MUXLINE[0] has unsafe behavior File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 54
+Warning (13012): Latch CONTROLUNIT:CU|MUXLINE[0] has unsafe behavior File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 53
     Warning (13013): Ports D and ENA on the latch are fed by the same signal COUNTER:COUNT|COUNT[0] File: F:/Work/FPGA/Board/Lab9/P1/COUNTER.v Line: 8
-Warning (13012): Latch CONTROLUNIT:CU|MUXLINE[1] has unsafe behavior File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 54
+Warning (13012): Latch CONTROLUNIT:CU|MUXLINE[1] has unsafe behavior File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 53
     Warning (13013): Ports D and ENA on the latch are fed by the same signal COUNTER:COUNT|COUNT[0] File: F:/Work/FPGA/Board/Lab9/P1/COUNTER.v Line: 8
-Warning (13012): Latch CONTROLUNIT:CU|MUXLINE[2] has unsafe behavior File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 54
+Warning (13012): Latch CONTROLUNIT:CU|MUXLINE[2] has unsafe behavior File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 53
     Warning (13013): Ports D and ENA on the latch are fed by the same signal COUNTER:COUNT|COUNT[0] File: F:/Work/FPGA/Board/Lab9/P1/COUNTER.v Line: 8
-Warning (13012): Latch CONTROLUNIT:CU|MUXLINE[3] has unsafe behavior File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 54
+Warning (13012): Latch CONTROLUNIT:CU|MUXLINE[3] has unsafe behavior File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 53
     Warning (13013): Ports D and ENA on the latch are fed by the same signal COUNTER:COUNT|COUNT[0] File: F:/Work/FPGA/Board/Lab9/P1/COUNTER.v Line: 8
-Warning (13012): Latch CONTROLUNIT:CU|MUXLINE[4] has unsafe behavior File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 54
+Warning (13012): Latch CONTROLUNIT:CU|MUXLINE[4] has unsafe behavior File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 53
     Warning (13013): Ports D and ENA on the latch are fed by the same signal COUNTER:COUNT|COUNT[0] File: F:/Work/FPGA/Board/Lab9/P1/COUNTER.v Line: 8
-Warning (13012): Latch CONTROLUNIT:CU|MUXLINE[5] has unsafe behavior File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 54
+Warning (13012): Latch CONTROLUNIT:CU|MUXLINE[5] has unsafe behavior File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 53
     Warning (13013): Ports D and ENA on the latch are fed by the same signal COUNTER:COUNT|COUNT[0] File: F:/Work/FPGA/Board/Lab9/P1/COUNTER.v Line: 8
-Warning (13012): Latch CONTROLUNIT:CU|MUXLINE[6] has unsafe behavior File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 54
+Warning (13012): Latch CONTROLUNIT:CU|MUXLINE[6] has unsafe behavior File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 53
     Warning (13013): Ports D and ENA on the latch are fed by the same signal COUNTER:COUNT|COUNT[0] File: F:/Work/FPGA/Board/Lab9/P1/COUNTER.v Line: 8
-Warning (13012): Latch CONTROLUNIT:CU|MUXLINE[7] has unsafe behavior File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 54
+Warning (13012): Latch CONTROLUNIT:CU|MUXLINE[7] has unsafe behavior File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 53
     Warning (13013): Ports D and ENA on the latch are fed by the same signal COUNTER:COUNT|COUNT[0] File: F:/Work/FPGA/Board/Lab9/P1/COUNTER.v Line: 8
-Warning (13012): Latch CONTROLUNIT:CU|MUXLINE[9] has unsafe behavior File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 54
+Warning (13012): Latch CONTROLUNIT:CU|MUXLINE[8] has unsafe behavior File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 53
     Warning (13013): Ports D and ENA on the latch are fed by the same signal COUNTER:COUNT|COUNT[0] File: F:/Work/FPGA/Board/Lab9/P1/COUNTER.v Line: 8
-Warning (13012): Latch CONTROLUNIT:CU|DONE has unsafe behavior File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 11
+Warning (13012): Latch CONTROLUNIT:CU|MUXLINE[9] has unsafe behavior File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 53
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CONTROLUNIT:CU|IRtoCU[6] File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 43
+Warning (13012): Latch CONTROLUNIT:CU|ADDSUB has unsafe behavior File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 8
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CONTROLUNIT:CU|IRtoCU[6] File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 43
+Warning (13012): Latch CONTROLUNIT:CU|DONE has unsafe behavior File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 12
     Warning (13013): Ports D and ENA on the latch are fed by the same signal COUNTER:COUNT|COUNT[0] File: F:/Work/FPGA/Board/Lab9/P1/COUNTER.v Line: 8
-Warning (13012): Latch CONTROLUNIT:CU|REGSELECTORS[0] has unsafe behavior File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 54
+Warning (13012): Latch CONTROLUNIT:CU|REGSELECTORS[0] has unsafe behavior File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 53
     Warning (13013): Ports D and ENA on the latch are fed by the same signal COUNTER:COUNT|COUNT[0] File: F:/Work/FPGA/Board/Lab9/P1/COUNTER.v Line: 8
-Warning (13012): Latch CONTROLUNIT:CU|REGSELECTORS[1] has unsafe behavior File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 54
+Warning (13012): Latch CONTROLUNIT:CU|REGSELECTORS[1] has unsafe behavior File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 53
     Warning (13013): Ports D and ENA on the latch are fed by the same signal COUNTER:COUNT|COUNT[0] File: F:/Work/FPGA/Board/Lab9/P1/COUNTER.v Line: 8
-Warning (13012): Latch CONTROLUNIT:CU|REGSELECTORS[2] has unsafe behavior File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 54
+Warning (13012): Latch CONTROLUNIT:CU|REGSELECTORS[2] has unsafe behavior File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 53
     Warning (13013): Ports D and ENA on the latch are fed by the same signal COUNTER:COUNT|COUNT[0] File: F:/Work/FPGA/Board/Lab9/P1/COUNTER.v Line: 8
-Warning (13012): Latch CONTROLUNIT:CU|REGSELECTORS[3] has unsafe behavior File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 54
+Warning (13012): Latch CONTROLUNIT:CU|REGSELECTORS[3] has unsafe behavior File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 53
     Warning (13013): Ports D and ENA on the latch are fed by the same signal COUNTER:COUNT|COUNT[0] File: F:/Work/FPGA/Board/Lab9/P1/COUNTER.v Line: 8
-Warning (13012): Latch CONTROLUNIT:CU|REGSELECTORS[4] has unsafe behavior File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 54
+Warning (13012): Latch CONTROLUNIT:CU|REGSELECTORS[4] has unsafe behavior File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 53
     Warning (13013): Ports D and ENA on the latch are fed by the same signal COUNTER:COUNT|COUNT[0] File: F:/Work/FPGA/Board/Lab9/P1/COUNTER.v Line: 8
-Warning (13012): Latch CONTROLUNIT:CU|REGSELECTORS[5] has unsafe behavior File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 54
+Warning (13012): Latch CONTROLUNIT:CU|REGSELECTORS[5] has unsafe behavior File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 53
     Warning (13013): Ports D and ENA on the latch are fed by the same signal COUNTER:COUNT|COUNT[0] File: F:/Work/FPGA/Board/Lab9/P1/COUNTER.v Line: 8
-Warning (13012): Latch CONTROLUNIT:CU|REGSELECTORS[6] has unsafe behavior File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 54
+Warning (13012): Latch CONTROLUNIT:CU|REGSELECTORS[6] has unsafe behavior File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 53
     Warning (13013): Ports D and ENA on the latch are fed by the same signal COUNTER:COUNT|COUNT[0] File: F:/Work/FPGA/Board/Lab9/P1/COUNTER.v Line: 8
-Warning (13012): Latch CONTROLUNIT:CU|REGSELECTORS[7] has unsafe behavior File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 54
+Warning (13012): Latch CONTROLUNIT:CU|REGSELECTORS[7] has unsafe behavior File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 53
     Warning (13013): Ports D and ENA on the latch are fed by the same signal COUNTER:COUNT|COUNT[0] File: F:/Work/FPGA/Board/Lab9/P1/COUNTER.v Line: 8
-Warning (13012): Latch CONTROLUNIT:CU|REGSELECTORS[8] has unsafe behavior File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 54
+Warning (13012): Latch CONTROLUNIT:CU|REGSELECTORS[8] has unsafe behavior File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 53
     Warning (13013): Ports D and ENA on the latch are fed by the same signal COUNTER:COUNT|COUNT[0] File: F:/Work/FPGA/Board/Lab9/P1/COUNTER.v Line: 8
-Warning (13012): Latch CONTROLUNIT:CU|REGSELECTORS[9] has unsafe behavior File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 54
+Warning (13012): Latch CONTROLUNIT:CU|REGSELECTORS[9] has unsafe behavior File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 53
     Warning (13013): Ports D and ENA on the latch are fed by the same signal COUNTER:COUNT|COUNT[0] File: F:/Work/FPGA/Board/Lab9/P1/COUNTER.v Line: 8
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "MUXSELECTORSs[8]" is stuck at GND File: F:/Work/FPGA/Board/Lab9/P1/PROCESSOR.v Line: 9
+Warning (13012): Latch CONTROLUNIT:CU|COUNTERCLR has unsafe behavior File: F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v Line: 10
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal COUNTER:COUNT|COUNT[0] File: F:/Work/FPGA/Board/Lab9/P1/COUNTER.v Line: 8
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 64 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file F:/Work/FPGA/Board/Lab9/P1/output_files/p1.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 522 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 631 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 19 input pins
-    Info (21059): Implemented 167 output pins
-    Info (21061): Implemented 336 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 53 warnings
+    Info (21059): Implemented 203 output pins
+    Info (21061): Implemented 409 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 55 warnings
     Info: Peak virtual memory: 597 megabytes
-    Info: Processing ended: Sun Apr 30 16:13:24 2017
+    Info: Processing ended: Tue May 02 20:29:24 2017
     Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:28
+    Info: Total CPU time (on all processors): 00:00:29
 
 
 +------------------------------------------+

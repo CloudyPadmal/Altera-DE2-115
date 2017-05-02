@@ -2,9 +2,12 @@ module ALU
 (
     input [15:0] LINEA, LINEB,
     input ADD,
-    output reg [15:0] LINEOUT
+    output reg [15:0] LINEOUT,
+    output ADDs
 );
 
+    assign ADDs = ADD;
+    
     always @ (*)
         begin
             if (ADD)

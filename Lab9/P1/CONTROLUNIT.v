@@ -6,6 +6,7 @@ module CONTROLUNIT
     output reg [9:0] MUXLINE,
     output reg [9:0] REGSELECTORS,
     output reg ADDSUB,
+    output [2:0] INS,
     output reg COUNTERCLR,
     output reg DONE
 );
@@ -18,9 +19,10 @@ module CONTROLUNIT
         
     // Fetch instruction
     wire [2:0] INSTRUCTION;
-    reg IREN;
+    //reg IREN;
     reg [8:0] IRtoCU;
     assign INSTRUCTION = IRtoCU[8:6];
+    assign INS = INSTRUCTION;
     
     // REGSELECTORS 10'bGA_HGFE_DCBA
     
@@ -38,14 +40,11 @@ module CONTROLUNIT
         .LINEOUT(REG2)
     );
     
-    always @ (*)
+    always @ (negedge CLK)
         begin
-            if (IREN)
+            if (COUNTERLINE == 2'b00)
                 begin
-                    if (COUNTERLINE == 2'b00)
-                        begin
-                            IRtoCU = IRLINE;
-                        end
+                    IRtoCU = IRLINE;
                 end
         end
     
@@ -56,16 +55,15 @@ module CONTROLUNIT
                     case (COUNTERLINE)
                         2'b00: // Fetch Instruction to IR
                             begin
-                                IREN = 1'b1;
                                 DONE = 1'b0;
                                 // Clear MUX Line;
                                 MUXLINE = 10'b00_0000_0000;
                                 // Clear REG Line;
                                 REGSELECTORS = 10'b00_0000_0000;
+                                COUNTERCLR <= 1'b0;
                             end
                         2'b01: // Time Step One
                             begin
-                                IREN = 1'b0;
                                 case (INSTRUCTION)
                                     I0: // RX <- RY; DONE;
                                         begin
@@ -134,7 +132,7 @@ module CONTROLUNIT
                                     I2: // RX <- REGG; DONE;
                                         begin
                                             // Open REGG from MUX;
-                                            MUXLINE = 10'b010_0000_0000;
+                                            MUXLINE = 10'b01_0000_0000;
                                             // Open REGX from CU;
                                             REGSELECTORS = {2'b00, REG1};
                                             // Assert Done;
@@ -144,7 +142,7 @@ module CONTROLUNIT
                                     I3: // RX <- REGG; DONE;
                                         begin
                                             // Open REGG from MUX;
-                                            MUXLINE = 10'b010_0000_0000;
+                                            MUXLINE = 10'b01_0000_0000;
                                             // Open REGX from CU;
                                             REGSELECTORS = {2'b00, REG1};
                                             // Assert Done;
@@ -166,6 +164,7 @@ module tC;
     reg [1:0] COUNTERLINE;
     reg [8:0] IRLINE;
     wire [9:0] MUXLINE, REGSELECTORS;
+    wire [2:0] INS;
     wire ADDSUB, COUNTERCLR, DONE;
     
     // Initiate CU
@@ -177,6 +176,7 @@ module tC;
         .MUXLINE(MUXLINE),
         .REGSELECTORS(REGSELECTORS),
         .ADDSUB(ADDSUB),
+        .INS(INS),
         .COUNTERCLR(COUNTERCLR),
         .DONE(DONE)
     );
@@ -203,6 +203,7 @@ module tC;
         #1 // Time Step 2 -> I0
         CLK = 1'b1;
         COUNTERLINE = 2'b01;
+        IRLINE = 9'b001_111_101; // To check if new IRs are taken into account
         #1
         CLK = 1'b0;
         
@@ -216,6 +217,7 @@ module tC;
         
         #1 // Time Step 2 -> I1
         COUNTERLINE = 2'b01;
+        IRLINE = 9'b001_101_101; // To check if new IRs are taken into account
         CLK = 1'b1;
         #1
         CLK = 1'b0;
@@ -230,6 +232,7 @@ module tC;
         
         #1 // Time Step 2 -> I2
         COUNTERLINE = 2'b01;
+        IRLINE = 9'b001_111_100; // To check if new IRs are taken into account
         CLK = 1'b1;
         #1
         CLK = 1'b0;

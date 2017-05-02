@@ -580,7 +580,139 @@
 					"strict" : false
 				},
 				{
+					"name" : "ACCu[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ACCu[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ACCu[2]",
+					"strict" : false
+				},
+				{
+					"name" : "ACCu[3]",
+					"strict" : false
+				},
+				{
+					"name" : "ACCu[4]",
+					"strict" : false
+				},
+				{
+					"name" : "ACCu[5]",
+					"strict" : false
+				},
+				{
+					"name" : "ACCu[6]",
+					"strict" : false
+				},
+				{
+					"name" : "ACCu[7]",
+					"strict" : false
+				},
+				{
+					"name" : "ACCu[8]",
+					"strict" : false
+				},
+				{
+					"name" : "ACCu[9]",
+					"strict" : false
+				},
+				{
+					"name" : "ACCu[10]",
+					"strict" : false
+				},
+				{
+					"name" : "ACCu[11]",
+					"strict" : false
+				},
+				{
+					"name" : "ACCu[12]",
+					"strict" : false
+				},
+				{
+					"name" : "ACCu[13]",
+					"strict" : false
+				},
+				{
+					"name" : "ACCu[14]",
+					"strict" : false
+				},
+				{
+					"name" : "ACCu[15]",
+					"strict" : false
+				},
+				{
+					"name" : "RG[0]",
+					"strict" : false
+				},
+				{
+					"name" : "RG[1]",
+					"strict" : false
+				},
+				{
+					"name" : "RG[2]",
+					"strict" : false
+				},
+				{
+					"name" : "RG[3]",
+					"strict" : false
+				},
+				{
+					"name" : "RG[4]",
+					"strict" : false
+				},
+				{
+					"name" : "RG[5]",
+					"strict" : false
+				},
+				{
+					"name" : "RG[6]",
+					"strict" : false
+				},
+				{
+					"name" : "RG[7]",
+					"strict" : false
+				},
+				{
+					"name" : "RG[8]",
+					"strict" : false
+				},
+				{
+					"name" : "RG[9]",
+					"strict" : false
+				},
+				{
+					"name" : "RG[10]",
+					"strict" : false
+				},
+				{
+					"name" : "RG[11]",
+					"strict" : false
+				},
+				{
+					"name" : "RG[12]",
+					"strict" : false
+				},
+				{
+					"name" : "RG[13]",
+					"strict" : false
+				},
+				{
+					"name" : "RG[14]",
+					"strict" : false
+				},
+				{
+					"name" : "RG[15]",
+					"strict" : false
+				},
+				{
 					"name" : "DONE",
+					"strict" : false
+				},
+				{
+					"name" : "ADDs",
 					"strict" : false
 				},
 				{
@@ -589,6 +721,18 @@
 				},
 				{
 					"name" : "COUNTtoCUs[1]",
+					"strict" : false
+				},
+				{
+					"name" : "INSs[0]",
+					"strict" : false
+				},
+				{
+					"name" : "INSs[1]",
+					"strict" : false
+				},
+				{
+					"name" : "INSs[2]",
 					"strict" : false
 				},
 				{
@@ -621,6 +765,10 @@
 				},
 				{
 					"name" : "MUXSELECTORSs[7]",
+					"strict" : false
+				},
+				{
+					"name" : "MUXSELECTORSs[8]",
 					"strict" : false
 				},
 				{

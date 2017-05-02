@@ -3,9 +3,10 @@ module PROCESSOR
     input CLK, RUN, RESET,
     input [15:0] DIN,
     output [15:0] BUS,
-    output [15:0] DEMO1, DEMO2, DEMO3, DEMO4, DEMO5, DEMO6, DEMO7, DEMO8,
-    output DONE,
+    output [15:0] DEMO1, DEMO2, DEMO3, DEMO4, DEMO5, DEMO6, DEMO7, DEMO8, ACCu, RG,
+    output DONE, ADDs,
     output [1:0] COUNTtoCUs,
+    output [2:0] INSs,
     output [9:0] MUXSELECTORSs, REGSELECTORSs
 );
 
@@ -13,7 +14,8 @@ module PROCESSOR
     wire [15:0] R0toMUX, R1toMUX, R2toMUX, R3toMUX, R4toMUX, R5toMUX, R6toMUX, R7toMUX;
     wire [15:0] RGtoMUX, MUXtoRN, RAtoALU, ALUtoRG;
     wire [9:0] MUXSELECTORS, REGSELECTORS;
-    wire ADDSUB, COUNTCLR;
+    wire ADDSUB, COUNTCLR, ADDw;
+    wire [2:0] INS;
     wire [1:0] COUNTtoCU;
     
     assign COUNTtoCUs = COUNTtoCU;
@@ -27,6 +29,10 @@ module PROCESSOR
     assign DEMO6 = R5toMUX;
     assign DEMO7 = R6toMUX;
     assign DEMO8 = R7toMUX;
+    assign ACCu = RAtoALU;
+    assign RG = ALUtoRG;
+    assign INSs = INS;
+    assign ADDs = ADDw;
 
     // Instantiate CU
     CONTROLUNIT CU(
@@ -38,6 +44,7 @@ module PROCESSOR
         .REGSELECTORS(REGSELECTORS),
         .ADDSUB(ADDSUB),
         .COUNTERCLR(COUNTCLR),
+        .INS(INS),
         .DONE(DONE)
     );
     
@@ -108,13 +115,14 @@ module PROCESSOR
         .LINEA(RAtoALU),
         .LINEB(MUXtoRN),
         .ADD(ADDSUB),
-        .LINEOUT(ALUtoRG)
+        .LINEOUT(ALUtoRG),
+        .ADDs(ADDw)
     );
     
     // Instantiate Counter
     COUNTER COUNT(
         .CLK(CLK),
-        .CLR(RESET),
+        .CLR(RESET | COUNTCLR),
         .COUNT(COUNTtoCU)
     );
     
@@ -145,8 +153,9 @@ module tP;
     reg RESET;
     reg [15:0] DIN;
     wire [15:0] BUS;
-    wire [15:0] DEMO1, DEMO2, DEMO3, DEMO4, DEMO5, DEMO6, DEMO7, DEMO8;
+    wire [15:0] DEMO1, DEMO2, DEMO3, DEMO4, DEMO5, DEMO6, DEMO7, DEMO8, ACCu, RG;
     wire DONE;
+    wire [2:0] INSs;
     wire [1:0] COUNTtoCUs;
     wire [9:0] MUXSELECTORSs, REGSELECTORSs;
     
@@ -164,6 +173,9 @@ module tP;
         .DEMO6(DEMO6),
         .DEMO7(DEMO7),
         .DEMO8(DEMO8),
+        .ACCu(ACCu),
+        .RG(RG),
+        .INSs(INSs),
         .BUS(BUS),
         .DONE(DONE),
         .COUNTtoCUs(COUNTtoCUs),
@@ -180,30 +192,86 @@ module tP;
     
     // Test I1 (RX <- DIN)
     initial begin
+        /************************** I1 - 1 ***********************************/
         #1
         CLK = 1'b1;
         RESET = 1'b1;
-        DIN = {7'b000_0000, 3'b010, 3'b001, 3'b010};
+        DIN = {7'b000_0000, 3'b010, 3'b001, 3'b000}; // I1 : R1 <- DIN
         #1
         CLK = 1'b0;
         RESET = 1'b0;       
         #1
         CLK = 1'b1;
+        DIN = {7'b000_0000, 3'b000, 3'b100, 3'b000}; // Provide Data via DIN
+        #1
+        CLK = 1'b0;
+        /************************** I1 - 2 ***********************************/
+        #1
+        CLK = 1'b1;
+        DIN = {7'b000_0000, 3'b010, 3'b010, 3'b000}; // I1 : R2 <- DIN
         #1
         CLK = 1'b0;
         #1
         CLK = 1'b1;
-        DIN = {7'b111_0111, 3'b010, 3'b101, 3'b110};
+        DIN = {7'b000_0000, 3'b000, 3'b000, 3'b100}; // Provide Data via DIN        
+        #1
+        CLK = 1'b0;
+        /************************** I0 - 1 ***********************************/
+        #1
+        CLK = 1'b1;
+        DIN = {7'b000_0000, 3'b001, 3'b011, 3'b001}; // I0 : R3 <- R1
         #1
         CLK = 1'b0;
         #1
         CLK = 1'b1;
-        DIN = {7'b000_1100, 3'b011, 3'b011, 3'b110};
+        #1
+        CLK = 1'b0;
+        /************************** I2 - 1 ***********************************/
+        #1
+        CLK = 1'b1;
+        DIN = {7'b000_0000, 3'b011, 3'b001, 3'b010}; // I2 : R1 <- R1 + R2
         #1
         CLK = 1'b0;
         #1
         CLK = 1'b1;
-        DIN = {7'b010_1100, 3'b100, 3'b001, 3'b100};
+        #1
+        CLK = 1'b0;
+        #1
+        CLK = 1'b1;
+        #1
+        CLK = 1'b0;
+        #1
+        CLK = 1'b1;
+        #1
+        CLK = 1'b0;
+        /************************** I3 - 1 ***********************************/
+        #1
+        CLK = 1'b1;
+        DIN = {7'b000_0000, 3'b100, 3'b001, 3'b010}; // I3 : R1 <- R1 - R2
+        #1
+        CLK = 1'b0;
+        #1
+        CLK = 1'b1;
+        #1
+        CLK = 1'b0;
+        #1
+        CLK = 1'b1;
+        #1
+        CLK = 1'b0;
+        #1
+        CLK = 1'b1;
+        #1
+        CLK = 1'b0;
+        #1
+        CLK = 1'b1;
+        #1
+        CLK = 1'b0;
+        #1
+        CLK = 1'b1;
+        #1
+        CLK = 1'b0;
+        #1
+        CLK = 1'b1;
         #1
         CLK = 1'b0;
         #1

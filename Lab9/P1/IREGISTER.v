@@ -5,7 +5,7 @@ module IREGISTER
     output reg [8:0] OUT
 );
 
-    always @ (posedge CLK)
+    always @ (negedge CLK)
         begin
             if (WE)
                 begin

@@ -1,5 +1,5 @@
 Flow report for p1
-Sun Apr 30 16:13:24 2017
+Tue May 02 20:29:24 2017
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -41,18 +41,18 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Sun Apr 30 16:13:24 2017       ;
+; Flow Status                        ; Successful - Tue May 02 20:29:24 2017       ;
 ; Quartus Prime Version              ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name                      ; p1                                          ;
 ; Top-level Entity Name              ; PROCESSOR                                   ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE115F29C7                               ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 320                                         ;
-;     Total combinational functions  ; 208                                         ;
-;     Dedicated logic registers      ; 130                                         ;
-; Total registers                    ; 130                                         ;
-; Total pins                         ; 186                                         ;
+; Total logic elements               ; 377                                         ;
+;     Total combinational functions  ; 240                                         ;
+;     Dedicated logic registers      ; 171                                         ;
+; Total registers                    ; 171                                         ;
+; Total pins                         ; 222                                         ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -65,7 +65,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/30/2017 16:13:12 ;
+; Start date & time ; 05/02/2017 20:29:11 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; p1                  ;
 +-------------------+---------------------+
@@ -76,7 +76,7 @@ agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 1097044241719.149354899104616          ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 1097044241719.149373715103944          ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                            ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)              ; <None>        ; --          ; --             ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --             ;

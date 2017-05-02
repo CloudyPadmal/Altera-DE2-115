@@ -9,13 +9,13 @@ z2
 cModel Technology
 Z0 dF:/Work/FPGA/Board/Lab9/P1/simulation/modelsim
 vALU
-Z1 !s110 1493549023
+Z1 !s110 1493737194
 !i10b 1
-!s100 bHS<Dn=8P><T`[PTRMLM00
-I]njEW08H[>1T^]R5?[?WM3
+!s100 L?N^dAhUmW_Vo3QkOSNVn1
+IDgEgm1j[0Uajj94BBQNN?0
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-Z3 w1493256985
+Z3 w1493735382
 Z4 8F:/Work/FPGA/Board/Lab9/P1/ALU.v
 Z5 FF:/Work/FPGA/Board/Lab9/P1/ALU.v
 L0 1
@@ -23,7 +23,7 @@ Z6 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z7 !s108 1493549023.000000
+Z7 !s108 1493737194.000000
 Z8 !s107 F:/Work/FPGA/Board/Lab9/P1/ALU.v|
 Z9 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/Work/FPGA/Board/Lab9/P1|F:/Work/FPGA/Board/Lab9/P1/ALU.v|
 !i113 1
@@ -34,11 +34,11 @@ n@a@l@u
 vCONTROLUNIT
 R1
 !i10b 1
-!s100 M:59]Z5mkWhU3>HDT9fo[1
-I326NLj::Wcj[Ng>Aeh@hE3
+!s100 >;NI?QoWAjW<Hj`VhKG:12
+I^[1gG>22`=;cfX^ROTbKe0
 R2
 R0
-Z13 w1493548404
+Z13 w1493736730
 Z14 8F:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v
 Z15 FF:/Work/FPGA/Board/Lab9/P1/CONTROLUNIT.v
 L0 1
@@ -126,11 +126,11 @@ n@m@u@l@t@i@p@l@e@x@e@r
 vPROCESSOR
 R1
 !i10b 1
-!s100 `C@X2J0JhB_D=JXJmViKl2
-I`WeOCOzM92HCdI12I0f^o0
+!s100 e`ChSALH5M=DA;[_E@L9N3
+IZHIc7gl3oM8Y]eP3?F[872
 R2
 R0
-Z33 w1493548987
+Z33 w1493737147
 Z34 8F:/Work/FPGA/Board/Lab9/P1/PROCESSOR.v
 Z35 FF:/Work/FPGA/Board/Lab9/P1/PROCESSOR.v
 L0 1
@@ -172,14 +172,14 @@ n@r@e@g@i@s@t@e@r
 vtC
 R1
 !i10b 1
-!s100 zFPKcGT1iQeUA3Mkc`hd[1
-IG0`B=V@0bXeX4ZV1zj:OI2
+!s100 1`j]mQAVl2=?25o]fcV<<0
+IIhc@mIkn56bc1g1k<l4:T1
 R2
 R0
 R13
 R14
 R15
-L0 163
+L0 161
 R6
 r1
 !s85 0
@@ -195,14 +195,14 @@ nt@c
 vtestALU
 R1
 !i10b 1
-!s100 LI:WedX0=0e`0[^FVc5nD3
-IS4llcLPAWiT]4BNiUI_M03
+!s100 a<UJIJjLKk@F<14>O5Y[H2
+I?PfK3?R0l9J@mWW?;I[?90
 R2
 R0
 R3
 R4
 R5
-Z43 L0 22
+L0 25
 R6
 r1
 !s85 0
@@ -225,7 +225,7 @@ R0
 R18
 R19
 R20
-R43
+L0 22
 R6
 r1
 !s85 0
@@ -310,14 +310,14 @@ ntest@r@e@g@i@s@t@e@r
 vtP
 R1
 !i10b 1
-!s100 SHEe@;IQ^ShGeffm27<PA2
-IdIQS5SLGmSz:NKCi8MhPN2
+!s100 G:U]Pz6<60B0hXnc:E=f60
+IV9C44@^e3jL=NCP?aOzJH1
 R2
 R0
 R33
 R34
 R35
-L0 141
+L0 149
 R6
 r1
 !s85 0
